@@ -1,0 +1,55 @@
+name: Rentalify pipeline
+
+# Scrapes + extracts on a schedule, then commits the new listings.json.
+# That commit triggers the Pages deploy workflow.
+on:
+  schedule:
+    # Sun / Tue / Thu at 03:00 UTC
+    - cron: "0 3 * * 0,2,4"
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+concurrency:
+  group: rentalify-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pipeline deps
+        run: npm ci || npm install
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run pipeline + publish
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Make sure no API key is present so the subscription/OAuth path is used.
+          ANTHROPIC_API_KEY: ""
+        run: |
+          node normalize.js
+          node publish.mjs
+          node validate.mjs web/public/listings.json
+
+      - name: Commit results
+        run: |
+          git config user.name "rentalify-bot"
+          git config user.email "actions@github.com"
+          git add out state.json web/public/listings.json
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "data: refresh listings ($(date -u +%F))"
+            git push
+          fi

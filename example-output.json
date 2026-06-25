@@ -1,0 +1,109 @@
+{
+  "run_metadata": {
+    "run_id": "9f1c2e7a-4b6d-4a51-9c3e-2a1b8d4e5f60",
+    "schema_version": "1.1.0",
+    "run_started_at": "2026-06-23T00:00:00Z",
+    "run_finished_at": "2026-06-23T00:03:41Z",
+    "is_initial_backfill": true,
+    "sources": [
+      {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "source_url": "https://www.facebook.com/groups/608325962573249",
+        "window_from": "2026-03-23T00:00:00Z",
+        "window_to": "2026-06-23T00:00:00Z",
+        "watermark_used": null,
+        "posts_fetched": 312,
+        "rental_posts_kept": 3,
+        "non_rental_filtered_out": 305,
+        "duplicates_skipped": 4
+      }
+    ],
+    "totals": {
+      "posts_fetched": 312,
+      "rental_posts_kept": 3,
+      "non_rental_filtered_out": 305,
+      "duplicates_skipped": 4
+    }
+  },
+  "listings": [
+    {
+      "id": "facebook_group:608325962573249:a1b2c3d4e5f60718",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "a1b2c3d4e5f60718",
+        "post_url": null,
+        "author_name": "דנה לוי",
+        "posted_at": null,
+        "scraped_at": "2026-06-23T00:01:12Z",
+        "raw_text": "להשכרה דירת 3 חדרים בהדר, חיפה. קומה 2 מתוך 4, 70 מ\"ר, משופצת, מרוהטת חלקית, מזגן, מרפסת, ללא מעלית. 4200 ש\"ח לחודש לא כולל ארנונה. כניסה ב-1.8. לפרטים דנה 050-1234567 (גם וואטסאפ) 🙂",
+        "images": ["https://example.com/img/aaa.jpg", "https://example.com/img/bbb.jpg"]
+      },
+      "classification": { "is_rental_offer": true, "listing_kind": "apartment_rent", "confidence": 0.97 },
+      "location": { "city": "חיפה", "neighborhood": "הדר", "street": null, "raw_location_text": "בהדר, חיפה", "lat": 32.808, "lng": 34.992, "geocode_source": "neighborhood" },
+      "property": { "rooms": 3, "size_sqm": 70, "floor": 2, "total_floors": 4, "property_type": "apartment" },
+      "price": { "amount": 4200, "currency": "ILS", "period": "month", "includes_arnona": false, "includes_vaad_bait": null, "raw_price_text": "4200 ש\"ח לחודש לא כולל ארנונה" },
+      "amenities": { "furnished": true, "air_conditioning": true, "elevator": false, "parking": null, "balcony": true, "safe_room_mamad": null, "storage": null, "renovated": true, "pets_allowed": null, "accessible": null },
+      "availability": { "available_from": "2026-08-01", "min_lease_months": null, "is_short_term": false },
+      "contact": { "phone": "050-1234567", "whatsapp": "050-1234567", "contact_name": "דנה", "preferred_method": "whatsapp" },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": ["location.street", "price.includes_vaad_bait", "amenities.parking", "amenities.safe_room_mamad", "amenities.storage", "amenities.pets_allowed", "amenities.accessible", "availability.min_lease_months"],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:b2c3d4e5f6071829",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "b2c3d4e5f6071829",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-23T00:01:30Z",
+        "raw_text": "סאבלט ל-4 חודשים בנווה שאנן עם אופציה להמשך חוזה. דירת 2 חדרים, מרוהטת מלא, מיזוג, מעלית. 3800 כולל הכל. זמין מיידי.",
+        "images": []
+      },
+      "classification": { "is_rental_offer": true, "listing_kind": "apartment_rent", "confidence": 0.88 },
+      "location": { "city": null, "neighborhood": "נווה שאנן", "street": null, "raw_location_text": "בנווה שאנן", "lat": 32.777, "lng": 35.022, "geocode_source": "neighborhood" },
+      "property": { "rooms": 2, "size_sqm": null, "floor": null, "total_floors": null, "property_type": "apartment" },
+      "price": { "amount": 3800, "currency": "ILS", "period": "month", "includes_arnona": true, "includes_vaad_bait": true, "raw_price_text": "3800 כולל הכל" },
+      "amenities": { "furnished": true, "air_conditioning": true, "elevator": true, "parking": null, "balcony": null, "safe_room_mamad": null, "storage": null, "renovated": null, "pets_allowed": null, "accessible": null },
+      "availability": { "available_from": null, "min_lease_months": 4, "is_short_term": true },
+      "contact": { "phone": null, "whatsapp": null, "contact_name": null, "preferred_method": "comment" },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": ["location.city", "location.street", "property.size_sqm", "property.floor", "property.total_floors", "amenities.parking", "amenities.balcony", "amenities.safe_room_mamad", "amenities.storage", "amenities.renovated", "amenities.pets_allowed", "amenities.accessible", "availability.available_from", "contact.phone", "contact.whatsapp", "contact.contact_name"],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:c3d4e5f607182930",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "c3d4e5f607182930",
+        "post_url": null,
+        "author_name": "Yossi C",
+        "posted_at": null,
+        "scraped_at": "2026-06-23T00:01:48Z",
+        "raw_text": "מחפשים שותף/ה לדירת שותפים בכרמל. חדר פנוי בדירת 4 חדרים, החדר מרוהט. קרוב לאוניברסיטה. מחיר יסגר בתיאום. נא לפנות בפרטי.",
+        "images": []
+      },
+      "classification": { "is_rental_offer": true, "listing_kind": "room_in_shared", "confidence": 0.81 },
+      "location": { "city": null, "neighborhood": "כרמל", "street": null, "raw_location_text": "בכרמל", "lat": 32.8, "lng": 34.987, "geocode_source": "neighborhood" },
+      "property": { "rooms": 4, "size_sqm": null, "floor": null, "total_floors": null, "property_type": "room" },
+      "price": { "amount": null, "currency": "ILS", "period": "month", "includes_arnona": null, "includes_vaad_bait": null, "raw_price_text": "מחיר יסגר בתיאום" },
+      "amenities": { "furnished": true, "air_conditioning": null, "elevator": null, "parking": null, "balcony": null, "safe_room_mamad": null, "storage": null, "renovated": null, "pets_allowed": null, "accessible": null },
+      "availability": { "available_from": null, "min_lease_months": null, "is_short_term": null },
+      "contact": { "phone": null, "whatsapp": null, "contact_name": null, "preferred_method": "dm" },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": ["location.city", "location.street", "property.size_sqm", "property.floor", "property.total_floors", "price.amount", "price.includes_arnona", "price.includes_vaad_bait", "amenities.air_conditioning", "amenities.elevator", "amenities.parking", "amenities.balcony", "amenities.safe_room_mamad", "amenities.storage", "amenities.renovated", "amenities.pets_allowed", "amenities.accessible", "availability.available_from", "availability.min_lease_months", "availability.is_short_term", "contact.phone", "contact.whatsapp", "contact.contact_name"],
+        "needs_review": false
+      }
+    }
+  ]
+}

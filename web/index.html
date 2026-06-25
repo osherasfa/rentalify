@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rentalify — דירות להשכרה על המפה</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <header class="brand">
+          <h1>Rentalify<span class="dot">.</span></h1>
+          <p class="tagline">דירות להשכרה — סינון לפי אזור על המפה</p>
+        </header>
+
+        <section class="panel filters">
+          <p class="panel-title">סינון</p>
+
+          <label class="field">מחיר (₪ לחודש)
+            <div class="range">
+              <input id="price-min" type="number" inputmode="numeric" placeholder="מ-" min="0" />
+              <input id="price-max" type="number" inputmode="numeric" placeholder="עד" min="0" />
+            </div>
+          </label>
+
+          <label class="field">חדרים (מינימום)
+            <select id="rooms-min">
+              <option value="">הכול</option>
+              <option value="1">1+</option>
+              <option value="1.5">1.5+</option>
+              <option value="2">2+</option>
+              <option value="2.5">2.5+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>סוג נכס</legend>
+            <label class="chk"><input type="checkbox" class="kind" value="apartment_rent" checked /> דירה</label>
+            <label class="chk"><input type="checkbox" class="kind" value="unit_rent" checked /> יחידת דיור</label>
+            <label class="chk"><input type="checkbox" class="kind" value="room_in_shared" checked /> חדר בשותפות</label>
+          </fieldset>
+
+          <label class="chk"><input type="checkbox" id="hide-review" /> הסתר מודעות שדורשות בדיקה</label>
+        </section>
+
+        <section class="results-head">
+          <span id="count">—</span>
+          <span id="nogeo" class="muted"></span>
+        </section>
+
+        <section id="results" class="results"></section>
+
+        <footer class="foot">
+          נתונים: מודעות פייסבוק שעובדו אוטומטית. מיקום מקורב לפי שם השכונה/העיר.
+          רקע המפה: © OpenStreetMap · OpenFreeMap.
+        </footer>
+      </aside>
+
+      <main id="map">
+        <div id="search" class="map-search">
+          <input id="search-input" type="text" placeholder="חיפוש מקום בישראל…" autocomplete="off" />
+          <ul id="search-results" class="search-results" hidden></ul>
+        </div>
+
+        <div id="draw-tools" class="map-panel">
+          <div class="seg" id="mode">
+            <button data-mode="add" class="active" title="הוספה" aria-label="הוספה">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <button data-mode="subtract" title="החסרה" aria-label="החסרה">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+            </button>
+          </div>
+
+          <div class="tools">
+            <button class="tool" data-shape="Circle" title="עיגול" aria-label="עיגול">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>
+            </button>
+            <button class="tool" data-shape="Polygon" title="מצולע" aria-label="מצולע">
+              <svg viewBox="0 0 24 24"><polygon points="12,3 21,9 18,20 6,20 3,9"/></svg>
+            </button>
+            <button class="tool" data-shape="Rectangle" title="מלבן" aria-label="מלבן">
+              <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="1"/></svg>
+            </button>
+          </div>
+
+          <div class="toolbar-actions">
+            <button class="btn icon" id="undo" title="בטל אחרון" aria-label="בטל אחרון" disabled>
+              <svg viewBox="0 0 24 24"><polyline points="9 14 4 9 9 4"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>
+            </button>
+            <button class="btn icon danger" id="clear" title="נקה הכול" aria-label="נקה הכול" disabled>
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

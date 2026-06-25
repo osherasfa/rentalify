@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(curl -sL --max-time 25 \"https://raw.githubusercontent.com/glynnbird/countriesgeojson/master/israel.geojson\" -o /tmp/il1.json)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(head -c 200 /tmp/il1.json)",
+      "Bash(wc -c /tmp/il1.json)",
+      "Bash(node -e \"const g=require\\('/tmp/il1.json'\\); const c=g.geometry.coordinates; console.log\\('type',g.geometry.type,'rings',c.length,'pts',c[0].length\\); console.log\\('lng range', Math.min\\(...c[0].map\\(p=>p[0]\\)\\).toFixed\\(2\\), Math.max\\(...c[0].map\\(p=>p[0]\\)\\).toFixed\\(2\\)\\); console.log\\('lat range', Math.min\\(...c[0].map\\(p=>p[1]\\)\\).toFixed\\(2\\), Math.max\\(...c[0].map\\(p=>p[1]\\)\\).toFixed\\(2\\)\\);\")",
+      "Bash(curl -sL --max-time 25 \"https://raw.githubusercontent.com/johan/world.geo.json/master/countries/ISR.geo.json\" -o /tmp/il2.json)",
+      "Bash(echo \"il2 exit=$?\")",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p .tmp)",
+      "Bash(curl -sL --max-time 25 \"https://raw.githubusercontent.com/glynnbird/countriesgeojson/master/israel.geojson\" -o .tmp/il1.json)",
+      "Bash(curl -sL --max-time 25 \"https://raw.githubusercontent.com/johan/world.geo.json/master/countries/ISR.geo.json\" -o .tmp/il2.json)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

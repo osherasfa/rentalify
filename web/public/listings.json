@@ -1,0 +1,1309 @@
+{
+  "run_metadata": {
+    "run_id": "bcd55426-6613-413d-8fb9-356375c5869d",
+    "schema_version": "1.1.0",
+    "run_started_at": "2026-06-24T18:46:34.379Z",
+    "run_finished_at": "2026-06-24T18:46:34.379Z",
+    "is_initial_backfill": true,
+    "sources": [
+      {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "source_url": "https://www.facebook.com/groups/608325962573249",
+        "window_from": "2026-03-26T18:46:34.379Z",
+        "window_to": "2026-06-24T18:46:34.379Z",
+        "watermark_used": null,
+        "posts_fetched": 400,
+        "rental_posts_kept": 18,
+        "non_rental_filtered_out": 380,
+        "duplicates_skipped": 2
+      }
+    ],
+    "totals": {
+      "posts_fetched": 400,
+      "rental_posts_kept": 18,
+      "non_rental_filtered_out": 380,
+      "duplicates_skipped": 2
+    }
+  },
+  "listings": [
+    {
+      "id": "facebook_group:608325962573249:3e7f22ba3482088b",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "3e7f22ba3482088b",
+        "post_url": null,
+        "author_name": "נועה",
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.378Z",
+        "raw_text": "להשכרה 2 חדרים בפלורנטין",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "פלורנטין",
+        "street": null,
+        "raw_location_text": "פלורנטין",
+        "lat": 32.056,
+        "lng": 34.77,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5800 שח"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "052-1112233",
+        "whatsapp": null,
+        "contact_name": "נועה",
+        "preferred_method": "phone"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:fb154a369db1ba62",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "fb154a369db1ba62",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים ברמת אביב",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "רמת אביב",
+        "street": null,
+        "raw_location_text": "רמת אביב",
+        "lat": 32.113,
+        "lng": 34.795,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": 85,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 8200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "8200 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:96bf0f81ee7801e1",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "96bf0f81ee7801e1",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 2.5 חדרים ברמת גן",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "רמת גן",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "רמת גן",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 2.5,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5200 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:eeb414ff5ba2ccc8",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "eeb414ff5ba2ccc8",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בגבעתיים",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "גבעתיים",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "גבעתיים",
+        "lat": 32.07225,
+        "lng": 34.81253,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": 78,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 6400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "6400 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:5144e396293811bd",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "5144e396293811bd",
+        "post_url": null,
+        "author_name": "דנה",
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בהדר",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "חיפה",
+        "neighborhood": "הדר",
+        "street": null,
+        "raw_location_text": "הדר",
+        "lat": 32.808,
+        "lng": 34.992,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3400 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": "דנה",
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:1967b2cbfbae81bf",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "1967b2cbfbae81bf",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 2 חדרים בנחלאות",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "ירושלים",
+        "neighborhood": "נחלאות",
+        "street": null,
+        "raw_location_text": "נחלאות",
+        "lat": 31.783,
+        "lng": 35.212,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5500 שח"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:42660bd191e6a862",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "42660bd191e6a862",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 5 חדרים בבאר שבע",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "באר שבע",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "באר שבע",
+        "lat": 31.25181,
+        "lng": 34.7913,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 5,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "room"
+      },
+      "price": {
+        "amount": 1600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "1600 שח"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:1ab67507f95e3d0d",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "1ab67507f95e3d0d",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בנתניה",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "נתניה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "נתניה",
+        "lat": 32.33291,
+        "lng": 34.85992,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": 90,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 7000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "7000 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:41567754aaffe7ee",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "41567754aaffe7ee",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 4 חדרים בהרצליה",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "הרצליה",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": 120,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 9500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "9500 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:7c415a1142318bd5",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "7c415a1142318bd5",
+        "post_url": null,
+        "author_name": "אבי",
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 5 חדרים בברק",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "עלי זהב",
+        "neighborhood": "ברק",
+        "street": "ברק 17",
+        "raw_location_text": "ברק 17, ברק",
+        "lat": 32.07213,
+        "lng": 35.06327,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 5,
+        "size_sqm": 140,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5200 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": "אבי",
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:bdcc713317e9fa4d",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "bdcc713317e9fa4d",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 4 חדרים באריאל",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "אריאל",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "אריאל",
+        "lat": 32.1065,
+        "lng": 35.18449,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 4200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "4200 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:4e8c6d24dce0fb8e",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "4e8c6d24dce0fb8e",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 4 חדרים בקצרין",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "קצרין",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "קצרין",
+        "lat": 32.99194,
+        "lng": 35.69139,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": 110,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3800 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:6c640f5e612a88ea",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "6c640f5e612a88ea",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בירוחם",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.55
+      },
+      "location": {
+        "city": "ירוחם",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "ירוחם",
+        "lat": 30.98822,
+        "lng": 34.93176,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 2400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2400 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": true
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:5f4429d21474b2f7",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "5f4429d21474b2f7",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בנהריה",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "נהריה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "נהריה",
+        "lat": 33.00892,
+        "lng": 35.09814,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 4100,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "4100 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:080cac3858d1fb1b",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "080cac3858d1fb1b",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 2 חדרים באילת",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "אילת",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "אילת",
+        "lat": 29.55805,
+        "lng": 34.94821,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5000 שח"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": true
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:a950321e976fbc37",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "a950321e976fbc37",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 4 חדרים במודיעין עילית",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "מודיעין עילית",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "מודיעין עילית",
+        "lat": 31.93221,
+        "lng": 35.04416,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 4500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "4500 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:b69c3dcef23873de",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "b69c3dcef23873de",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים בעפולה",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "עפולה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "עפולה",
+        "lat": 32.60907,
+        "lng": 35.2892,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3200 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:887e3d3b4ad40ee9",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "887e3d3b4ad40ee9",
+        "post_url": null,
+        "author_name": null,
+        "posted_at": null,
+        "scraped_at": "2026-06-24T18:46:34.379Z",
+        "raw_text": "להשכרה 3 חדרים ברחובות",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "רחובות",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "רחובות",
+        "lat": 31.89421,
+        "lng": 34.81199,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 3,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 5000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "5000 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": "comment"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [],
+        "needs_review": false
+      }
+    }
+  ]
+}

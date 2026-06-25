@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rentalify.app/schemas/rental-listings-1.1.0.json",
+  "title": "Rentalify Rental Listings Export",
+  "description": "Normalized output of a scrape+clean run. Group-agnostic: each listing carries its own source, and run_metadata supports many sources at once.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_metadata", "listings"],
+  "properties": {
+    "run_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "schema_version", "run_started_at", "is_initial_backfill", "sources", "totals"],
+      "properties": {
+        "run_id": { "type": "string", "description": "UUID for this run" },
+        "schema_version": { "type": "string", "const": "1.1.0" },
+        "run_started_at": { "type": "string", "format": "date-time" },
+        "run_finished_at": { "type": ["string", "null"], "format": "date-time" },
+        "is_initial_backfill": { "type": "boolean", "description": "true on the first 3-month backfill run" },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["platform", "source_id", "window_from", "window_to"],
+            "properties": {
+              "platform": { "type": "string", "enum": ["facebook_group", "facebook_marketplace", "telegram_channel", "other"] },
+              "source_id": { "type": "string", "description": "Group/channel id. For FB groups: the numeric group id." },
+              "source_url": { "type": ["string", "null"], "format": "uri" },
+              "window_from": { "type": "string", "format": "date-time", "description": "Lower bound requested for this run (onlyPostsNewerThan)" },
+              "window_to": { "type": "string", "format": "date-time" },
+              "watermark_used": { "type": ["string", "null"], "format": "date-time", "description": "The stored watermark this run started from (null on backfill)" },
+              "posts_fetched": { "type": "integer", "minimum": 0 },
+              "rental_posts_kept": { "type": "integer", "minimum": 0 },
+              "non_rental_filtered_out": { "type": "integer", "minimum": 0 },
+              "duplicates_skipped": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "totals": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["posts_fetched", "rental_posts_kept", "non_rental_filtered_out", "duplicates_skipped"],
+          "properties": {
+            "posts_fetched": { "type": "integer", "minimum": 0 },
+            "rental_posts_kept": { "type": "integer", "minimum": 0 },
+            "non_rental_filtered_out": { "type": "integer", "minimum": 0 },
+            "duplicates_skipped": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/listing" }
+    }
+  },
+  "$defs": {
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source", "classification", "location", "property", "price", "amenities", "availability", "contact", "extraction"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z_]+:[^:]+:[^:]+$",
+          "description": "Stable unique id: platform:source_id:post_id"
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["platform", "source_id", "post_id", "raw_text"],
+          "properties": {
+            "platform": { "type": "string", "enum": ["facebook_group", "facebook_marketplace", "telegram_channel", "other"] },
+            "source_id": { "type": "string" },
+            "post_id": { "type": "string" },
+            "post_url": { "type": ["string", "null"], "format": "uri" },
+            "author_name": { "type": ["string", "null"] },
+            "posted_at": { "type": ["string", "null"], "format": "date-time" },
+            "scraped_at": { "type": ["string", "null"], "format": "date-time" },
+            "raw_text": { "type": "string", "description": "Original post text, kept verbatim for re-extraction and debugging" },
+            "images": {
+              "type": "array",
+              "items": { "type": "string", "format": "uri" }
+            }
+          }
+        },
+        "classification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["is_rental_offer", "listing_kind"],
+          "properties": {
+            "is_rental_offer": { "type": "boolean", "description": "Always true for kept listings; non-offers are filtered out before export" },
+            "listing_kind": { "type": "string", "enum": ["apartment_rent", "unit_rent", "room_in_shared"] },
+            "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+          }
+        },
+        "location": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "city": { "type": ["string", "null"] },
+            "neighborhood": { "type": ["string", "null"] },
+            "street": { "type": ["string", "null"] },
+            "raw_location_text": { "type": ["string", "null"] },
+            "lat": { "type": ["number", "null"], "minimum": -90, "maximum": 90, "description": "Geocoded latitude from the offline gazetteer (approx, one point per place)" },
+            "lng": { "type": ["number", "null"], "minimum": -180, "maximum": 180, "description": "Geocoded longitude" },
+            "geocode_source": { "type": ["string", "null"], "enum": ["neighborhood", "city", "none", null], "description": "Granularity the coordinates were resolved at" }
+          }
+        },
+        "property": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "rooms": { "type": ["number", "null"], "minimum": 0 },
+            "size_sqm": { "type": ["number", "null"], "minimum": 0 },
+            "floor": { "type": ["integer", "null"] },
+            "total_floors": { "type": ["integer", "null"], "minimum": 0 },
+            "property_type": {
+              "type": ["string", "null"],
+              "enum": ["apartment", "unit", "house", "penthouse", "studio", "duplex", "garden_apartment", "room", null]
+            }
+          }
+        },
+        "price": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": ["number", "null"], "minimum": 0 },
+            "currency": { "type": "string", "enum": ["ILS", "USD", "EUR"], "default": "ILS" },
+            "period": { "type": ["string", "null"], "enum": ["month", "week", "day", "night", null] },
+            "includes_arnona": { "type": ["boolean", "null"] },
+            "includes_vaad_bait": { "type": ["boolean", "null"] },
+            "raw_price_text": { "type": ["string", "null"] }
+          }
+        },
+        "amenities": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Tri-state booleans: true / false / null. null = not mentioned, which is different from explicitly absent.",
+          "properties": {
+            "furnished": { "type": ["boolean", "null"] },
+            "air_conditioning": { "type": ["boolean", "null"] },
+            "elevator": { "type": ["boolean", "null"] },
+            "parking": { "type": ["boolean", "null"] },
+            "balcony": { "type": ["boolean", "null"] },
+            "safe_room_mamad": { "type": ["boolean", "null"] },
+            "storage": { "type": ["boolean", "null"] },
+            "renovated": { "type": ["boolean", "null"] },
+            "pets_allowed": { "type": ["boolean", "null"] },
+            "accessible": { "type": ["boolean", "null"] }
+          }
+        },
+        "availability": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "available_from": { "type": ["string", "null"], "format": "date" },
+            "min_lease_months": { "type": ["integer", "null"], "minimum": 0 },
+            "is_short_term": { "type": ["boolean", "null"], "description": "true for sublet-style listings that still offer a contract" }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "phone": { "type": ["string", "null"] },
+            "whatsapp": { "type": ["string", "null"] },
+            "contact_name": { "type": ["string", "null"] },
+            "preferred_method": { "type": ["string", "null"], "enum": ["phone", "whatsapp", "comment", "dm", null] }
+          }
+        },
+        "extraction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["schema_version", "missing_fields", "needs_review"],
+          "properties": {
+            "schema_version": { "type": "string", "const": "1.1.0" },
+            "missing_fields": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Dotted paths of fields left at default/null, e.g. price.amount"
+            },
+            "needs_review": { "type": "boolean", "description": "true when confidence is low or required signals conflict" }
+          }
+        }
+      }
+    }
+  }
+}

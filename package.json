@@ -1,0 +1,19 @@
+{
+  "name": "rentalify-aggregator",
+  "version": "1.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Scrapes Facebook groups via Apify, cleans posts into normalized rental listings with the Claude Code CLI, geocodes them, and publishes a static map frontend.",
+  "scripts": {
+    "start": "node normalize.js",
+    "publish": "node publish.mjs",
+    "validate": "node validate.mjs"
+  },
+  "dependencies": {
+    "apify-client": "^2.9.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

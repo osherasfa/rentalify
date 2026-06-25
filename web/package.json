@@ -1,0 +1,25 @@
+{
+  "name": "rentalify-web",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Rentalify frontend — offline Hebrew map of Israel with draw-a-range filtering.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@turf/boolean-point-in-polygon": "^7.1.0",
+    "@turf/difference": "^7.1.0",
+    "@turf/helpers": "^7.1.0",
+    "@turf/union": "^7.1.0",
+    "maplibre-gl": "^4.7.1",
+    "supercluster": "^8.0.1",
+    "terra-draw": "^1.31.2",
+    "terra-draw-maplibre-gl-adapter": "^1.4.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
