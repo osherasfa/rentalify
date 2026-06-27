@@ -7,7 +7,15 @@ import { difference } from "@turf/difference";
 import { booleanPointInPolygon } from "@turf/boolean-point-in-polygon";
 import { featureCollection } from "@turf/helpers";
 import Supercluster from "supercluster";
+import { GOVMAP_TOKEN } from "./config.js";
 import "./style.css";
+
+// GovMap (+ proj4) is loaded lazily — only when a token is configured.
+let _govmapSearch = null;
+async function loadGovmapSearch() {
+  if (!_govmapSearch) _govmapSearch = (await import("./govmap.js")).govmapSearch;
+  return _govmapSearch;
+}
 
 const BASE = import.meta.env.BASE_URL;
 // Free, no-key vector basemap (OpenFreeMap "positron"). MapLibre = the open
@@ -259,7 +267,9 @@ function setupSearch(places) {
   const pick = (p) => {
     input.value = p.name;
     close();
-    map.flyTo({ center: [p.lng, p.lat], zoom: p.kind === "שכונה" ? 14 : 12, duration: 800 });
+    // street-level (GovMap, no kind) zooms closest; neighborhood/city less so
+    const zoom = p.kind === "שכונה" ? 14 : p.kind ? 12 : 16;
+    map.flyTo({ center: [p.lng, p.lat], zoom, duration: 800 });
   };
 
   const render = () => {
@@ -267,7 +277,8 @@ function setupSearch(places) {
     matches.forEach((p, i) => {
       const li = document.createElement("li");
       if (i === active) li.className = "active";
-      li.innerHTML = `<span>${p.name}</span><span class="kind">${p.kind}${p.city ? " · " + p.city : ""}</span>`;
+      const tag = p.kind ? `${p.kind}${p.city ? " · " + p.city : ""}` : "כתובת";
+      li.innerHTML = `<span>${p.name}</span><span class="kind">${tag}</span>`;
       li.addEventListener("mousedown", (e) => { e.preventDefault(); pick(p); });
       list.appendChild(li);
     });
@@ -292,7 +303,25 @@ function setupSearch(places) {
     return scored.slice(0, 8).map((s) => s.p);
   };
 
-  input.addEventListener("input", () => { matches = search(input.value); active = -1; render(); });
+  // When a GovMap token is set, search any Israeli address live (debounced);
+  // otherwise fall back to the bundled offline gazetteer.
+  let debounce;
+  input.addEventListener("input", () => {
+    const q = input.value;
+    if (!GOVMAP_TOKEN) { matches = search(q); active = -1; render(); return; }
+    clearTimeout(debounce);
+    debounce = setTimeout(async () => {
+      if (normSearch(q).length < 2) { matches = []; active = -1; render(); return; }
+      try {
+        const govmapSearch = await loadGovmapSearch();
+        matches = await govmapSearch(GOVMAP_TOKEN, q);
+      } catch (e) {
+        console.warn("GovMap search failed, using local gazetteer:", e);
+        matches = search(q);
+      }
+      active = -1; render();
+    }, 250);
+  });
   input.addEventListener("keydown", (e) => {
     if (list.hidden) return;
     if (e.key === "ArrowDown") { e.preventDefault(); active = Math.min(active + 1, matches.length - 1); render(); }

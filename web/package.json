@@ -15,6 +15,7 @@
     "@turf/helpers": "^7.1.0",
     "@turf/union": "^7.1.0",
     "maplibre-gl": "^4.7.1",
+    "proj4": "^2.20.9",
     "supercluster": "^8.0.1",
     "terra-draw": "^1.31.2",
     "terra-draw-maplibre-gl-adapter": "^1.4.1"
