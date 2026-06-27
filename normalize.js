@@ -65,7 +65,7 @@ const SOURCES = [
     platform: "facebook_group",
     source_id: "608325962573249",
     source_url: "https://www.facebook.com/groups/608325962573249",
-    resultsLimit: 1000, // high for backfill; lower it for routine runs if you like
+    resultsLimit: 5, // TEST RUN — tiny on purpose. Bump back up (e.g. 1000) after the first run works.
   },
 ];
 
