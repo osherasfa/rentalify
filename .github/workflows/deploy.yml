@@ -9,6 +9,11 @@ on:
     paths:
       - "web/**"
       - ".github/workflows/deploy.yml"
+  # Re-deploy whenever the scraper pipeline finishes (its bot commit can't
+  # trigger a push event, so we listen for the workflow completing instead).
+  workflow_run:
+    workflows: ["Rentalify pipeline"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
