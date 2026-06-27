@@ -18,9 +18,11 @@ const DEST = join(PUBLIC_DIR, "listings.json");
 const GAZ_SRC = join(__dirname, "geo", "il-places.json");
 const GAZ_DEST = join(PUBLIC_DIR, "il-places.json");
 
-// The published copy is served PUBLICLY on GitHub Pages. Scraped phone numbers
-// and names should not be exposed there. Set to false only if the site is private.
-const STRIP_CONTACT = true;
+// The published copy is served PUBLICLY on GitHub Pages. true = remove scraped
+// phone numbers + names (privacy-safe). false = keep them so users can contact
+// landlords. You chose to SHOW contacts — be mindful this publishes strangers'
+// phone numbers on a public site (privacy/legal consideration under Israeli law).
+const STRIP_CONTACT = false;
 
 if (!existsSync(OUT_DIR)) {
   console.error("no out/ directory — run `node normalize.js` first.");
