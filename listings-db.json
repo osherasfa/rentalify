@@ -1,130 +1,6 @@
 {
-  "run_metadata": {
-    "run_id": "82e6f4cc-754d-4f4b-9ec6-5738afc8c75b",
-    "schema_version": "1.1.0",
-    "run_started_at": "2026-06-27T22:10:14.751Z",
-    "run_finished_at": "2026-06-27T22:10:14.751Z",
-    "is_initial_backfill": true,
-    "sources": [
-      {
-        "platform": "facebook_group",
-        "source_id": "608325962573249",
-        "source_url": "https://www.facebook.com/groups/608325962573249",
-        "window_from": "2026-03-27T22:08:15.454Z",
-        "window_to": "2026-06-27T22:08:15.454Z",
-        "watermark_used": null,
-        "posts_fetched": 5,
-        "rental_posts_kept": 4,
-        "non_rental_filtered_out": 1,
-        "duplicates_skipped": 0
-      }
-    ],
-    "totals": {
-      "posts_fetched": 5,
-      "rental_posts_kept": 4,
-      "non_rental_filtered_out": 1,
-      "duplicates_skipped": 0
-    }
-  },
-  "listings": [
-    {
-      "id": "facebook_group:608325962573249:5d8149a429b8412e",
-      "source": {
-        "platform": "facebook_group",
-        "source_id": "608325962573249",
-        "post_id": "5d8149a429b8412e",
-        "post_url": null,
-        "author_name": "Alma Zilber",
-        "posted_at": null,
-        "scraped_at": "2026-06-27T22:10:14.751Z",
-        "raw_text": "דירת שותפות בהרצליה✨️\nמחפשת 2 שותפות לדירת 4 חדרים מרווחת ומוארת בהרצליה☀️\n\nקצת פרטים על הדירה: \n\n• 2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך\n\n• 100 מ\"ר, 3 כיווני אוויר ושמש\n\n• סלון ענק ומרווח עם מרפסת נפרדת מקורה (ויטרינה)\n\n• מרפסת שירות עם מכונת כביסה ומייבש חדשים\n\n• מטבח גדול עם מדיח, תנור, מקרר וכיריים גז\n\n• 3 חדרי שינה גדולים עם ארונות מובנים ותקרות גבוהות, אחד גם עם פרקט\n\n• מזגן בכל חדר ובסלון\n\n• חניון לבניין\n\nמיקום מושלם ממש במרכז הרצליה במרחק הליכה ממרכז העיר, קווי אוטובוס ישירים לתל אביב, רכבת הרצליה, אוניברסיטת רייכמן(רבע שעה ברגל) והים,\n\n• חדרי כושר (אייקון והולמס פלייס) ממש ליד הבית, סופרים, סופרפארם וכל מה שצריך\n\n• כניסה ב1 לאוגוסט, אבל יש גמישות לפני בתיאום עם השותפה הקודמת.\n\nשאלות ופרטים נוספים בפרטי✨️",
-        "images": [
-          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733448815_122181078488747827_2712243658013657001_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1920&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CVVEez4BNlYQ7kNvwHaiiPX&_nc_oc=Ado1tHmUeJpTqDBPd_3wrDOAh1E_azEVAiOPiPiBawxFeismbntsuMZ5YHfgzMp1FlU&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_zu8HbrKn_E4qaXQRnckXQUjdr1ZGHxYm1f6QqBZmfOQ&oe=6A4618A5",
-          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/731495875_122181078530747827_2939597971488673836_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BwFsYiEENl0Q7kNvwF1D9ZC&_nc_oc=AdpSbA-oyAghKm8k5ZRPC7IOot0iNv8mYgZidRdzjPsPfmKnL8UbaT6JAr2mqOwMOuk&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_a2lQCz7zJ0bdlAd3OciSktT3AMlmma6y9nWiKFDcBPg&oe=6A46348F",
-          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733146244_122181078572747827_5856730396560236892_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DO7K4Ik3KNQQ7kNvwGdGXem&_nc_oc=Adokrz8bMn-HMwHVec_MZ6UfViPlZISPipCbTqe2i8JpAOTOk_UQTdw1_rjdfV4Wpek&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_5ZVNN7YOwUMIXcdQWtCQ6E5l2wGGrlNhiIi3zNVNiZA&oe=6A460B29",
-          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732081904_122181078614747827_1393657073919437555_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=LP9JqKojrmMQ7kNvwHDcvau&_nc_oc=AdrX0JxBlSnAyO8POjZ_4fC1nhJOkwjucdBf9TCkOl57ZnwYypDdQJC2LJym0ShDFRw&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-gzGd2c5xNP2o7a_XNm16lhLcH6ygsBcvb3ab4VjsMpA&oe=6A4613AE",
-          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733935748_122181078656747827_5576109723790627847_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KgSx97uvlgYQ7kNvwEMXq28&_nc_oc=Adol19SYe2rq7-erwPcrONHYDm9WvSs1XUzk4q1VfleWcnjA-Pl0bikag5CVwgIHsg8&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9yUNNQnhh9SdT8N00Mh5zCknKndfFUrz-wX5Ks18ywyA&oe=6A462CF3"
-        ]
-      },
-      "classification": {
-        "is_rental_offer": true,
-        "listing_kind": "room_in_shared",
-        "confidence": 0.9
-      },
-      "location": {
-        "city": "הרצליה",
-        "neighborhood": null,
-        "street": null,
-        "raw_location_text": "הרצליה, במרכז הרצליה",
-        "lat": 32.16627,
-        "lng": 34.82536,
-        "geocode_source": "city"
-      },
-      "property": {
-        "rooms": 2,
-        "size_sqm": 100,
-        "floor": null,
-        "total_floors": null,
-        "property_type": "apartment"
-      },
-      "price": {
-        "amount": 2200,
-        "currency": "ILS",
-        "period": "month",
-        "includes_arnona": null,
-        "includes_vaad_bait": null,
-        "raw_price_text": "2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך"
-      },
-      "amenities": {
-        "furnished": null,
-        "air_conditioning": true,
-        "elevator": null,
-        "parking": true,
-        "balcony": true,
-        "safe_room_mamad": null,
-        "storage": null,
-        "renovated": null,
-        "pets_allowed": null,
-        "accessible": null
-      },
-      "availability": {
-        "available_from": "2026-08-01",
-        "min_lease_months": null,
-        "is_short_term": null
-      },
-      "contact": {
-        "phone": null,
-        "whatsapp": null,
-        "contact_name": null,
-        "preferred_method": null
-      },
-      "extraction": {
-        "schema_version": "1.1.0",
-        "missing_fields": [
-          "location.neighborhood",
-          "location.street",
-          "property.floor",
-          "property.total_floors",
-          "price.includes_arnona",
-          "price.includes_vaad_bait",
-          "amenities.furnished",
-          "amenities.elevator",
-          "amenities.safe_room_mamad",
-          "amenities.storage",
-          "amenities.renovated",
-          "amenities.pets_allowed",
-          "amenities.accessible",
-          "availability.min_lease_months",
-          "availability.is_short_term",
-          "contact.phone",
-          "contact.whatsapp",
-          "contact.contact_name",
-          "contact.preferred_method"
-        ],
-        "needs_review": false
-      }
-    },
-    {
+  "listings": {
+    "facebook_group:608325962573249:ccc872cf49374384": {
       "id": "facebook_group:608325962573249:ccc872cf49374384",
       "source": {
         "platform": "facebook_group",
@@ -222,7 +98,7 @@
         "needs_review": false
       }
     },
-    {
+    "facebook_group:608325962573249:8e8443c116bfbabc": {
       "id": "facebook_group:608325962573249:8e8443c116bfbabc",
       "source": {
         "platform": "facebook_group",
@@ -316,7 +192,7 @@
         "needs_review": false
       }
     },
-    {
+    "facebook_group:608325962573249:0d4c2f9498598af2": {
       "id": "facebook_group:608325962573249:0d4c2f9498598af2",
       "source": {
         "platform": "facebook_group",
@@ -419,6 +295,103 @@
         ],
         "needs_review": false
       }
+    },
+    "facebook_group:608325962573249:5d8149a429b8412e": {
+      "id": "facebook_group:608325962573249:5d8149a429b8412e",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "5d8149a429b8412e",
+        "post_url": null,
+        "author_name": "Alma Zilber",
+        "posted_at": null,
+        "scraped_at": "2026-06-27T22:10:14.751Z",
+        "raw_text": "דירת שותפות בהרצליה✨️\nמחפשת 2 שותפות לדירת 4 חדרים מרווחת ומוארת בהרצליה☀️\n\nקצת פרטים על הדירה: \n\n• 2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך\n\n• 100 מ\"ר, 3 כיווני אוויר ושמש\n\n• סלון ענק ומרווח עם מרפסת נפרדת מקורה (ויטרינה)\n\n• מרפסת שירות עם מכונת כביסה ומייבש חדשים\n\n• מטבח גדול עם מדיח, תנור, מקרר וכיריים גז\n\n• 3 חדרי שינה גדולים עם ארונות מובנים ותקרות גבוהות, אחד גם עם פרקט\n\n• מזגן בכל חדר ובסלון\n\n• חניון לבניין\n\nמיקום מושלם ממש במרכז הרצליה במרחק הליכה ממרכז העיר, קווי אוטובוס ישירים לתל אביב, רכבת הרצליה, אוניברסיטת רייכמן(רבע שעה ברגל) והים,\n\n• חדרי כושר (אייקון והולמס פלייס) ממש ליד הבית, סופרים, סופרפארם וכל מה שצריך\n\n• כניסה ב1 לאוגוסט, אבל יש גמישות לפני בתיאום עם השותפה הקודמת.\n\nשאלות ופרטים נוספים בפרטי✨️",
+        "images": [
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733448815_122181078488747827_2712243658013657001_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1920&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CVVEez4BNlYQ7kNvwHaiiPX&_nc_oc=Ado1tHmUeJpTqDBPd_3wrDOAh1E_azEVAiOPiPiBawxFeismbntsuMZ5YHfgzMp1FlU&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_zu8HbrKn_E4qaXQRnckXQUjdr1ZGHxYm1f6QqBZmfOQ&oe=6A4618A5",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/731495875_122181078530747827_2939597971488673836_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BwFsYiEENl0Q7kNvwF1D9ZC&_nc_oc=AdpSbA-oyAghKm8k5ZRPC7IOot0iNv8mYgZidRdzjPsPfmKnL8UbaT6JAr2mqOwMOuk&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_a2lQCz7zJ0bdlAd3OciSktT3AMlmma6y9nWiKFDcBPg&oe=6A46348F",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733146244_122181078572747827_5856730396560236892_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DO7K4Ik3KNQQ7kNvwGdGXem&_nc_oc=Adokrz8bMn-HMwHVec_MZ6UfViPlZISPipCbTqe2i8JpAOTOk_UQTdw1_rjdfV4Wpek&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_5ZVNN7YOwUMIXcdQWtCQ6E5l2wGGrlNhiIi3zNVNiZA&oe=6A460B29",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732081904_122181078614747827_1393657073919437555_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=LP9JqKojrmMQ7kNvwHDcvau&_nc_oc=AdrX0JxBlSnAyO8POjZ_4fC1nhJOkwjucdBf9TCkOl57ZnwYypDdQJC2LJym0ShDFRw&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-gzGd2c5xNP2o7a_XNm16lhLcH6ygsBcvb3ab4VjsMpA&oe=6A4613AE",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733935748_122181078656747827_5576109723790627847_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KgSx97uvlgYQ7kNvwEMXq28&_nc_oc=Adol19SYe2rq7-erwPcrONHYDm9WvSs1XUzk4q1VfleWcnjA-Pl0bikag5CVwgIHsg8&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9yUNNQnhh9SdT8N00Mh5zCknKndfFUrz-wX5Ks18ywyA&oe=6A462CF3"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "הרצליה, במרכז הרצליה",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": 100,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 2200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.elevator",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
     }
-  ]
+  }
 }

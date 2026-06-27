@@ -37,6 +37,10 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # Make sure no API key is present so the subscription/OAuth path is used.
           ANTHROPIC_API_KEY: ""
+          # Cloudflare R2 image storage (optional — without these, images keep their Facebook URLs).
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
         run: |
           node normalize.js
           node publish.mjs
@@ -46,7 +50,7 @@ jobs:
         run: |
           git config user.name "rentalify-bot"
           git config user.email "actions@github.com"
-          git add out state.json web/public/listings.json
+          git add out state.json listings-db.json web/public/listings.json
           if git diff --cached --quiet; then
             echo "no changes to commit"
           else

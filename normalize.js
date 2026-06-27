@@ -119,12 +119,15 @@ async function fetchPosts(source, onlyNewerThan) {
 }
 
 // Map a raw Apify item to the fields we rely on.
-// The actor gives no post id / timestamp / post url, so we synthesize a stable
-// id by hashing user id + text, and capture images from attachments[].image.uri.
+// The actor returns a real post permalink ("url"), publish time ("time") and post
+// id ("facebookId"). We fall back to a text hash for the id if it's ever missing,
+// so the pipeline still works on partial data.
 function readRaw(item) {
   const text = item.text ?? "";
   const userId = item.user?.id ?? "";
-  const post_id = createHash("sha1").update(userId + "|" + text).digest("hex").slice(0, 16);
+  const post_id = String(
+    item.facebookId ?? item.postId ?? createHash("sha1").update(userId + "|" + text).digest("hex").slice(0, 16)
+  );
 
   const attachments = Array.isArray(item.attachments) ? item.attachments : [];
   const images = attachments
@@ -136,11 +139,11 @@ function readRaw(item) {
 
   return {
     post_id,
-    post_url: null,                       // actor only exposes the group url
+    post_url: item.url ?? item.postUrl ?? null,   // direct permalink to the post
     author_name: item.user?.name ?? null,
-    posted_at: null,                      // not provided by the actor
+    posted_at: item.time ?? item.date ?? null,    // ISO publish time
     text,
-    ocr,                                  // image-burned text, appended to the LLM input
+    ocr,                                          // image-burned text, appended to the LLM input
     images,
   };
 }

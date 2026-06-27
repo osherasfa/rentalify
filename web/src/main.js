@@ -128,22 +128,91 @@ function renderClusters() {
 }
 
 // ---------- rendering ----------
-function popupHtml(l) {
-  const tags = amenityTags(l.amenities).map((t) => `<span class="tag">${t}</span>`).join("");
-  const contact = l.contact?.phone || l.contact?.whatsapp;
-  return `
-    <h3>${KIND_LABEL[l.classification.listing_kind] || "מודעה"} · ${placeText(l.location)}</h3>
-    <div class="pop-price">${priceText(l.price)}${roomsText(l.property) ? " · " + roomsText(l.property) : ""}</div>
-    ${tags ? `<div class="tags">${tags}</div>` : ""}
-    ${contact ? `<div style="margin-top:8px">☎ ${contact}</div>` : ""}
-    ${l.source.source_url ? `<div style="margin-top:8px"><a href="${l.source.source_url}" target="_blank" rel="noopener">למקור בפייסבוק ↗</a></div>` : ""}`;
-}
+const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Simple card for the sidebar list + cluster popup — core info only.
 function cardHtml(l) {
-  const tags = amenityTags(l.amenities).slice(0, 5).map((t) => `<span class="tag">${t}</span>`).join("");
-  const meta = [roomsText(l.property), l.property?.size_sqm ? `${l.property.size_sqm} מ"ר` : null, KIND_LABEL[l.classification.listing_kind]].filter(Boolean).join(" · ");
+  const meta = [roomsText(l.property), KIND_LABEL[l.classification.listing_kind]].filter(Boolean).join(" · ");
   return `<div class="row1"><span class="place">${placeText(l.location)}</span><span class="price">${priceText(l.price)}</span></div>
-    <div class="meta">${meta}</div>${tags ? `<div class="tags">${tags}</div>` : ""}`;
+    <div class="meta">${meta}</div>`;
 }
+
+// Full detail view shown in the modal when a listing is clicked.
+function detailHtml(l) {
+  const p = l.property, pr = l.price, av = l.availability, ct = l.contact;
+  const imgs = Array.isArray(l.source.images) ? l.source.images : [];
+  const slider = imgs.length ? `
+    <div class="slider">
+      <div class="slider-track">
+        ${imgs.map((u) => `<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add('img-broken')" />`).join("")}
+      </div>
+      ${imgs.length > 1 ? `
+        <button class="slider-btn slider-prev" aria-label="הקודם">‹</button>
+        <button class="slider-btn slider-next" aria-label="הבא">›</button>
+        <div class="slider-count">1 / ${imgs.length}</div>` : ""}
+    </div>` : "";
+  const amen = amenityTags(l.amenities).map((t) => `<span class="tag">${t}</span>`).join("");
+  const specs = [
+    roomsText(p),
+    p.size_sqm ? `${p.size_sqm} מ"ר` : null,
+    p.floor != null ? `קומה ${p.floor}${p.total_floors != null ? ` מתוך ${p.total_floors}` : ""}` : null,
+  ].filter(Boolean).join(" · ");
+  const priceExtra = [
+    pr.includes_arnona === true ? "כולל ארנונה" : pr.includes_arnona === false ? "לא כולל ארנונה" : null,
+    pr.includes_vaad_bait === true ? "כולל ועד בית" : null,
+  ].filter(Boolean).join(" · ");
+  const avail = [
+    av.available_from ? `כניסה: ${av.available_from}` : null,
+    av.min_lease_months ? `מינ׳ ${av.min_lease_months} חודשים` : null,
+    av.is_short_term ? "טווח קצר" : null,
+  ].filter(Boolean).join(" · ");
+  const wa = ct.whatsapp ? String(ct.whatsapp).replace(/\D/g, "").replace(/^0/, "972") : null;
+  const contact = [
+    ct.phone ? `<a href="tel:${ct.phone}">☎ ${ct.phone}</a>` : null,
+    wa ? `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">💬 וואטסאפ</a>` : null,
+    ct.contact_name ? `<span>${escapeHtml(ct.contact_name)}</span>` : null,
+  ].filter(Boolean).join(" · ");
+  return `
+    ${slider}
+    <h2>${KIND_LABEL[l.classification.listing_kind] || "מודעה"} · ${placeText(l.location)}</h2>
+    <div class="d-price">${priceText(pr)}${priceExtra ? ` <span class="d-sub">(${priceExtra})</span>` : ""}</div>
+    ${specs ? `<div class="d-row">${specs}</div>` : ""}
+    ${amen ? `<div class="tags d-tags">${amen}</div>` : ""}
+    ${avail ? `<div class="d-row d-muted">${avail}</div>` : ""}
+    <div class="d-contact">${contact || '<span class="d-muted">פנייה בתגובות / בפרטי</span>'}</div>
+    ${l.source.raw_text ? `<div class="d-desc">${escapeHtml(l.source.raw_text)}</div>` : ""}
+    <div class="d-foot">
+      ${fbLink(l.source)}
+      ${l.extraction.needs_review ? `<span class="d-review">⚠ דורש בדיקה</span>` : ""}
+    </div>`;
+}
+
+// Link to the exact post when we have its permalink, else to the group.
+function fbLink(src) {
+  if (src.post_url) return `<a href="${src.post_url}" target="_blank" rel="noopener">לפוסט המקורי בפייסבוק ↗</a>`;
+  if (src.source_id) return `<a href="https://www.facebook.com/groups/${src.source_id}" target="_blank" rel="noopener">לקבוצת המקור בפייסבוק ↗</a>`;
+  return "";
+}
+
+function wireSlider(root) {
+  const track = root.querySelector(".slider-track");
+  if (!track) return;
+  const count = root.querySelector(".slider-count");
+  const n = track.children.length;
+  const update = () => { if (count) count.textContent = `${Math.round(track.scrollLeft / track.clientWidth) + 1} / ${n}`; };
+  track.addEventListener("scroll", update, { passive: true });
+  root.querySelector(".slider-next")?.addEventListener("click", () => track.scrollBy({ left: track.clientWidth, behavior: "smooth" }));
+  root.querySelector(".slider-prev")?.addEventListener("click", () => track.scrollBy({ left: -track.clientWidth, behavior: "smooth" }));
+}
+
+function openDetail(l) {
+  const modal = document.getElementById("detail");
+  modal.querySelector(".modal-body").innerHTML = detailHtml(l);
+  modal.querySelector(".modal-card").scrollTop = 0;
+  wireSlider(modal);
+  modal.hidden = false;
+}
+function closeDetail() { document.getElementById("detail").hidden = true; }
 // Open exactly one popup, replacing any previous one.
 function openPopup(lngLat, content) {
   if (activePopup) activePopup.remove();
@@ -153,11 +222,11 @@ function openPopup(lngLat, content) {
 }
 
 function focusListing(l) {
-  if (l.location.lat == null) return;
-  const [dy, dx] = jitter(l.id);
-  const c = [l.location.lng + dx, l.location.lat + dy];
-  map.flyTo({ center: c, zoom: Math.max(map.getZoom(), 14) });
-  openPopup(c, popupHtml(l));
+  if (l.location.lat != null) {
+    const [dy, dx] = jitter(l.id);
+    map.flyTo({ center: [l.location.lng + dx, l.location.lat + dy], zoom: Math.max(map.getZoom(), 14) });
+  }
+  openDetail(l);
 }
 
 // Card list shown when a cluster of nearby dots is clicked.
@@ -387,10 +456,10 @@ async function init() {
       paint: { "circle-radius": 6, "circle-color": "#2563eb", "circle-stroke-color": "#ffffff", "circle-stroke-width": 2 },
     });
 
-    // single dot -> its popup
+    // single dot -> full detail modal
     map.on("click", "unclustered-point", (e) => {
       const l = byId.get(e.features[0].properties.id);
-      if (l) openPopup(e.lngLat, popupHtml(l));
+      if (l) openDetail(l);
     });
     // cluster dot -> list of its listings as cards (getLeaves is synchronous)
     map.on("click", "clusters", (e) => {
@@ -417,6 +486,11 @@ async function init() {
     document.querySelectorAll(".filters input, .filters select").forEach((el) => {
       el.addEventListener("input", apply); el.addEventListener("change", apply);
     });
+
+    // detail modal: close on X, backdrop click, or Esc
+    document.querySelector("#detail .modal-close").addEventListener("click", closeDetail);
+    document.querySelector("#detail .modal-backdrop").addEventListener("click", closeDetail);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDetail(); });
 
     apply();
   });
