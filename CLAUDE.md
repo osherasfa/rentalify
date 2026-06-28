@@ -17,9 +17,12 @@ as pins on an interactive Hebrew map. Self-maintaining.
 
 ## Pipeline
 - **Scraper:** Apify actor `apify/facebook-groups-scraper` (id `2chN8UQcH1CfxLRNE`).
-  Per post it returns `url` (permalink), `time` (ISO date), `facebookId`, `text`,
-  `attachments`, `user`. ⚠️ The early 20-item `apify example input.json` sample was
-  **stripped** of `url`/`time` — the real output has them; trust the real run.
+  Per post it returns `url` (permalink), `time` (ISO date), `id` (the **post** id),
+  `facebookId` (the **group** id — NOT the post!), `text`, `attachments`, `user`.
+  ⚠️ Use `item.id` (or the id inside the permalink) for the post id — never
+  `facebookId`, which collapses every post to the group id. ⚠️ The early 20-item
+  `apify example input.json` sample was **stripped** of `url`/`time` — the real
+  output has them; trust the real run.
 - **AI extraction:** `claude -p` (Claude Code CLI, auto-installed in the workflow),
   Haiku model, subscription auth via `CLAUDE_CODE_OAUTH_TOKEN`. Prompt is
   `extraction-prompt.md`. The instructions are embedded in the prompt (no
@@ -75,8 +78,6 @@ as pins on an interactive Hebrew map. Self-maintaining.
   `https://….r2.cloudflarestorage.com` URL — `lib/r2.js` accepts either form).
 
 ## Gotchas / open items
-- **4 old test listings** in `listings-db.json` predate R2 → expiring Facebook
-  image URLs + null dates. Should be cleared.
 - **GovMap** token is pending approval → search stays town-level until pasted into
   `config.js`. GovMap is browser-only (no server API) so it **can't** geocode the
   pipeline's posts; street-level posts would need a REST geocoder (Google/MapTiler).

@@ -19,10 +19,12 @@
  * The output validates against rental-listings.schema.json (v1.1.0).
  *
  * IMPORTANT about the actor output shape:
- *   The real actor returns items with ONLY { facebookUrl, text, attachments?, user, likesCount, commentsCount }.
- *   There is NO native post id, NO timestamp, and NO per-post URL (facebookUrl is the GROUP url).
- *   So: post identity is a hash of (user.id + text); there is no time-based watermark —
- *   incrementality comes from the actor's onlyPostsNewerThan window + hash dedup.
+ *   Each item has { url, time, id, facebookId, text, attachments?, user, ... }:
+ *     url        = permalink to the post        time       = ISO publish time
+ *     id         = the POST id                  facebookId = the GROUP id (NOT the post!)
+ *   post identity is item.id (or the id in the permalink); we fall back to a
+ *   hash of (user.id + text) only when those are missing. The watermark advances
+ *   from item.time; the onlyPostsNewerThan window + id dedup handle incrementality.
  *
  * Prerequisites:
  *   - Node 18+
@@ -118,15 +120,27 @@ async function fetchPosts(source, onlyNewerThan) {
   return items;
 }
 
+// Pull the numeric post id out of a permalink, e.g.
+//   .../groups/608.../permalink/36811611815151206/  ->  "36811611815151206"
+//   .../groups/608.../posts/36811611815151206       ->  "36811611815151206"
+function postIdFromUrl(url) {
+  if (typeof url !== "string") return null;
+  const m = url.match(/\/(?:permalink|posts)\/(\d+)/);
+  return m ? m[1] : null;
+}
+
 // Map a raw Apify item to the fields we rely on.
-// The actor returns a real post permalink ("url"), publish time ("time") and post
-// id ("facebookId"). We fall back to a text hash for the id if it's ever missing,
+// The actor returns a post permalink ("url"), publish time ("time"), the POST id
+// ("id") and the GROUP id ("facebookId" — NOT the post). post_id therefore comes
+// from item.id / the permalink, never from facebookId (using that collapses every
+// post to the group id). We fall back to a text hash if all of those are missing,
 // so the pipeline still works on partial data.
 function readRaw(item) {
   const text = item.text ?? "";
   const userId = item.user?.id ?? "";
   const post_id = String(
-    item.facebookId ?? item.postId ?? createHash("sha1").update(userId + "|" + text).digest("hex").slice(0, 16)
+    item.id ?? item.postId ?? postIdFromUrl(item.url) ??
+    createHash("sha1").update(userId + "|" + text).digest("hex").slice(0, 16)
   );
 
   const attachments = Array.isArray(item.attachments) ? item.attachments : [];
