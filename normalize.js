@@ -264,6 +264,20 @@ function collectMissing(obj, prefix, acc) {
   }
 }
 
+// The AI sometimes invents an out-of-enum value (e.g. property_type "loft").
+// Clamp every AI-controlled enum to the schema's allowed set so one bad value
+// can't fail validation and discard the whole run. (Schema-locked enums.)
+function clampEnum(value, allowed, fallback) {
+  return allowed.includes(value) ? value : fallback;
+}
+const ENUMS = {
+  listing_kind: ["apartment_rent", "unit_rent", "room_in_shared"],
+  property_type: ["apartment", "unit", "house", "penthouse", "studio", "duplex", "garden_apartment", "room", null],
+  currency: ["ILS", "USD", "EUR"],
+  period: ["month", "week", "day", "night", null],
+  preferred_method: ["phone", "whatsapp", "comment", "dm", null],
+};
+
 function normalize(raw, source, extracted) {
   const id = `${source.platform}:${source.source_id}:${raw.post_id}`;
 
@@ -273,6 +287,12 @@ function normalize(raw, source, extracted) {
   const amenities = { ...DEFAULTS.amenities, ...(extracted.amenities ?? {}) };
   const availability = { ...DEFAULTS.availability, ...(extracted.availability ?? {}) };
   const contact = { ...DEFAULTS.contact, ...(extracted.contact ?? {}) };
+
+  // Keep AI-supplied enums inside the schema's allowed values.
+  property.property_type = clampEnum(property.property_type, ENUMS.property_type, null);
+  price.currency = clampEnum(price.currency, ENUMS.currency, "ILS");
+  price.period = clampEnum(price.period, ENUMS.period, "month");
+  contact.preferred_method = clampEnum(contact.preferred_method, ENUMS.preferred_method, null);
 
   // Geocode from the structured place fields (offline gazetteer).
   const geo = geocode(location.city, location.neighborhood);
@@ -309,7 +329,7 @@ function normalize(raw, source, extracted) {
     },
     classification: {
       is_rental_offer: true,
-      listing_kind: extracted.listing_kind ?? "apartment_rent",
+      listing_kind: clampEnum(extracted.listing_kind, ENUMS.listing_kind, "apartment_rent"),
       confidence: extracted.confidence ?? null,
     },
     location,
@@ -330,7 +350,7 @@ function normalize(raw, source, extracted) {
 async function main() {
   const state = loadState();
   // Manual-run toggles (set as env by the workflow's workflow_dispatch inputs):
-  //   BACKFILL=true     -> ignore the watermark + seen ids, pull the full window
+  //   BACKFILL=true     -> pull the full window (keeps seen ids; re-run to drain failures)
   //   FORCE_SCRAPE=true -> always run the actor, never reuse a recent run
   const forcedBackfill = process.env.BACKFILL === "true";
   const forceScrape = process.env.FORCE_SCRAPE === "true";
@@ -342,15 +362,16 @@ async function main() {
 
   for (const source of SOURCES) {
     const key = `${source.platform}:${source.source_id}`;
-    // A forced backfill behaves like a first run: ignore the saved watermark + seen ids.
-    const prev = (forcedBackfill ? null : state[key]) ?? { last_posted_at: null, seen_post_ids: [] };
+    const prev = state[key] ?? { last_posted_at: null, seen_post_ids: [] };
     const seen = new Set(prev.seen_post_ids);
 
     // Window = everything since the newest post we already have (minus a small
-    // overlap). First time (no watermark): a one-off backfill.
-    const windowFrom = prev.last_posted_at
-      ? isoMinusDays(prev.last_posted_at, OVERLAP_DAYS)
-      : isoMonthsAgo(BACKFILL_MONTHS);
+    // overlap). No watermark yet, or a forced backfill: use the full window.
+    // A forced backfill keeps `seen`, so re-running it only retries posts that
+    // failed extraction last time (e.g. rate-limited) instead of redoing all.
+    const windowFrom = (forcedBackfill || !prev.last_posted_at)
+      ? isoMonthsAgo(BACKFILL_MONTHS)
+      : isoMinusDays(prev.last_posted_at, OVERLAP_DAYS);
     const windowTo = new Date().toISOString();
 
     const items = await fetchPosts(source, windowFrom, forceScrape);
