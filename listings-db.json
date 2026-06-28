@@ -388,6 +388,373 @@
         ],
         "needs_review": false
       }
+    },
+    "facebook_group:608325962573249:36822652247380496": {
+      "id": "facebook_group:608325962573249:36822652247380496",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36822652247380496",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36822652247380496/",
+        "author_name": "Ann Lifland Gecel",
+        "posted_at": "2026-06-28T08:42:07.000Z",
+        "scraped_at": "2026-06-28T18:28:27.489Z",
+        "raw_text": "חדר בדירת שותפות בתל-אביב בצפון הישן, רחוב ז׳בוטינסקי ליד דיזנגוף. שכירות 2,400 ₪ לחודש.\nדרוש/ה שותף/ה שלישי/ת , אחרי צבא ולא מעשן/ת בדירת 3 חדרים (אין סלון). הדירה יפה ומשופצת, עורפית ושקטה. המטבח מצויד לחלוטין, וכולל מכונת כביסה ומייבש. \nבחדר יש מזגן חדש, מיטה זוגית, ארון קיר, שולחן וכסא.\nבנוסף לדמי שכירות, יש הוצאות קבועות ע״ס 290₪ לחודש (ארנונה, מים, גז, ועד הבית, אינטרנט וסלקום tv). חשמל משלמים בנפרד.\nאין להכניס לדירה חיות מחמד.\nכניסה מיידית.\n050-8989690 - אן",
+        "images": [
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822652247380496/0.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822652247380496/1.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822652247380496/2.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822652247380496/3.jpg"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "תל-אביב",
+        "neighborhood": "צפון הישן",
+        "street": "רחוב ז׳בוטינסקי",
+        "raw_location_text": "בתל-אביב בצפון הישן, רחוב ז׳בוטינסקי ליד דיזנגוף",
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "2,400 ₪ לחודש"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "050-8989690",
+        "whatsapp": null,
+        "contact_name": "אן",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36822573190721735": {
+      "id": "facebook_group:608325962573249:36822573190721735",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36822573190721735",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36822573190721735/",
+        "author_name": "אור ייני",
+        "posted_at": "2026-06-28T08:36:16.000Z",
+        "scraped_at": "2026-06-28T18:28:27.489Z",
+        "raw_text": "חדר בדירת 3 שותפים בבית פרטי ברמת החייל. מקלחת ושירותים משותפים עם שותף\\ה. יש ממד, מטבח, פינת ישיבה ומרפסת פתוחה גדולה משותפים. ליד אסותא וההיטק. 2,600 לחודש כולל ארנונה. חשבונות מים וחשמל מתחלקים ל 3. כניסה מה 1\\7\\26. לפרטים נוסיפים רוני 0544780650.",
+        "images": [
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822573190721735/0.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822573190721735/1.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822573190721735/2.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822573190721735/3.jpg"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "רמת החייל",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "רמת החייל, ליד אסותא וההיטק",
+        "lat": 32.115,
+        "lng": 34.843,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2,600 לחודש כולל ארנונה"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0544780650",
+        "whatsapp": null,
+        "contact_name": "רוני",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36822428224069565": {
+      "id": "facebook_group:608325962573249:36822428224069565",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36822428224069565",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36822428224069565/",
+        "author_name": "Meni Biran",
+        "posted_at": "2026-06-28T08:25:45.000Z",
+        "scraped_at": "2026-06-28T18:28:27.489Z",
+        "raw_text": "ללא תיווך! בהרצליה הירוקה ,במלכי יהודה 29 דירת 4 חדרים גדולים. קומה שניה מיתוך 3 עם מעלית. עם מחסן וחניה מקורה . מקלט בבנין ,מזגנים בכל החדרים 2  שרותים -אחד ניפרד ואחד בחדר האמבטיה הכולל מקלחון ואמבטיה +מרפסת שרות  . מרחק הליכה של 10 דק למיכללה ו 10 דק למרכז העיר. כניסה 14.08.26. ארנונה לחודשיים 1300שח וועד בית 250 שח.  . מחיר :7700 שח לחודש. \n\nלהתקשר למני 0547431102",
+        "images": [
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822428224069565/0.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822428224069565/1.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822428224069565/2.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36822428224069565/3.jpg"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": "הרצליה הירוקה",
+        "street": "מלכי יהודה 29",
+        "raw_location_text": "בהרצליה הירוקה ,במלכי יהודה 29",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": null,
+        "floor": 2,
+        "total_floors": 3,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 7700,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "מחיר :7700 שח לחודש. ארנונה לחודשיים 1300שח וועד בית 250 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": true,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": true,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-14",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0547431102",
+        "whatsapp": null,
+        "contact_name": "מני",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "amenities.furnished",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36803771029268618": {
+      "id": "facebook_group:608325962573249:36803771029268618",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36803771029268618",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36803771029268618/",
+        "author_name": "Yuri Paikin",
+        "posted_at": "2026-06-27T11:30:42.000Z",
+        "scraped_at": "2026-06-28T18:28:27.489Z",
+        "raw_text": "חדר מפנק להשכרה בפנטהאוז משופץ בפתח תקווה - כניסה בתחילת אוגוסט!\n\nמחפשים את השותף השלישי והאחרון לדירת החלומות שלנו!\n\n**על הדירה:**\nדירה פנטהאוז משופצת מהיסוד עם 2 קומות וגג מהמם\nמטבח ענק ומאובזר (מקרר, תנור, תמי 4, המון ארונות)\nסלון מפנק עם טלוויזיה, נטפליקס, YES, ערסל ונוף מושלם\nמרפסת בקומה 9 עם פינת ישיבה, פרגולה וגריל פחמים\nגג ענק (60 מ\"ר) עם פינת ישיבה, שולחן סנוקר, ג'קוזי ופטריות חימום\nמנקה מקצועית מגיעה אחת לשבועיים על חשבון בעל הדירה\n\n**על החדר שמתפנה:**\nמיקום: קומה ראשונה\nשירותים ואמבטיה פרטיים\nהחדר כולל טלוויזיה עם YES, ארון בגדים, ושולחן עבודה - עובר לדייר החדש ללא עלות!\nנוף מהמם לשקיעה ישירות מהחדר\n\n**על השותפים:**\nבדירה יש 3 שותפים בלבד (כולל אותך!)\nחברותיים, אחראים, ולא מעשנים\nללא בעלי חיים\n\nללא מעשנים\n\nמחיר: 3,000 ₪ כולל הכל (שכ\"ד + חשבונות)\nחוזה סטנדרטי עם צ'קים לביטחון\n\nלפרטים ותיאום: שלחו הודעת וואטסאפ בלבד למספר: 050-3747744\n\nחדר מושלם במחיר מושלם - אל תפספסו!",
+        "images": [
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36803771029268618/0.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36803771029268618/1.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36803771029268618/2.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/36803771029268618/3.jpg"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "פתח תקווה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "פנטהאוז בפתח תקווה",
+        "lat": 32.08707,
+        "lng": 34.88747,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 1,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "3,000 ₪ כולל הכל (שכ\"ד + חשבונות)"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": true,
+        "renovated": true,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-01",
+        "min_lease_months": null,
+        "is_short_term": false
+      },
+      "contact": {
+        "phone": "050-3747744",
+        "whatsapp": "050-3747744",
+        "contact_name": null,
+        "preferred_method": "whatsapp"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "contact.contact_name"
+        ],
+        "needs_review": false
+      }
     }
   }
 }
