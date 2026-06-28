@@ -38,7 +38,7 @@
 import { ApifyClient } from "apify-client";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { randomUUID, createHash } from "node:crypto";
@@ -60,6 +60,10 @@ const SCHEMA_VERSION = "1.1.0";
 const PROMPT_PATH = join(__dirname, "extraction-prompt.md");
 const STATE_PATH = join(__dirname, "state.json");
 const OUT_DIR = join(__dirname, "out");
+// Durable per-post LLM cache: post_id -> extracted JSON. Written the instant a
+// post is extracted, so a crash/cancellation/rate-limit never loses the work and
+// re-runs never pay to re-extract a post we've already done.
+const CACHE_PATH = join(OUT_DIR, "extract-cache.json");
 
 // Add more groups here over time — the rest of the pipeline is group-agnostic.
 const SOURCES = [
@@ -81,6 +85,19 @@ function loadState() {
 }
 function saveState(state) {
   writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
+}
+
+// ---------- extraction cache ----------
+function loadCache() {
+  if (!existsSync(CACHE_PATH)) return {};
+  try { return JSON.parse(readFileSync(CACHE_PATH, "utf8")); } catch { return {}; }
+}
+// Atomic write (tmp + rename) so a process killed mid-write can't corrupt it.
+function saveCache(cache) {
+  if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
+  const tmp = `${CACHE_PATH}.tmp`;
+  writeFileSync(tmp, JSON.stringify(cache));
+  renameSync(tmp, CACHE_PATH);
 }
 function isoMonthsAgo(n) {
   const d = new Date();
@@ -357,6 +374,10 @@ async function main() {
   const extractLimit = Number(process.env.EXTRACT_LIMIT) || 0; // 0 = no cap
   const isBackfill = forcedBackfill || Object.keys(state).length === 0;
 
+  // Durable LLM cache: already-extracted posts are reused for free (no claude -p).
+  const cache = loadCache();
+  console.log(`extraction cache: ${Object.keys(cache).length} post(s) already extracted`);
+
   const listings = [];
   const sourceStats = [];
   const totals = { posts_fetched: 0, rental_posts_kept: 0, non_rental_filtered_out: 0, duplicates_skipped: 0 };
@@ -402,15 +423,23 @@ async function main() {
       console.log(`  EXTRACT_LIMIT=${extractLimit}: extracting ${batch.length}, deferring ${deferred.length} to next run`);
     }
 
-    // Extract in parallel (bounded).
+    // Extract in parallel (bounded). Cache hits are reused for free; every fresh
+    // extraction is written to the durable cache the instant it succeeds, so a
+    // crash/cancellation mid-run never loses it and a re-run never re-pays.
+    let cached = 0;
     const extractedAll = await mapLimit(batch, CONCURRENCY, async (raw) => {
+      if (cache[raw.post_id]) { cached++; return cache[raw.post_id]; }
       try {
-        return await extract(raw);
+        const result = await extract(raw);
+        cache[raw.post_id] = result;
+        saveCache(cache);
+        return result;
       } catch (e) {
         console.error(`extract failed for ${raw.post_id}:`, e.message);
         return null;
       }
     });
+    if (cached) console.log(`  reused ${cached} cached extraction(s) — no LLM call`);
 
     let kept = 0;
     batch.forEach((raw, idx) => {

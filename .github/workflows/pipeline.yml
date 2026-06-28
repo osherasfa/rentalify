@@ -63,13 +63,28 @@ jobs:
           node publish.mjs
           node validate.mjs web/public/listings.json
 
-      - name: Commit results
+      # Persist the expensive LLM extraction cache no matter what — even if the
+      # step above failed (e.g. validation) or the run was cancelled (e.g. out of
+      # tokens). This is what makes extraction progress unloseable.
+      - name: Save LLM progress (always)
+        if: always()
         run: |
           git config user.name "rentalify-bot"
           git config user.email "actions@github.com"
-          git add out state.json listings-db.json web/public/listings.json
+          git add out state.json
           if git diff --cached --quiet; then
-            echo "no changes to commit"
+            echo "no progress to save"
+          else
+            git commit -m "wip: save extraction progress ($(date -u +%F))"
+            git push
+          fi
+
+      # Only publish validated data to the site (gated on the step above passing).
+      - name: Commit published data
+        run: |
+          git add listings-db.json web/public/listings.json
+          if git diff --cached --quiet; then
+            echo "no published changes"
           else
             git commit -m "data: refresh listings ($(date -u +%F))"
             git push
