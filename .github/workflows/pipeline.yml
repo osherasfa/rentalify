@@ -16,6 +16,10 @@ on:
         description: "Force a fresh Apify scrape (don't reuse a recent run)"
         type: boolean
         default: false
+      extract_limit:
+        description: "Max posts to extract this run (0 = no cap; use a small number to pace a token-limited backfill)"
+        type: string
+        default: "0"
 
 concurrency:
   group: rentalify-pipeline
@@ -53,6 +57,7 @@ jobs:
           # Manual-run toggles (empty/false on scheduled runs).
           BACKFILL: ${{ inputs.backfill }}
           FORCE_SCRAPE: ${{ inputs.force_scrape }}
+          EXTRACT_LIMIT: ${{ inputs.extract_limit }}
         run: |
           node normalize.js
           node publish.mjs

@@ -354,6 +354,7 @@ async function main() {
   //   FORCE_SCRAPE=true -> always run the actor, never reuse a recent run
   const forcedBackfill = process.env.BACKFILL === "true";
   const forceScrape = process.env.FORCE_SCRAPE === "true";
+  const extractLimit = Number(process.env.EXTRACT_LIMIT) || 0; // 0 = no cap
   const isBackfill = forcedBackfill || Object.keys(state).length === 0;
 
   const listings = [];
@@ -389,8 +390,20 @@ async function main() {
       candidates.push(raw);
     }
 
+    // Optional per-run cap: extract at most N posts (paces a token-limited
+    // backfill). The rest stay un-seen and are picked up on the next run.
+    const batch = extractLimit > 0 ? candidates.slice(0, extractLimit) : candidates;
+    const deferred = candidates.slice(batch.length);
+    if (deferred.length) {
+      // Don't let the watermark advance past posts we deferred, or a future
+      // incremental run would skip them. Pull it back to the oldest deferred date.
+      const oldest = deferred.map((r) => r.posted_at).filter(Boolean).sort()[0];
+      if (oldest && (!maxPosted || oldest < maxPosted)) maxPosted = oldest;
+      console.log(`  EXTRACT_LIMIT=${extractLimit}: extracting ${batch.length}, deferring ${deferred.length} to next run`);
+    }
+
     // Extract in parallel (bounded).
-    const extractedAll = await mapLimit(candidates, CONCURRENCY, async (raw) => {
+    const extractedAll = await mapLimit(batch, CONCURRENCY, async (raw) => {
       try {
         return await extract(raw);
       } catch (e) {
@@ -400,7 +413,7 @@ async function main() {
     });
 
     let kept = 0;
-    candidates.forEach((raw, idx) => {
+    batch.forEach((raw, idx) => {
       const extracted = extractedAll[idx];
       if (!extracted) { failed++; return; }        // error -> leave UN-seen so it retries next run
       seen.add(raw.post_id);                        // definitively handled this post
