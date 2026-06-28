@@ -1,27 +1,27 @@
 {
   "run_metadata": {
-    "run_id": "82e6f4cc-754d-4f4b-9ec6-5738afc8c75b",
+    "run_id": "2b42624d-4952-45b4-a82f-c2a4dda42bbc",
     "schema_version": "1.1.0",
-    "run_started_at": "2026-06-27T22:10:14.751Z",
-    "run_finished_at": "2026-06-27T22:10:14.751Z",
-    "is_initial_backfill": true,
+    "run_started_at": "2026-06-28T07:04:17.256Z",
+    "run_finished_at": "2026-06-28T07:04:17.256Z",
+    "is_initial_backfill": false,
     "sources": [
       {
         "platform": "facebook_group",
         "source_id": "608325962573249",
         "source_url": "https://www.facebook.com/groups/608325962573249",
-        "window_from": "2026-03-27T22:08:15.454Z",
-        "window_to": "2026-06-27T22:08:15.454Z",
+        "window_from": "2026-06-21T07:03:25.772Z",
+        "window_to": "2026-06-28T07:03:25.773Z",
         "watermark_used": null,
-        "posts_fetched": 5,
-        "rental_posts_kept": 4,
+        "posts_fetched": 2,
+        "rental_posts_kept": 1,
         "non_rental_filtered_out": 1,
         "duplicates_skipped": 0
       }
     ],
     "totals": {
-      "posts_fetched": 5,
-      "rental_posts_kept": 4,
+      "posts_fetched": 2,
+      "rental_posts_kept": 1,
       "non_rental_filtered_out": 1,
       "duplicates_skipped": 0
     }
@@ -404,6 +404,103 @@
           "amenities.elevator",
           "amenities.parking",
           "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    {
+      "id": "facebook_group:608325962573249:608325962573249",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "608325962573249",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36811611815151206/",
+        "author_name": "Liry Minsky",
+        "posted_at": "2026-06-27T19:05:45.000Z",
+        "scraped_at": "2026-06-28T07:04:17.256Z",
+        "raw_text": "חדר בדירת 2 שותפים במרכז הוד השרון.\n📍מרחק הליכה מהרכבת\n📍קרוב לסופרים בתי קפה וברי יין\n\n✅ממד בדירה\n✅סלון גדול ומרווח מאוד\n✅מרפסת חמודה\n✅מרפסת שירות למכונה ומייבש כביסה\n✅חנייה בשפע מול הבניין\n\n✳️ בדירה יש בעלי חיים🦋\n💵2900₪ ללא חשמל ומים",
+        "images": [
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/608325962573249/0.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/608325962573249/1.jpg",
+          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/608325962573249/2.jpg"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הוד השרון",
+        "neighborhood": "מרכז",
+        "street": null,
+        "raw_location_text": "מרכז הוד השרון",
+        "lat": 29.55406,
+        "lng": 34.95178,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2900,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2900₪ ללא חשמל ומים"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.elevator",
           "amenities.safe_room_mamad",
           "amenities.storage",
           "amenities.renovated",
