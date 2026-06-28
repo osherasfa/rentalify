@@ -6,7 +6,16 @@ on:
   schedule:
     # Sun / Tue / Thu at 03:00 UTC
     - cron: "0 3 * * 0,2,4"
-  workflow_dispatch: {} # allow manual runs from the Actions tab
+  workflow_dispatch: # allow manual runs from the Actions tab
+    inputs:
+      backfill:
+        description: "Ignore the watermark and pull the full BACKFILL_MONTHS window"
+        type: boolean
+        default: false
+      force_scrape:
+        description: "Force a fresh Apify scrape (don't reuse a recent run)"
+        type: boolean
+        default: false
 
 concurrency:
   group: rentalify-pipeline
@@ -23,7 +32,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Install pipeline deps
         run: npm ci || npm install
@@ -41,6 +50,9 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          # Manual-run toggles (empty/false on scheduled runs).
+          BACKFILL: ${{ inputs.backfill }}
+          FORCE_SCRAPE: ${{ inputs.force_scrape }}
         run: |
           node normalize.js
           node publish.mjs

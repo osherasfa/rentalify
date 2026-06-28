@@ -135,10 +135,10 @@ async function findReusableRun(source, onlyNewerThanDay) {
   return null;
 }
 
-async function fetchPosts(source, onlyNewerThan) {
+async function fetchPosts(source, onlyNewerThan, forceScrape = false) {
   const onlyNewerThanDay = onlyNewerThan.slice(0, 10); // actor expects YYYY-MM-DD
 
-  const reuse = await findReusableRun(source, onlyNewerThanDay);
+  const reuse = forceScrape ? null : await findReusableRun(source, onlyNewerThanDay);
   let datasetId;
   if (reuse) {
     console.log(`reusing recent actor run ${reuse.id} (finished ${reuse.finishedAt}) — no new scrape`);
@@ -329,7 +329,12 @@ function normalize(raw, source, extracted) {
 // ---------- main ----------
 async function main() {
   const state = loadState();
-  const isBackfill = Object.keys(state).length === 0;
+  // Manual-run toggles (set as env by the workflow's workflow_dispatch inputs):
+  //   BACKFILL=true     -> ignore the watermark + seen ids, pull the full window
+  //   FORCE_SCRAPE=true -> always run the actor, never reuse a recent run
+  const forcedBackfill = process.env.BACKFILL === "true";
+  const forceScrape = process.env.FORCE_SCRAPE === "true";
+  const isBackfill = forcedBackfill || Object.keys(state).length === 0;
 
   const listings = [];
   const sourceStats = [];
@@ -337,7 +342,8 @@ async function main() {
 
   for (const source of SOURCES) {
     const key = `${source.platform}:${source.source_id}`;
-    const prev = state[key] ?? { last_posted_at: null, seen_post_ids: [] };
+    // A forced backfill behaves like a first run: ignore the saved watermark + seen ids.
+    const prev = (forcedBackfill ? null : state[key]) ?? { last_posted_at: null, seen_post_ids: [] };
     const seen = new Set(prev.seen_post_ids);
 
     // Window = everything since the newest post we already have (minus a small
@@ -347,7 +353,7 @@ async function main() {
       : isoMonthsAgo(BACKFILL_MONTHS);
     const windowTo = new Date().toISOString();
 
-    const items = await fetchPosts(source, windowFrom);
+    const items = await fetchPosts(source, windowFrom, forceScrape);
 
     // Pre-filter cheaply BEFORE any LLM spend: parse raw, advance the watermark
     // from every fetched post's date, drop empty / non-Hebrew / already-seen.
