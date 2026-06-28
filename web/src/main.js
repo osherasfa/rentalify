@@ -141,16 +141,7 @@ function cardHtml(l) {
 function detailHtml(l) {
   const p = l.property, pr = l.price, av = l.availability, ct = l.contact;
   const imgs = Array.isArray(l.source.images) ? l.source.images : [];
-  const slider = imgs.length ? `
-    <div class="slider">
-      <div class="slider-track">
-        ${imgs.map((u) => `<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add('img-broken')" />`).join("")}
-      </div>
-      ${imgs.length > 1 ? `
-        <button class="slider-btn slider-prev" aria-label="הקודם">‹</button>
-        <button class="slider-btn slider-next" aria-label="הבא">›</button>
-        <div class="slider-count">1 / ${imgs.length}</div>` : ""}
-    </div>` : "";
+  const slider = sliderHtml(imgs);
   const amen = amenityTags(l.amenities).map((t) => `<span class="tag">${t}</span>`).join("");
   const specs = [
     roomsText(p),
@@ -194,25 +185,87 @@ function fbLink(src) {
   return "";
 }
 
-function wireSlider(root) {
-  const track = root.querySelector(".slider-track");
-  if (!track) return;
-  const count = root.querySelector(".slider-count");
+// Image slider markup. `large` = the zoomed lightbox variant.
+function sliderHtml(imgs, { large = false } = {}) {
+  if (!imgs.length) return "";
+  const slides = imgs
+    .map((u, i) => `<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" data-i="${i}" onerror="this.classList.add('img-broken')" />`)
+    .join("");
+  const controls = imgs.length > 1 ? `
+      <button class="slider-btn slider-prev" type="button" aria-label="הקודם">›</button>
+      <button class="slider-btn slider-next" type="button" aria-label="הבא">‹</button>
+      <div class="slider-count">1 / ${imgs.length}</div>` : "";
+  return `<div class="slider${large ? " slider-large" : ""}">
+      <div class="slider-track">${slides}</div>${controls}
+    </div>`;
+}
+
+// Index-based RTL slider: wraps in both directions, buttons + swipe + tap-to-zoom.
+// onZoom(i) fires on a tap (not a drag). Returns a controller { show, index }.
+function wireSlider(root, { onZoom } = {}) {
+  const slider = root.querySelector(".slider");
+  if (!slider) return null;
+  const track = slider.querySelector(".slider-track");
   const n = track.children.length;
-  const update = () => { if (count) count.textContent = `${Math.round(track.scrollLeft / track.clientWidth) + 1} / ${n}`; };
-  track.addEventListener("scroll", update, { passive: true });
-  root.querySelector(".slider-next")?.addEventListener("click", () => track.scrollBy({ left: track.clientWidth, behavior: "smooth" }));
-  root.querySelector(".slider-prev")?.addEventListener("click", () => track.scrollBy({ left: -track.clientWidth, behavior: "smooth" }));
+  const count = slider.querySelector(".slider-count");
+  let idx = 0;
+  const show = (i) => {
+    idx = (i % n + n) % n;                              // wrap both ways
+    track.style.transform = `translateX(${idx * -100}%)`;
+    if (count) count.textContent = `${idx + 1} / ${n}`;
+  };
+  slider.querySelector(".slider-next")?.addEventListener("click", () => show(idx + 1));
+  slider.querySelector(".slider-prev")?.addEventListener("click", () => show(idx - 1));
+
+  // drag / swipe — and tell a tap apart from a drag so a tap can zoom
+  let startX = null, moved = false;
+  track.addEventListener("pointerdown", (e) => { startX = e.clientX; moved = false; });
+  track.addEventListener("pointermove", (e) => { if (startX != null && Math.abs(e.clientX - startX) > 8) moved = true; });
+  track.addEventListener("pointerup", (e) => {
+    if (startX == null) return;
+    const dx = e.clientX - startX; startX = null;
+    if (Math.abs(dx) > 40) show(idx + (dx > 0 ? -1 : 1));   // drag right→prev, left→next
+  });
+  track.addEventListener("click", (e) => {
+    if (!moved && onZoom && e.target.closest("img")) onZoom(idx);
+  });
+
+  show(0);
+  return { show, get index() { return idx; } };
 }
 
 function openDetail(l) {
   const modal = document.getElementById("detail");
   modal.querySelector(".modal-body").innerHTML = detailHtml(l);
   modal.querySelector(".modal-card").scrollTop = 0;
-  wireSlider(modal);
+  const imgs = Array.isArray(l.source.images) ? l.source.images : [];
+  wireSlider(modal, { onZoom: (i) => openLightbox(imgs, i) });
   modal.hidden = false;
 }
 function closeDetail() { document.getElementById("detail").hidden = true; }
+
+// Full-screen image viewer with the same sliding, opened by tapping a photo.
+let lightboxKeyHandler = null;
+function openLightbox(imgs, startIdx = 0) {
+  if (!imgs.length) return;
+  const lb = document.getElementById("lightbox");
+  lb.querySelector(".lightbox-body").innerHTML = sliderHtml(imgs, { large: true });
+  const ctrl = wireSlider(lb);
+  ctrl?.show(startIdx);
+  lb.hidden = false;
+  lightboxKeyHandler = (e) => {
+    if (e.key === "Escape") closeLightbox();
+    else if (e.key === "ArrowLeft") ctrl?.show(ctrl.index + 1);
+    else if (e.key === "ArrowRight") ctrl?.show(ctrl.index - 1);
+  };
+  document.addEventListener("keydown", lightboxKeyHandler);
+}
+function closeLightbox() {
+  const lb = document.getElementById("lightbox");
+  lb.hidden = true;
+  lb.querySelector(".lightbox-body").innerHTML = "";
+  if (lightboxKeyHandler) { document.removeEventListener("keydown", lightboxKeyHandler); lightboxKeyHandler = null; }
+}
 // Open exactly one popup, replacing any previous one.
 function openPopup(lngLat, content) {
   if (activePopup) activePopup.remove();
@@ -487,10 +540,16 @@ async function init() {
       el.addEventListener("input", apply); el.addEventListener("change", apply);
     });
 
-    // detail modal: close on X, backdrop click, or Esc
+    // detail modal: close on X, backdrop click, or Esc (only when no lightbox is open)
     document.querySelector("#detail .modal-close").addEventListener("click", closeDetail);
     document.querySelector("#detail .modal-backdrop").addEventListener("click", closeDetail);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDetail(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.getElementById("lightbox").hidden) closeDetail();
+    });
+
+    // image lightbox: close on X or backdrop click (Esc handled while open)
+    document.querySelector("#lightbox .lightbox-close").addEventListener("click", closeLightbox);
+    document.querySelector("#lightbox .lightbox-backdrop").addEventListener("click", closeLightbox);
 
     apply();
   });
