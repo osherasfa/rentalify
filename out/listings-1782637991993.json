@@ -1,0 +1,30 @@
+{
+  "run_metadata": {
+    "run_id": "ef3c0c11-c86f-4b33-b3fc-dd3046d56845",
+    "schema_version": "1.1.0",
+    "run_started_at": "2026-06-28T09:13:11.993Z",
+    "run_finished_at": "2026-06-28T09:13:11.993Z",
+    "is_initial_backfill": false,
+    "sources": [
+      {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "source_url": "https://www.facebook.com/groups/608325962573249",
+        "window_from": "2026-06-25T19:05:45.000Z",
+        "window_to": "2026-06-28T09:13:11.633Z",
+        "watermark_used": "2026-06-27T19:05:45.000Z",
+        "posts_fetched": 2,
+        "rental_posts_kept": 0,
+        "non_rental_filtered_out": 1,
+        "duplicates_skipped": 1
+      }
+    ],
+    "totals": {
+      "posts_fetched": 2,
+      "rental_posts_kept": 0,
+      "non_rental_filtered_out": 1,
+      "duplicates_skipped": 1
+    }
+  },
+  "listings": []
+}
