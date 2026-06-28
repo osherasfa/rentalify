@@ -108,16 +108,55 @@ async function mapLimit(items, limit, fn) {
 }
 
 // ---------- Apify ----------
+const REUSE_MAX_AGE_HOURS = 12; // reuse a recent run's dataset instead of paying to re-scrape
+
+// Apify's .call() ALWAYS starts a new (pay-per-post) scrape, but every run's
+// dataset is retained on the platform. So before scraping we look for a recent
+// SUCCEEDED run of this actor, for the same group, whose window already reaches
+// at least as far back as ours — and reuse its dataset for free if we find one.
+async function findReusableRun(source, onlyNewerThanDay) {
+  try {
+    const { items: runs } = await apify.actor(ACTOR_ID).runs().list({ desc: true, limit: 10 });
+    const minFinished = Date.now() - REUSE_MAX_AGE_HOURS * 3600_000;
+    for (const r of runs) {
+      if (r.status !== "SUCCEEDED" || !r.defaultDatasetId) continue;
+      if (new Date(r.finishedAt).getTime() < minFinished) continue;
+      const rec = await apify.keyValueStore(r.defaultKeyValueStoreId).getRecord("INPUT");
+      const inp = rec?.value;
+      if (!inp) continue;
+      const sameGroup = (inp.startUrls?.[0]?.url ?? "") === source.source_url;
+      // string compare on YYYY-MM-DD: its window must start on/before ours
+      const coversWindow = typeof inp.onlyPostsNewerThan === "string" && inp.onlyPostsNewerThan <= onlyNewerThanDay;
+      if (sameGroup && coversWindow) return r;
+    }
+  } catch (e) {
+    console.warn(`reuse check failed (${e.message}) — will run the actor`);
+  }
+  return null;
+}
+
 async function fetchPosts(source, onlyNewerThan) {
-  const input = {
-    startUrls: [{ url: source.source_url }],
-    resultsLimit: source.resultsLimit ?? 100,
-    viewOption: "CHRONOLOGICAL",
-    onlyPostsNewerThan: onlyNewerThan.slice(0, 10), // actor expects YYYY-MM-DD
-  };
-  const run = await apify.actor(ACTOR_ID).call(input);
-  const { items } = await apify.dataset(run.defaultDatasetId).listItems();
-  return items;
+  const onlyNewerThanDay = onlyNewerThan.slice(0, 10); // actor expects YYYY-MM-DD
+
+  const reuse = await findReusableRun(source, onlyNewerThanDay);
+  let datasetId;
+  if (reuse) {
+    console.log(`reusing recent actor run ${reuse.id} (finished ${reuse.finishedAt}) — no new scrape`);
+    datasetId = reuse.defaultDatasetId;
+  } else {
+    const run = await apify.actor(ACTOR_ID).call({
+      startUrls: [{ url: source.source_url }],
+      resultsLimit: source.resultsLimit ?? 100,
+      viewOption: "CHRONOLOGICAL",
+      onlyPostsNewerThan: onlyNewerThanDay,
+    });
+    datasetId = run.defaultDatasetId;
+  }
+
+  const { items } = await apify.dataset(datasetId).listItems();
+  // A reused run may have a wider window than we need — trim to ours so we don't
+  // re-extract older posts. Keep items with no timestamp (can't place them).
+  return reuse ? items.filter((it) => !it.time || it.time >= onlyNewerThan) : items;
 }
 
 // Pull the numeric post id out of a permalink, e.g.
