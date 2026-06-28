@@ -192,8 +192,8 @@ function sliderHtml(imgs, { large = false } = {}) {
     .map((u, i) => `<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" data-i="${i}" onerror="this.classList.add('img-broken')" />`)
     .join("");
   const controls = imgs.length > 1 ? `
-      <button class="slider-btn slider-prev" type="button" aria-label="הקודם">›</button>
-      <button class="slider-btn slider-next" type="button" aria-label="הבא">‹</button>
+      <button class="slider-btn slider-prev" type="button" aria-label="הקודם">‹</button>
+      <button class="slider-btn slider-next" type="button" aria-label="הבא">›</button>
       <div class="slider-count">1 / ${imgs.length}</div>` : "";
   return `<div class="slider${large ? " slider-large" : ""}">
       <div class="slider-track">${slides}</div>${controls}

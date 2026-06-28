@@ -221,8 +221,8 @@ legend { font-size: 11px; font-weight: 600; color: var(--muted-2); padding: 0 6p
   justify-content: center; box-shadow: var(--shadow);
 }
 .slider-btn:hover { background: #fff; }
-.slider-prev { right: 10px; }
-.slider-next { left: 10px; }
+.slider-next { right: 10px; }
+.slider-prev { left: 10px; }
 .slider-count {
   position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); direction: ltr;
   background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 12px; padding: 2px 10px; border-radius: 10px;
