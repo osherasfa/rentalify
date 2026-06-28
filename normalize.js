@@ -287,6 +287,17 @@ function collectMissing(obj, prefix, acc) {
 function clampEnum(value, allowed, fallback) {
   return allowed.includes(value) ? value : fallback;
 }
+// Coerce an AI-supplied numeric field to a finite number, else null. Handles
+// strings ("12", "12 חודשים") and rejects NaN/Infinity so a bad value can't
+// fail validation. `min`/`max` clamp into the schema's allowed range.
+function clampNum(value, { int = false, min = null, max = null } = {}) {
+  let n = typeof value === "number" ? value : parseFloat(value);
+  if (!Number.isFinite(n)) return null;
+  if (int) n = Math.round(n);
+  if (min != null && n < min) n = min;
+  if (max != null && n > max) n = max;
+  return n;
+}
 const ENUMS = {
   listing_kind: ["apartment_rent", "unit_rent", "room_in_shared"],
   property_type: ["apartment", "unit", "house", "penthouse", "studio", "duplex", "garden_apartment", "room", null],
@@ -310,6 +321,15 @@ function normalize(raw, source, extracted) {
   price.currency = clampEnum(price.currency, ENUMS.currency, "ILS");
   price.period = clampEnum(price.period, ENUMS.period, "month");
   contact.preferred_method = clampEnum(contact.preferred_method, ENUMS.preferred_method, null);
+
+  // Coerce AI-supplied numerics to the schema's types/ranges (strings, floats
+  // where an integer is required, NaN, etc. would otherwise fail validation).
+  property.rooms = clampNum(property.rooms, { min: 0 });
+  property.size_sqm = clampNum(property.size_sqm, { min: 0 });
+  property.floor = clampNum(property.floor, { int: true });
+  property.total_floors = clampNum(property.total_floors, { int: true, min: 0 });
+  price.amount = clampNum(price.amount, { min: 0 });
+  availability.min_lease_months = clampNum(availability.min_lease_months, { int: true, min: 0 });
 
   // Geocode from the structured place fields (offline gazetteer).
   const geo = geocode(location.city, location.neighborhood);
@@ -347,7 +367,7 @@ function normalize(raw, source, extracted) {
     classification: {
       is_rental_offer: true,
       listing_kind: clampEnum(extracted.listing_kind, ENUMS.listing_kind, "apartment_rent"),
-      confidence: extracted.confidence ?? null,
+      confidence: clampNum(extracted.confidence, { min: 0, max: 1 }),
     },
     location,
     property,
