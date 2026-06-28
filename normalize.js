@@ -49,8 +49,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // ---------- config ----------
 const ACTOR_ID = "2chN8UQcH1CfxLRNE";
 const MODEL = "haiku";          // CLI alias; cheap + good enough for per-post extraction
-const BACKFILL_MONTHS = 3;      // first run window
-const LOOKBACK_DAYS = 7;        // routine-run window (re-scraped each time; dedup cleans overlap)
+const BACKFILL_MONTHS = 3;      // window used only the very first time (no watermark yet)
+const OVERLAP_DAYS = 2;         // small re-fetch overlap before the watermark so border posts aren't missed
 const CONCURRENCY = 4;          // parallel `claude -p` processes
 const SCHEMA_VERSION = "1.1.0";
 
@@ -65,7 +65,7 @@ const SOURCES = [
     platform: "facebook_group",
     source_id: "608325962573249",
     source_url: "https://www.facebook.com/groups/608325962573249",
-    resultsLimit: 5, // TEST RUN — tiny on purpose. Bump back up (e.g. 1000) after the first run works.
+    resultsLimit: 120, // cap per run — generous for a few days of incremental posts
   },
 ];
 
@@ -85,8 +85,8 @@ function isoMonthsAgo(n) {
   d.setMonth(d.getMonth() - n);
   return d.toISOString();
 }
-function isoDaysAgo(n) {
-  const d = new Date();
+function isoMinusDays(iso, n) {
+  const d = new Date(iso);
   d.setDate(d.getDate() - n);
   return d.toISOString();
 }
@@ -268,22 +268,28 @@ async function main() {
 
   for (const source of SOURCES) {
     const key = `${source.platform}:${source.source_id}`;
-    const prev = state[key] ?? { seen_post_ids: [] };
+    const prev = state[key] ?? { last_posted_at: null, seen_post_ids: [] };
     const seen = new Set(prev.seen_post_ids);
 
-    const windowFrom = isBackfill ? isoMonthsAgo(BACKFILL_MONTHS) : isoDaysAgo(LOOKBACK_DAYS);
+    // Window = everything since the newest post we already have (minus a small
+    // overlap). First time (no watermark): a one-off backfill.
+    const windowFrom = prev.last_posted_at
+      ? isoMinusDays(prev.last_posted_at, OVERLAP_DAYS)
+      : isoMonthsAgo(BACKFILL_MONTHS);
     const windowTo = new Date().toISOString();
 
     const items = await fetchPosts(source, windowFrom);
 
-    // Pre-filter cheaply BEFORE any LLM spend: parse raw, drop empty / non-Hebrew / seen.
-    let dropped = 0, dups = 0;
+    // Pre-filter cheaply BEFORE any LLM spend: parse raw, advance the watermark
+    // from every fetched post's date, drop empty / non-Hebrew / already-seen.
+    let dropped = 0, dups = 0, failed = 0;
+    let maxPosted = prev.last_posted_at;
     const candidates = [];
     for (const item of items) {
       const raw = readRaw(item);
+      if (raw.posted_at && (!maxPosted || raw.posted_at > maxPosted)) maxPosted = raw.posted_at;
       if (!raw.text || !hasHebrew(raw.text)) { dropped++; continue; }
       if (seen.has(raw.post_id)) { dups++; continue; }
-      seen.add(raw.post_id); // mark seen now so we never re-spend on it, kept or not
       candidates.push(raw);
     }
 
@@ -300,20 +306,22 @@ async function main() {
     let kept = 0;
     candidates.forEach((raw, idx) => {
       const extracted = extractedAll[idx];
-      if (!extracted) { dropped++; return; }       // extraction error -> treat as filtered
+      if (!extracted) { failed++; return; }        // error -> leave UN-seen so it retries next run
+      seen.add(raw.post_id);                        // definitively handled this post
       if (extracted.is_rental_offer !== true) { dropped++; return; }
       listings.push(normalize(raw, source, extracted));
       kept++;
     });
+    if (failed) console.warn(`  ${failed} post(s) failed extraction — will retry next run`);
 
-    state[key] = { seen_post_ids: [...seen] };
+    state[key] = { last_posted_at: maxPosted, seen_post_ids: [...seen] };
     sourceStats.push({
       platform: source.platform,
       source_id: source.source_id,
       source_url: source.source_url ?? null,
       window_from: windowFrom,
       window_to: windowTo,
-      watermark_used: null,
+      watermark_used: prev.last_posted_at,
       posts_fetched: items.length,
       rental_posts_kept: kept,
       non_rental_filtered_out: dropped,

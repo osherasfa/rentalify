@@ -35,22 +35,24 @@ That's why a static host (Pages) is enough for it.
 | `state.json` | Created on first run. Holds `seen_post_ids` per source (the dedup set). Delete it to force a full backfill. |
 | `out/` | One timestamped output file per run, plus `unmatched-*.json` listing place names that didn't geocode (so you can extend the gazetteer). |
 
-## ⚠️ Important: the real actor output has no id / timestamp / post URL
+## How the scrape + incremental logic works
 
-The Apify actor returns items with **only** `{ facebookUrl, text, attachments?, user, likesCount, commentsCount }`.
-There is **no** native post id, **no** timestamp, and `facebookUrl` is the **group**
-URL (not the post). Consequences, already handled in `normalize.js`:
+The actor returns per post: `url` (the post permalink), `time` (publish date),
+`facebookId` (post id), `text`, `attachments`, `user`. (The 20-item sample bundled
+early on was stripped of `url`/`time` — the real output has them.) Handled in
+`normalize.js`:
 
-- **Identity** = `sha1(user.id + text)` (a stable hash), since there's no post id.
-- **No time-based watermark.** Incrementality comes from the actor's server-side
-  `onlyPostsNewerThan` window + hash dedup (`seen_post_ids`). The first run uses a
-  3-month window; later runs use a 7-day window.
-- **Images** come from `attachments[].image.uri`; `attachments[].ocrText` (text
-  burned into images) is appended to the LLM input.
+- **Identity** = `facebookId` (falls back to a `sha1(user.id + text)` hash).
+- **Watermark incremental.** State stores `last_posted_at` per source. Each run
+  fetches `onlyPostsNewerThan = last_posted_at − 2 days` (a small overlap so border
+  posts aren't missed; `seen_post_ids` dedups it). The **first** run (no watermark)
+  does a one-off `BACKFILL_MONTHS` window. So a run picks up exactly what's new
+  since the previous run — not a fixed lookback.
+- **Failed extractions are left un-seen** so they retry next run (resilient to a
+  transient rate-limit).
+- **Images** come from `attachments[].image.uri`; `attachments[].ocrText` is
+  appended to the LLM input.
 - **Non-Hebrew posts are dropped** before any LLM spend (`lib/text.js`).
-
-If a fresh live run surfaces fields not in the sample (e.g. timestamps on some
-posts), update `readRaw()` in `normalize.js`.
 
 ## How extraction is billed
 
