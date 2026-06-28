@@ -125,109 +125,11 @@
       }
     },
     {
-      "id": "facebook_group:608325962573249:UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==",
+      "id": "facebook_group:608325962573249:36804259795886408",
       "source": {
         "platform": "facebook_group",
         "source_id": "608325962573249",
-        "post_id": "UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==",
-        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36811611815151206/",
-        "author_name": "Liry Minsky",
-        "posted_at": "2026-06-27T19:05:45.000Z",
-        "scraped_at": "2026-06-28T08:51:21.979Z",
-        "raw_text": "חדר בדירת 2 שותפים במרכז הוד השרון.\n📍מרחק הליכה מהרכבת\n📍קרוב לסופרים בתי קפה וברי יין\n\n✅ממד בדירה\n✅סלון גדול ומרווח מאוד\n✅מרפסת חמודה\n✅מרפסת שירות למכונה ומייבש כביסה\n✅חנייה בשפע מול הבניין\n\n✳️ בדירה יש בעלי חיים🦋\n💵2900₪ ללא חשמל ומים",
-        "images": [
-          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==/0.jpg",
-          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==/1.jpg",
-          "https://pub-6f3616047fef4f4887070a43494479e4.r2.dev/UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==/2.jpg"
-        ]
-      },
-      "classification": {
-        "is_rental_offer": true,
-        "listing_kind": "room_in_shared",
-        "confidence": 0.85
-      },
-      "location": {
-        "city": "הוד השרון",
-        "neighborhood": null,
-        "street": null,
-        "raw_location_text": "במרכז הוד השרון",
-        "lat": 32.15934,
-        "lng": 34.8932,
-        "geocode_source": "city"
-      },
-      "property": {
-        "rooms": 1,
-        "size_sqm": null,
-        "floor": null,
-        "total_floors": null,
-        "property_type": null
-      },
-      "price": {
-        "amount": 2900,
-        "currency": "ILS",
-        "period": "month",
-        "includes_arnona": null,
-        "includes_vaad_bait": null,
-        "raw_price_text": "2900₪ ללא חשמל ומים"
-      },
-      "amenities": {
-        "furnished": null,
-        "air_conditioning": null,
-        "elevator": null,
-        "parking": true,
-        "balcony": true,
-        "safe_room_mamad": true,
-        "storage": null,
-        "renovated": null,
-        "pets_allowed": null,
-        "accessible": null
-      },
-      "availability": {
-        "available_from": null,
-        "min_lease_months": null,
-        "is_short_term": null
-      },
-      "contact": {
-        "phone": null,
-        "whatsapp": null,
-        "contact_name": null,
-        "preferred_method": null
-      },
-      "extraction": {
-        "schema_version": "1.1.0",
-        "missing_fields": [
-          "location.neighborhood",
-          "location.street",
-          "property.size_sqm",
-          "property.floor",
-          "property.total_floors",
-          "property.property_type",
-          "price.includes_arnona",
-          "price.includes_vaad_bait",
-          "amenities.furnished",
-          "amenities.air_conditioning",
-          "amenities.elevator",
-          "amenities.storage",
-          "amenities.renovated",
-          "amenities.pets_allowed",
-          "amenities.accessible",
-          "availability.available_from",
-          "availability.min_lease_months",
-          "availability.is_short_term",
-          "contact.phone",
-          "contact.whatsapp",
-          "contact.contact_name",
-          "contact.preferred_method"
-        ],
-        "needs_review": true
-      }
-    },
-    {
-      "id": "facebook_group:608325962573249:UzpfSTEwMDAwMjU0NjQyNDEzMzpWSzozNjgwNDI1OTc5NTg4NjQwOA==",
-      "source": {
-        "platform": "facebook_group",
-        "source_id": "608325962573249",
-        "post_id": "UzpfSTEwMDAwMjU0NjQyNDEzMzpWSzozNjgwNDI1OTc5NTg4NjQwOA==",
+        "post_id": "36804259795886408",
         "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36804259795886408/",
         "author_name": "Or Zigelboim",
         "posted_at": "2026-06-27T12:01:17.000Z",
@@ -325,11 +227,11 @@
       }
     },
     {
-      "id": "facebook_group:608325962573249:UzpfSTYxNTcyNDM0ODIzMDAyOlZLOjM2ODA0MjI2Mjk1ODg5NzU4",
+      "id": "facebook_group:608325962573249:36804226295889758",
       "source": {
         "platform": "facebook_group",
         "source_id": "608325962573249",
-        "post_id": "UzpfSTYxNTcyNDM0ODIzMDAyOlZLOjM2ODA0MjI2Mjk1ODg5NzU4",
+        "post_id": "36804226295889758",
         "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36804226295889758/",
         "author_name": "Alma Zilber",
         "posted_at": "2026-06-27T11:59:14.000Z",
@@ -420,11 +322,11 @@
       }
     },
     {
-      "id": "facebook_group:608325962573249:UzpfSTY2MTE2OTU2NzpWSzozNjIxNjExMTk4ODAzNDUyOA==",
+      "id": "facebook_group:608325962573249:36216111988034528",
       "source": {
         "platform": "facebook_group",
         "source_id": "608325962573249",
-        "post_id": "UzpfSTY2MTE2OTU2NzpWSzozNjIxNjExMTk4ODAzNDUyOA==",
+        "post_id": "36216111988034528",
         "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36216111988034528/",
         "author_name": "Roy Paz",
         "posted_at": "2026-06-02T10:43:28.000Z",

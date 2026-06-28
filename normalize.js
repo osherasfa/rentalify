@@ -168,17 +168,33 @@ function postIdFromUrl(url) {
   return m ? m[1] : null;
 }
 
+// The actor's item.id is Facebook's base64 "feedback" id, e.g.
+//   "UzpfST..." -> decoded "S:_I100004357066991:VK:36811611815151206"
+// which EMBEDS the numeric post id (the trailing number). Pull that out so the
+// id matches the one in the permalink, regardless of which field the actor gives.
+function numericPostId(item) {
+  const fromUrl = postIdFromUrl(item.url);
+  if (fromUrl) return fromUrl;
+  if (typeof item.id === "string") {
+    let s = item.id;
+    try { const d = Buffer.from(item.id, "base64").toString("utf8"); if (/[:_]/.test(d)) s = d; } catch {}
+    const nums = s.match(/\d{5,}/g);
+    if (nums) return nums[nums.length - 1];
+  }
+  return item.postId ? String(item.postId) : null;
+}
+
 // Map a raw Apify item to the fields we rely on.
 // The actor returns a post permalink ("url"), publish time ("time"), the POST id
-// ("id") and the GROUP id ("facebookId" — NOT the post). post_id therefore comes
-// from item.id / the permalink, never from facebookId (using that collapses every
-// post to the group id). We fall back to a text hash if all of those are missing,
-// so the pipeline still works on partial data.
+// ("id", a base64 feedback id) and the GROUP id ("facebookId" — NOT the post).
+// post_id is the NUMERIC post id (from the permalink, or extracted from item.id),
+// never facebookId (which collapses every post to the group id). We fall back to
+// a text hash only if all of those are missing, so partial data still works.
 function readRaw(item) {
   const text = item.text ?? "";
   const userId = item.user?.id ?? "";
   const post_id = String(
-    item.id ?? item.postId ?? postIdFromUrl(item.url) ??
+    numericPostId(item) ??
     createHash("sha1").update(userId + "|" + text).digest("hex").slice(0, 16)
   );
 
