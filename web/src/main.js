@@ -37,8 +37,9 @@ const AMENITY_LABEL = {
   pets_allowed: "חיות מחמד", accessible: "נגיש",
 };
 const priceText = (p) => (!p || p.amount == null ? "מחיר לא צוין" : `${p.amount.toLocaleString("he-IL")} ₪`);
-const placeText = (loc) => [loc.neighborhood, loc.city].filter(Boolean).join(", ") || loc.raw_location_text || "מיקום לא ידוע";
+const placeText = (loc) => escapeHtml([loc.neighborhood, loc.city].filter(Boolean).join(", ") || loc.raw_location_text || "מיקום לא ידוע");
 const roomsText = (prop) => (prop.rooms != null ? `${prop.rooms} חד'` : null);
+const floorText = (prop) => (prop.floor != null ? (prop.floor === 0 ? "קומת קרקע" : `קומה ${prop.floor}`) : null);
 const amenityTags = (a) => Object.entries(a).filter(([, v]) => v === true).map(([k]) => AMENITY_LABEL[k]).filter(Boolean);
 
 function jitter(id) {
@@ -47,6 +48,32 @@ function jitter(id) {
   return [((((h >> 10) % 1000) / 1000) - 0.5) * 0.006, ((h % 1000) / 1000 - 0.5) * 0.006];
 }
 const pointFeat = (id, lng, lat) => ({ type: "Feature", geometry: { type: "Point", coordinates: [lng, lat] }, properties: { id } });
+
+// ---------- saved / liked listings (persisted in localStorage) ----------
+const LIKED_KEY = "rentalify:liked";
+const loadLiked = () => { try { return JSON.parse(localStorage.getItem(LIKED_KEY)) || []; } catch { return []; } };
+const liked = new Set(loadLiked());
+const saveLiked = () => localStorage.setItem(LIKED_KEY, JSON.stringify([...liked]));
+let showLikedOnly = false;
+
+// Reflect the favourites count + active state on the toggle in the results head.
+function updateLikedUi() {
+  const count = document.getElementById("fav-count");
+  if (count) count.textContent = liked.size;
+  const t = document.getElementById("fav-toggle");
+  if (t) { t.classList.toggle("active", showLikedOnly); t.setAttribute("aria-pressed", String(showLikedOnly)); }
+}
+
+// Toggle a listing's saved state and refresh just the heart that was clicked.
+function toggleLike(l, btn) {
+  if (liked.has(l.id)) liked.delete(l.id); else liked.add(l.id);
+  saveLiked();
+  const on = liked.has(l.id);
+  btn.classList.toggle("liked", on);
+  btn.setAttribute("aria-pressed", String(on));
+  updateLikedUi();
+  if (showLikedOnly) apply(); // re-filter the list/map when viewing favourites only
+}
 
 // ---------- state ----------
 let allListings = [];
@@ -85,12 +112,10 @@ function readFilters() {
   return {
     priceMin: num("price-min"), priceMax: num("price-max"),
     roomsMin: document.getElementById("rooms-min").value ? Number(document.getElementById("rooms-min").value) : null,
-    kinds: [...document.querySelectorAll(".kind:checked")].map((c) => c.value),
     hideReview: document.getElementById("hide-review").checked,
   };
 }
 function passesFilters(l, f) {
-  if (!f.kinds.includes(l.classification.listing_kind)) return false;
   if (f.hideReview && l.extraction.needs_review) return false;
   const amt = l.price?.amount;
   if (f.priceMin != null && (amt == null || amt < f.priceMin)) return false;
@@ -105,6 +130,7 @@ function apply() {
   const visible = [], feats = [];
   for (const l of allListings) {
     if (!passesFilters(l, f)) continue;
+    if (showLikedOnly && !liked.has(l.id)) continue;
     const hasGeo = l.location.lat != null && l.location.lng != null;
     if (hasGeo) {
       const [dy, dx] = jitter(l.id);
@@ -130,11 +156,35 @@ function renderClusters() {
 // ---------- rendering ----------
 const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// Simple card for the sidebar list + cluster popup — core info only.
+// Sidebar / cluster-popup card: photo on the side, then neighborhood, city,
+// price, labels and contact stacked, with a save (heart) button.
 function cardHtml(l) {
-  const meta = [roomsText(l.property), KIND_LABEL[l.classification.listing_kind]].filter(Boolean).join(" · ");
-  return `<div class="row1"><span class="place">${placeText(l.location)}</span><span class="price">${priceText(l.price)}</span></div>
-    <div class="meta">${meta}</div>`;
+  const loc = l.location, ct = l.contact || {};
+  const nb = loc.neighborhood ? escapeHtml(loc.neighborhood) : null;
+  const city = loc.city ? escapeHtml(loc.city) : null;
+  // Title = neighborhood, sub = city (smaller). Fall back when one is missing.
+  const title = nb || city || (loc.raw_location_text ? escapeHtml(loc.raw_location_text) : "מיקום לא ידוע");
+  const sub = nb && city ? city : "";
+  // Labels: rooms / floor / amenities — no listing-kind.
+  const labels = [roomsText(l.property), floorText(l.property), ...amenityTags(l.amenities)].filter(Boolean);
+  const chips = labels.map((t) => `<span class="chip">${t}</span>`).join("");
+  const contactBits = [ct.contact_name ? escapeHtml(ct.contact_name) : null, ct.phone ? escapeHtml(ct.phone) : null].filter(Boolean);
+  const imgs = Array.isArray(l.source.images) ? l.source.images : [];
+  const thumb = imgs.length
+    ? `<div class="card-thumb"><img src="${escapeHtml(imgs[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('no-img')" /></div>`
+    : `<div class="card-thumb no-img"></div>`;
+  const on = liked.has(l.id);
+  return `${thumb}
+    <div class="card-body">
+      <div class="card-title">${title}</div>
+      ${sub ? `<div class="card-sub">${sub}</div>` : ""}
+      <div class="price">${priceText(l.price)}</div>
+      ${chips ? `<div class="card-tags">${chips}</div>` : ""}
+      ${contactBits.length ? `<div class="card-contact">☎ ${contactBits.join(" · ")}</div>` : ""}
+    </div>
+    <button class="like-btn${on ? " liked" : ""}" type="button" aria-label="שמירה למועדפים" aria-pressed="${on}">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>`;
 }
 
 // Full detail view shown in the modal when a listing is clicked.
@@ -159,8 +209,8 @@ function detailHtml(l) {
   ].filter(Boolean).join(" · ");
   const wa = ct.whatsapp ? String(ct.whatsapp).replace(/\D/g, "").replace(/^0/, "972") : null;
   const contact = [
-    ct.phone ? `<a href="tel:${ct.phone}">☎ ${ct.phone}</a>` : null,
-    wa ? `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">💬 וואטסאפ</a>` : null,
+    ct.phone ? `<a href="tel:${escapeHtml(ct.phone)}">☎ ${escapeHtml(ct.phone)}</a>` : null,
+    wa ? `<a href="https://wa.me/${escapeHtml(wa)}" target="_blank" rel="noopener">💬 וואטסאפ</a>` : null,
     ct.contact_name ? `<span>${escapeHtml(ct.contact_name)}</span>` : null,
   ].filter(Boolean).join(" · ");
   return `
@@ -189,7 +239,7 @@ function fbLink(src) {
 function sliderHtml(imgs, { large = false } = {}) {
   if (!imgs.length) return "";
   const slides = imgs
-    .map((u, i) => `<img src="${u}" alt="" loading="lazy" referrerpolicy="no-referrer" data-i="${i}" onerror="this.classList.add('img-broken')" />`)
+    .map((u, i) => `<img src="${escapeHtml(u)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-i="${i}" onerror="this.classList.add('img-broken')" />`)
     .join("");
   const controls = imgs.length > 1 ? `
       <button class="slider-btn slider-prev" type="button" aria-label="הקודם">‹</button>
@@ -296,7 +346,11 @@ function clusterListEl(leaves) {
     const c = document.createElement("div");
     c.className = "card" + (l.extraction.needs_review ? " review" : "");
     c.innerHTML = cardHtml(l);
-    c.addEventListener("click", () => focusListing(l));
+    c.addEventListener("click", (e) => {
+      const btn = e.target.closest(".like-btn");
+      if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
+      focusListing(l);
+    });
     wrap.appendChild(c);
   }
   return wrap;
@@ -305,11 +359,19 @@ function clusterListEl(leaves) {
 function renderResults(list) {
   const box = document.getElementById("results");
   box.innerHTML = "";
+  if (!list.length) {
+    box.innerHTML = `<div class="muted empty">${showLikedOnly ? "אין מודעות שמורות. לחצו על ♥ בכרטיס כדי לשמור." : "אין תוצאות לסינון הנוכחי."}</div>`;
+    return;
+  }
   for (const l of list.slice(0, 200)) {
     const el = document.createElement("div");
     el.className = "card" + (l.extraction.needs_review ? " review" : "");
     el.innerHTML = cardHtml(l);
-    el.addEventListener("click", () => focusListing(l));
+    el.addEventListener("click", (e) => {
+      const btn = e.target.closest(".like-btn");
+      if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
+      focusListing(l);
+    });
     box.appendChild(el);
   }
 }
@@ -539,6 +601,12 @@ async function init() {
     document.querySelectorAll(".filters input, .filters select").forEach((el) => {
       el.addEventListener("input", apply); el.addEventListener("change", apply);
     });
+    document.getElementById("fav-toggle").addEventListener("click", () => {
+      showLikedOnly = !showLikedOnly;
+      updateLikedUi();
+      apply();
+    });
+    updateLikedUi();
 
     // detail modal: close on X, backdrop click, or Esc (only when no lightbox is open)
     document.querySelector("#detail .modal-close").addEventListener("click", closeDetail);

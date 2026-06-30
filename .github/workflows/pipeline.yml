@@ -8,10 +8,6 @@ on:
     - cron: "0 3 * * 0,2,4"
   workflow_dispatch: # allow manual runs from the Actions tab
     inputs:
-      backfill:
-        description: "Ignore the watermark and pull the full BACKFILL_MONTHS window"
-        type: boolean
-        default: false
       force_scrape:
         description: "Force a fresh Apify scrape (don't reuse a recent run)"
         type: boolean
@@ -55,7 +51,6 @@ jobs:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           # Manual-run toggles (empty/false on scheduled runs).
-          BACKFILL: ${{ inputs.backfill }}
           FORCE_SCRAPE: ${{ inputs.force_scrape }}
           EXTRACT_LIMIT: ${{ inputs.extract_limit }}
         run: |
@@ -71,7 +66,10 @@ jobs:
         run: |
           git config user.name "rentalify-bot"
           git config user.email "actions@github.com"
-          git add out state.json
+          # Only the durable progress is committed: the LLM extraction cache and the
+          # watermark/seen state. Per-run out/listings-*.json are gitignored (the
+          # master listings-db.json is the source of truth).
+          git add out/extract-cache.json state.json
           if git diff --cached --quiet; then
             echo "no progress to save"
           else

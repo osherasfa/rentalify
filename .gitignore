@@ -4,3 +4,9 @@ web/dist/
 .tmp/
 *.log
 .DS_Store
+
+# Per-run pipeline output. The durable progress lives in out/extract-cache.json
+# (tracked) + state.json + listings-db.json; these per-run files are disposable
+# once publish.mjs has merged them into the master DB.
+out/listings-*.json
+out/unmatched-*.json

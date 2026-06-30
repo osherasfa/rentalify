@@ -5,8 +5,13 @@ rental-listing JSON using the **Claude Code CLI** (your subscription login — n
 per-token API key), geocodes it offline, and serves it on a static **Hebrew map
 of Israel** where you draw an area to filter.
 
-Designed to run on a schedule (e.g. 3×/week): the first run backfills ~3 months,
-every run after pulls a recent window and dedups.
+Designed to run on a schedule (e.g. 3×/week): each run pulls just the posts since
+the last fetch (a watermark, minus a small overlap) and dedups. The first run ever
+(no watermark) uses a short `FRESH_LOOKBACK_DAYS` window — **not** a multi-month
+backfill.
+
+> For a deep dive into the pipeline + frontend logic (with flowcharts), see
+> [`flowchart_logic.md`](flowchart_logic.md).
 
 ## Architecture (two independent halves)
 
@@ -25,15 +30,19 @@ That's why a static host (Pages) is enough for it.
 | `rental-listings.schema.json` | Locked output format (JSON Schema, draft 2020-12), **v1.1.0** (adds `location.lat/lng/geocode_source`). |
 | `example-output.json` | Filled sample with 3 listings showing every decision. |
 | `extraction-prompt.md` | Instructions that turn one raw post into one structured object. Tune this first on real data. |
-| `normalize.js` | Pipeline: Apify fetch → drop non-Hebrew/seen → `claude -p` extract → normalize + geocode → write output + `state.json`. |
-| `publish.mjs` | Copies the newest `out/` file to `web/public/listings.json`. |
+| `normalize.js` | Pipeline: Apify fetch → drop non-Hebrew/seen → `claude -p` extract → normalize + geocode → write `out/listings-*.json` + `state.json`. Exposes its pure helpers for unit tests; runs the pipeline only when invoked directly. |
+| `publish.mjs` | Accumulator: merges the newest run into the master `listings-db.json`, re-hosts new listings' photos to Cloudflare R2 (if configured), prunes listings older than `MAX_AGE_MONTHS`, and publishes all live listings to `web/public/listings.json`. |
+| `listings-db.json` | Master store of all live listings, keyed by id — the source of truth `publish.mjs` maintains across runs. |
 | `validate.mjs` | Checks any output file against the schema. |
+| `test/` | `node --test` unit tests for the pipeline's pure helpers (post-id, value coercion, geocoding). Run with `npm test`. |
 | `lib/text.js`, `lib/geocode.js` | Hebrew detection + offline geocoder (niqqud/dash-aware matching; tries each field as city or neighborhood). |
+| `lib/r2.js` | Cloudflare R2 (S3-compatible) image storage. No-ops if R2 env vars are absent — images then keep their (expiring) Facebook URLs. |
+| `web/src/config.js`, `web/src/govmap.js` | Optional GovMap address search (domain-locked token). Empty token ⇒ the search box falls back to the offline gazetteer. |
 | `geo/il-places.json` | Offline gazetteer (Hebrew name → lat/lng). **~1,670 town/settlement + ~445 neighborhood keys**, full-country incl. Judea & Samaria, auto-built from GeoNames. |
 | `geo/build-gazetteer.mjs` | Rebuilds `geo/il-places.json` from GeoNames `IL.zip` + `PS.zip` dumps (see header for the download commands). Curated neighborhoods are preserved. |
 | `web/` | The static frontend (Vite + MapLibre GL). |
-| `state.json` | Created on first run. Holds `seen_post_ids` per source (the dedup set). Delete it to force a full backfill. |
-| `out/` | One timestamped output file per run, plus `unmatched-*.json` listing place names that didn't geocode (so you can extend the gazetteer). |
+| `state.json` | Created on first run. Holds `last_posted_at` (the watermark) + `seen_post_ids` per source (the dedup set). Delete it to start over from a fresh `FRESH_LOOKBACK_DAYS` window. |
+| `out/` | `extract-cache.json` (durable per-post LLM cache, **tracked**) + one timestamped `listings-*.json` per run and `unmatched-*.json` for un-geocoded place names (both **gitignored** — disposable once merged into `listings-db.json`). |
 
 ## How the scrape + incremental logic works
 
@@ -46,8 +55,8 @@ early on was stripped of `url`/`time` — the real output has them.) Handled in
 - **Watermark incremental.** State stores `last_posted_at` per source. Each run
   fetches `onlyPostsNewerThan = last_posted_at − 2 days` (a small overlap so border
   posts aren't missed; `seen_post_ids` dedups it). The **first** run (no watermark)
-  does a one-off `BACKFILL_MONTHS` window. So a run picks up exactly what's new
-  since the previous run — not a fixed lookback.
+  uses a short `FRESH_LOOKBACK_DAYS` (7-day) window — there is no multi-month
+  backfill. So a run picks up exactly what's new since the previous run.
 - **Failed extractions are left un-seen** so they retry next run (resilient to a
   transient rate-limit).
 - **Images** come from `attachments[].image.uri`; `attachments[].ocrText` is
@@ -86,12 +95,14 @@ would bill the API instead; `normalize.js` strips it from the child process.
 ## Run (pipeline)
 
 ```bash
-npm start                              # node normalize.js  -> out/listings-*.json
-npm run publish                        # copy newest run -> web/public/listings.json
-npm run validate web/public/listings.json   # optional schema check
+npm start                                 # node normalize.js  -> out/listings-*.json
+npm run publish                           # merge newest run -> listings-db.json -> web/public/listings.json
+npm run validate -- web/public/listings.json   # optional schema check
+npm test                                  # unit tests for the pipeline helpers
 ```
 
-First run = ~3-month backfill. After that it's a 7-day incremental window + dedup.
+First run uses a 7-day window (`FRESH_LOOKBACK_DAYS`). After that, every run pulls
+just the posts since the last fetch (watermark − a 2-day overlap) and dedups.
 
 ## Run (frontend, locally)
 

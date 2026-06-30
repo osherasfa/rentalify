@@ -68,13 +68,14 @@ async function main() {
   const runs = readdirSync(OUT_DIR).filter((f) => /^listings-\d+\.json$/.test(f)).sort();
   if (!runs.length) { console.error("no listings-*.json in out/."); process.exit(1); }
 
-  const newest = runs[runs.length - 1];
-  const run = JSON.parse(readFileSync(join(OUT_DIR, newest), "utf8"));
-
   const db = existsSync(DB_PATH) ? JSON.parse(readFileSync(DB_PATH, "utf8")) : { listings: {} };
   db.listings = db.listings || {};
 
-  // 1) merge new listings + re-host their images
+  // 1) merge the newest run's listings + re-host their images. The master DB is
+  // the source of truth, so we only consume the latest run file — older run files
+  // are already merged (and are gitignored/disposable). New ids dedup against the DB.
+  const latestRun = runs[runs.length - 1];
+  const run = JSON.parse(readFileSync(join(OUT_DIR, latestRun), "utf8"));
   let added = 0;
   for (const l of run.listings || []) {
     if (db.listings[l.id]) continue; // already have it

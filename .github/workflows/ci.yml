@@ -1,0 +1,24 @@
+name: CI
+
+# Fast checks on every push / PR: unit tests + schema validation of the sample.
+# (The scheduled scraper lives in pipeline.yml; this never calls Apify or Claude.)
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci || npm install
+      - name: Unit tests
+        run: npm test
+      - name: Validate example output against the schema
+        run: node validate.mjs example-output.json

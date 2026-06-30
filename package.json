@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node normalize.js",
     "publish": "node publish.mjs",
-    "validate": "node validate.mjs"
+    "validate": "node validate.mjs",
+    "test": "node --test"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1075.0",

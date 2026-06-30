@@ -28,6 +28,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # When triggered by the pipeline finishing, only deploy if it actually
+    # succeeded — a failed pipeline shouldn't trigger a (no-op) redeploy.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

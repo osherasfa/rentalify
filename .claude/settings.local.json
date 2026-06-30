@@ -15,7 +15,8 @@
       "Bash(curl -sL --max-time 25 \"https://raw.githubusercontent.com/johan/world.geo.json/master/countries/ISR.geo.json\" -o .tmp/il2.json)",
       "Bash(npm run *)",
       "mcp__Claude_Preview__preview_start",
-      "WebFetch(domain:api.govmap.gov.il)"
+      "WebFetch(domain:api.govmap.gov.il)",
+      "Bash(node --check normalize.js)"
     ]
   }
 }

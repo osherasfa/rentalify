@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rentalify — דירות להשכרה על המפה</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="app">
@@ -36,19 +39,16 @@
             </select>
           </label>
 
-          <fieldset>
-            <legend>סוג נכס</legend>
-            <label class="chk"><input type="checkbox" class="kind" value="apartment_rent" checked /> דירה</label>
-            <label class="chk"><input type="checkbox" class="kind" value="unit_rent" checked /> יחידת דיור</label>
-            <label class="chk"><input type="checkbox" class="kind" value="room_in_shared" checked /> חדר בשותפות</label>
-          </fieldset>
-
           <label class="chk"><input type="checkbox" id="hide-review" /> הסתר מודעות שדורשות בדיקה</label>
         </section>
 
         <section class="results-head">
           <span id="count">—</span>
           <span id="nogeo" class="muted"></span>
+          <button id="fav-toggle" class="fav-toggle" type="button" aria-pressed="false" title="מודעות שמורות">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span id="fav-count">0</span>
+          </button>
         </section>
 
         <section id="results" class="results"></section>
