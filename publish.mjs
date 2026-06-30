@@ -71,17 +71,22 @@ async function main() {
   const db = existsSync(DB_PATH) ? JSON.parse(readFileSync(DB_PATH, "utf8")) : { listings: {} };
   db.listings = db.listings || {};
 
-  // 1) merge the newest run's listings + re-host their images. The master DB is
-  // the source of truth, so we only consume the latest run file — older run files
-  // are already merged (and are gitignored/disposable). New ids dedup against the DB.
-  const latestRun = runs[runs.length - 1];
-  const run = JSON.parse(readFileSync(join(OUT_DIR, latestRun), "utf8"));
+  // 1) merge every run file present into the master DB (idempotent — new ids
+  // dedup against what's already stored, re-hosting only new listings' images).
+  // In CI a fresh checkout has only the current run's file (older ones are
+  // gitignored/not committed), so this merges just that one; locally several may
+  // accumulate and merging all of them prevents losing un-published runs.
   let added = 0;
-  for (const l of run.listings || []) {
-    if (db.listings[l.id]) continue; // already have it
-    await rehostImages(l);
-    db.listings[l.id] = l;
-    added++;
+  let lastRun = null;
+  for (const runFile of runs) {
+    const run = JSON.parse(readFileSync(join(OUT_DIR, runFile), "utf8"));
+    lastRun = run;
+    for (const l of run.listings || []) {
+      if (db.listings[l.id]) continue; // already have it
+      await rehostImages(l);
+      db.listings[l.id] = l;
+      added++;
+    }
   }
 
   // 2) prune listings older than MAX_AGE_MONTHS, deleting their R2 images
@@ -109,7 +114,7 @@ async function main() {
       if (l.source) l.source.author_name = null;
     }
   }
-  const output = { run_metadata: run.run_metadata, listings };
+  const output = { run_metadata: lastRun?.run_metadata, listings };
   mkdirSync(PUBLIC_DIR, { recursive: true });
   writeFileSync(DEST, JSON.stringify(output, null, 2));
   if (existsSync(GAZ_SRC)) copyFileSync(GAZ_SRC, GAZ_DEST);

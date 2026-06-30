@@ -755,6 +755,3182 @@
         ],
         "needs_review": false
       }
+    },
+    "facebook_group:608325962573249:ccc872cf49374384": {
+      "id": "facebook_group:608325962573249:ccc872cf49374384",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "ccc872cf49374384",
+        "post_url": null,
+        "author_name": "Liry Minsky",
+        "posted_at": null,
+        "scraped_at": "2026-06-27T22:10:14.750Z",
+        "raw_text": "חדר בדירת 2 שותפים במרכז הוד השרון.\n📍מרחק הליכה מהרכבת\n📍קרוב לסופרים בתי קפה וברי יין\n\n✅ממד בדירה\n✅סלון גדול ומרווח מאוד\n✅מרפסת חמודה\n✅מרפסת שירות למכונה ומייבש כביסה\n✅חנייה בשפע מול הבניין\n\n✳️ בדירה יש בעלי חיים🦋\n💵2900₪ ללא חשמל ומים",
+        "images": [
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/731787779_3602032309951969_6271115281556404534_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KbDW5LZ_cvgQ7kNvwEfksGX&_nc_oc=AdrUo9iBJbRXHADvujT-CfZ-u-WM5FC97USkneuQcIsPJKgyJB8Zw0A3IEZgw6hrXg4&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af_HsRmdvptC7xbOh-kPszQiZsWWWLYsSxJSMfJK1T11_Q&oe=6A46281D",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/730331437_3602032343285299_7686574561443426514_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d_qpUsuzqfQQ7kNvwH97dpr&_nc_oc=AdoKfwIU6czoRZQ6nCckpFvKVP0NZKI7ys5CjNYyufQ1zzjEtwFUo4DjVPG35xdZEXc&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af8Ck97CmqWdPdMQEyx30sRUKLL3C7Y1fzJPrc-7SHxwXw&oe=6A463377",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/734067572_3602032313285302_8843235183710852331_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=vg5ohFiCzYYQ7kNvwGat078&_nc_oc=Adoo9r1sDrRJgCzb1D6F20DEmHQMgOgOyVAmvfzV3S-GB-qWAlzRmh78Esl9hDHhRTo&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af-sPHhqTY2xAge7n_RHsosesSyoLWgZH334mzWapL3fRw&oe=6A460657"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "הוד השרון",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "מרכז הוד השרון",
+        "lat": 32.15934,
+        "lng": 34.8932,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2900,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2900₪ ללא חשמל ומים"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:8e8443c116bfbabc": {
+      "id": "facebook_group:608325962573249:8e8443c116bfbabc",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "8e8443c116bfbabc",
+        "post_url": null,
+        "author_name": "Roy Paz",
+        "posted_at": null,
+        "scraped_at": "2026-06-27T22:10:14.750Z",
+        "raw_text": "מחפש שותפ/ה לדירת 3 חדרים עם מרפסת גדולה ברחוב י ל פרץ . קרוב לרוטשילד, לוינסקי, פלורנטין\nכניסה 1.7 \nחוזה לשנה עם אופציה להארכה \n\nגיי פרנדלי \n\nיש אופציה לקנות מהשותף את המיטה והארון בגדים( לא תנאי לכניסה) \nמחפש שותף עם עבודה מסודרת(לא מהבית) , נקי וחברותי .\nהדירה מרוהטת חלקית וחלק מהריהוט נקנה יחד עם השותף היוצא . \n\nהחדר המושכר זה הממ״ד\n\nשכר דירה 3400 לא כולל חשבונות \n\nלעוד פרטים שילחו הודעה ❤️🙏",
+        "images": [
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/714765190_10164249723629568_6910662495541290733_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=7gUok3_iOdUQ7kNvwHIs6oz&_nc_oc=AdoqI0EPBuDlEFmJGYisjSsO_8aZx76hQV3foGvC9iEC1oSEJJog1APOKX5G48sEv2Q&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af-RI53hmh92YpPF5xYngvAh8WvWrqXtgcyivThOlfcBYw&oe=6A461F0C",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711687938_10164249723674568_6938948180842566623_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BM2NMyA8gh8Q7kNvwGuDm6D&_nc_oc=AdotIpEpSbrem-3UTWJKZsDow6-yRQ8zwkzqM4HTTT5oIBLVGO005DNpbSqythRK9wY&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af95kggwuvYsMSintlv-gj41H2Uc55AEC4H1pfmy4V12hg&oe=6A4623B9",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/712389354_10164249723874568_943774143602146626_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=PfP6rHxHFGgQ7kNvwGrwy9U&_nc_oc=Adr_Ul2wOUDHgb1XWTT76_OPoKexcjx-s9bZeooXPWf-03gRapAim-qaPRXGQ2nfPDM&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af95ZAbqx2NpThz5Fty5MRsbACn0hICMt8QoxaBwvXEOBA&oe=6A460964",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711389714_10164249724014568_1294101869274682298_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=vxt4DUOt7q8Q7kNvwG022oZ&_nc_oc=AdpL-UXUKxENi1wwNhHIJHgL-DA3xzgtTjFfHpSCj570YUQ1y3rGPAIXLVXwepApdRI&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af8qmMNJH2xs7to5s0fuRhTAKASQ0ifE3cWGz-IUS9TeaQ&oe=6A460FBB",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711848268_10164249724484568_2109239948840493759_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=389Pdo5mUo0Q7kNvwFRZaz6&_nc_oc=AdoRQtHau8VWDIYLvoxAOS-ukg2yugW47mbBx9LVKZ2oc0O2pvypRcwjsIebcQz3uhs&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af9g18YgpB51CmmEzqVkWouTeJrD8SstOTUqXPAVFlGWPQ&oe=6A460AD9"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.88
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": null,
+        "street": "י ל פרץ",
+        "raw_location_text": "רחוב י ל פרץ . קרוב לרוטשילד, לוינסקי, פלורנטין",
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "3400 לא כולל חשבונות"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-01",
+        "min_lease_months": 12,
+        "is_short_term": false
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:0d4c2f9498598af2": {
+      "id": "facebook_group:608325962573249:0d4c2f9498598af2",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "0d4c2f9498598af2",
+        "post_url": null,
+        "author_name": "Or Zigelboim",
+        "posted_at": null,
+        "scraped_at": "2026-06-27T22:10:14.750Z",
+        "raw_text": "להשכרה – חדר גדול ומואר בדירת שותפים בראשון לציון ,\n5 דק’ הליכה מרחוב רוטשילד, קרוב למרכז העיר.\nחלון ויטרינה גדול + חלון צד, הרבה אור טבעי.\nמתאים לסטודנטים/צעירים, שקט ונוח.\n\nמחיר: 2100₪",
+        "images": [
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730917702_27223166400684873_3350702897741073810_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GVbnJupFWHQQ7kNvwG3VsE5&_nc_oc=Adr4_BWKR8509LRAjFMI_w4s8XlO6dcpOs18YId87WxAo3GIA3yFTosomNjZyr0RrIY&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-N1N2KLWx9tZb3oluf4f6pUJySPqZrR5CILk873N7DTQ&oe=6A462BB0",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730833831_27223167050684808_2316249905591623952_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1542&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=9vc4l7Kk7HIQ7kNvwEEn_RD&_nc_oc=AdpWTFf4bCXGo3FP9oacuDKhitdup7GHTybzxEltBTMb0h8uDDpj39C6ekBcyGhndPc&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_cMgVnSICAHpKW-UuDNGzvDosWCx-RmpiA4CT9BXFtgw&oe=6A463651",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730621211_27223167767351403_4244823754277727394_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=6wbEdMIANisQ7kNvwE86YR5&_nc_oc=Adqabm7SKgK2WRAye9BXSJuDqn4tf9sJeQNHIhJ8yfgbmiXvt8kiWHaOeh51II-EGMc&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9CI7uujtO1jlYMEW0ZX-5JZV9FbDutZOlqOzmbENkmEg&oe=6A460222",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730749023_27223168304018016_4278933790142435602_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d_q_lJ_hYH0Q7kNvwFF_i8s&_nc_oc=AdqhPVkWp6KUj4eJyHi0IijUNyL2a9XchqMMjrLVokGuVBYb_bAupONclWgOsNgCJYs&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-Lbogivo1hlTUtelle9-WkbthTWX0QpIkOuSugLU25gA&oe=6A460851",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732068741_27223168567351323_7459236319535945435_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=pw4iaVGzxFIQ7kNvwF8tFh0&_nc_oc=Ado3DE30CxfmdjTnccQQk-k79nH4bJdy-uWyfnXN-cPauM2YNhwYZnCa2a-bqf1iSBI&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9aacpvonSCV5C82QfOJ9RSHARDBp4QMkQsTfYxHTwyww&oe=6A4611C1"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "ראשון לציון",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "ראשון לציון, 5 דק' הליכה מרחוב רוטשילד, קרוב למרכז העיר",
+        "lat": 31.97102,
+        "lng": 34.78939,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2100,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2100₪"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:5d8149a429b8412e": {
+      "id": "facebook_group:608325962573249:5d8149a429b8412e",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "5d8149a429b8412e",
+        "post_url": null,
+        "author_name": "Alma Zilber",
+        "posted_at": null,
+        "scraped_at": "2026-06-27T22:10:14.751Z",
+        "raw_text": "דירת שותפות בהרצליה✨️\nמחפשת 2 שותפות לדירת 4 חדרים מרווחת ומוארת בהרצליה☀️\n\nקצת פרטים על הדירה: \n\n• 2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך\n\n• 100 מ\"ר, 3 כיווני אוויר ושמש\n\n• סלון ענק ומרווח עם מרפסת נפרדת מקורה (ויטרינה)\n\n• מרפסת שירות עם מכונת כביסה ומייבש חדשים\n\n• מטבח גדול עם מדיח, תנור, מקרר וכיריים גז\n\n• 3 חדרי שינה גדולים עם ארונות מובנים ותקרות גבוהות, אחד גם עם פרקט\n\n• מזגן בכל חדר ובסלון\n\n• חניון לבניין\n\nמיקום מושלם ממש במרכז הרצליה במרחק הליכה ממרכז העיר, קווי אוטובוס ישירים לתל אביב, רכבת הרצליה, אוניברסיטת רייכמן(רבע שעה ברגל) והים,\n\n• חדרי כושר (אייקון והולמס פלייס) ממש ליד הבית, סופרים, סופרפארם וכל מה שצריך\n\n• כניסה ב1 לאוגוסט, אבל יש גמישות לפני בתיאום עם השותפה הקודמת.\n\nשאלות ופרטים נוספים בפרטי✨️",
+        "images": [
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733448815_122181078488747827_2712243658013657001_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1920&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CVVEez4BNlYQ7kNvwHaiiPX&_nc_oc=Ado1tHmUeJpTqDBPd_3wrDOAh1E_azEVAiOPiPiBawxFeismbntsuMZ5YHfgzMp1FlU&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_zu8HbrKn_E4qaXQRnckXQUjdr1ZGHxYm1f6QqBZmfOQ&oe=6A4618A5",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/731495875_122181078530747827_2939597971488673836_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BwFsYiEENl0Q7kNvwF1D9ZC&_nc_oc=AdpSbA-oyAghKm8k5ZRPC7IOot0iNv8mYgZidRdzjPsPfmKnL8UbaT6JAr2mqOwMOuk&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_a2lQCz7zJ0bdlAd3OciSktT3AMlmma6y9nWiKFDcBPg&oe=6A46348F",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733146244_122181078572747827_5856730396560236892_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DO7K4Ik3KNQQ7kNvwGdGXem&_nc_oc=Adokrz8bMn-HMwHVec_MZ6UfViPlZISPipCbTqe2i8JpAOTOk_UQTdw1_rjdfV4Wpek&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_5ZVNN7YOwUMIXcdQWtCQ6E5l2wGGrlNhiIi3zNVNiZA&oe=6A460B29",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732081904_122181078614747827_1393657073919437555_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=LP9JqKojrmMQ7kNvwHDcvau&_nc_oc=AdrX0JxBlSnAyO8POjZ_4fC1nhJOkwjucdBf9TCkOl57ZnwYypDdQJC2LJym0ShDFRw&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-gzGd2c5xNP2o7a_XNm16lhLcH6ygsBcvb3ab4VjsMpA&oe=6A4613AE",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733935748_122181078656747827_5576109723790627847_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KgSx97uvlgYQ7kNvwEMXq28&_nc_oc=Adol19SYe2rq7-erwPcrONHYDm9WvSs1XUzk4q1VfleWcnjA-Pl0bikag5CVwgIHsg8&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9yUNNQnhh9SdT8N00Mh5zCknKndfFUrz-wX5Ks18ywyA&oe=6A462CF3"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "הרצליה, במרכז הרצליה",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": 100,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 2200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.elevator",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:608325962573249": {
+      "id": "facebook_group:608325962573249:608325962573249",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "608325962573249",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36811611815151206/",
+        "author_name": "Liry Minsky",
+        "posted_at": "2026-06-27T19:05:45.000Z",
+        "scraped_at": "2026-06-28T07:04:17.256Z",
+        "raw_text": "חדר בדירת 2 שותפים במרכז הוד השרון.\n📍מרחק הליכה מהרכבת\n📍קרוב לסופרים בתי קפה וברי יין\n\n✅ממד בדירה\n✅סלון גדול ומרווח מאוד\n✅מרפסת חמודה\n✅מרפסת שירות למכונה ומייבש כביסה\n✅חנייה בשפע מול הבניין\n\n✳️ בדירה יש בעלי חיים🦋\n💵2900₪ ללא חשמל ומים",
+        "images": [
+          "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/731787779_3602032309951969_6271115281556404534_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KbDW5LZ_cvgQ7kNvwHqmpQB&_nc_oc=Adragz1DfAlccwnP2NvZLL9xhv1hOWi6G_rNlA7cK2aOhftAdGmy8NDOANF_t75piHg&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=aHwUHnA3AISgrfGEjtZXYA&_nc_ss=72289&oh=00_Af-lK346Mj2tmWttbE7ESgeJOpzO4SLWDThOS4VyrdrxVQ&oe=6A46989D",
+          "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/730331437_3602032343285299_7686574561443426514_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d_qpUsuzqfQQ7kNvwE76Afi&_nc_oc=AdothTzGVOWyy14liVp54PAUF9tIR0TfD4hP1pHzbRrCiXO10X1tj2TUrUeaUWCtYN0&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=aHwUHnA3AISgrfGEjtZXYA&_nc_ss=72289&oh=00_Af-Ozs3hSb1C1r9Cy218NtBEitIxgK2aIzyzHfJCmfWVlQ&oe=6A46A3F7",
+          "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/734067572_3602032313285302_8843235183710852331_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=vg5ohFiCzYYQ7kNvwHBXpXf&_nc_oc=AdoFgJDOlejyBmWu_qbgAbQSY7-chRkHwC3tAfQJs2hqqcY-3lMqzgpZYzUtdq5-qgA&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=aHwUHnA3AISgrfGEjtZXYA&_nc_ss=72289&oh=00_Af8Ij6Qt5RCsb9XgnxAVFMzUFFw9hsfgvILR3pwR7kR3yw&oe=6A46AF17"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הוד השרון",
+        "neighborhood": "מרכז",
+        "street": null,
+        "raw_location_text": "מרכז הוד השרון",
+        "lat": 29.55406,
+        "lng": 34.95178,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2900,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2900₪ ללא חשמל ומים"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.elevator",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==": {
+      "id": "facebook_group:608325962573249:UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "UzpfSTEwMDAwNDM1NzA2Njk5MTpWSzozNjgxMTYxMTgxNTE1MTIwNg==",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36811611815151206/",
+        "author_name": "Liry Minsky",
+        "posted_at": "2026-06-27T19:05:45.000Z",
+        "scraped_at": "2026-06-28T08:51:21.979Z",
+        "raw_text": "חדר בדירת 2 שותפים במרכז הוד השרון.\n📍מרחק הליכה מהרכבת\n📍קרוב לסופרים בתי קפה וברי יין\n\n✅ממד בדירה\n✅סלון גדול ומרווח מאוד\n✅מרפסת חמודה\n✅מרפסת שירות למכונה ומייבש כביסה\n✅חנייה בשפע מול הבניין\n\n✳️ בדירה יש בעלי חיים🦋\n💵2900₪ ללא חשמל ומים",
+        "images": [
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/731787779_3602032309951969_6271115281556404534_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KbDW5LZ_cvgQ7kNvwEfksGX&_nc_oc=AdrUo9iBJbRXHADvujT-CfZ-u-WM5FC97USkneuQcIsPJKgyJB8Zw0A3IEZgw6hrXg4&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af_HsRmdvptC7xbOh-kPszQiZsWWWLYsSxJSMfJK1T11_Q&oe=6A46281D",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/730331437_3602032343285299_7686574561443426514_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d_qpUsuzqfQQ7kNvwH97dpr&_nc_oc=AdoKfwIU6czoRZQ6nCckpFvKVP0NZKI7ys5CjNYyufQ1zzjEtwFUo4DjVPG35xdZEXc&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af8Ck97CmqWdPdMQEyx30sRUKLL3C7Y1fzJPrc-7SHxwXw&oe=6A463377",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/734067572_3602032313285302_8843235183710852331_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=vg5ohFiCzYYQ7kNvwGat078&_nc_oc=Adoo9r1sDrRJgCzb1D6F20DEmHQMgOgOyVAmvfzV3S-GB-qWAlzRmh78Esl9hDHhRTo&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af-sPHhqTY2xAge7n_RHsosesSyoLWgZH334mzWapL3fRw&oe=6A460657"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "הוד השרון",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "במרכז הוד השרון",
+        "lat": 32.15934,
+        "lng": 34.8932,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2900,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2900₪ ללא חשמל ומים"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": true
+      }
+    },
+    "facebook_group:608325962573249:UzpfSTY2MTE2OTU2NzpWSzozNjIxNjExMTk4ODAzNDUyOA==": {
+      "id": "facebook_group:608325962573249:UzpfSTY2MTE2OTU2NzpWSzozNjIxNjExMTk4ODAzNDUyOA==",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "UzpfSTY2MTE2OTU2NzpWSzozNjIxNjExMTk4ODAzNDUyOA==",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36216111988034528/",
+        "author_name": "Roy Paz",
+        "posted_at": "2026-06-02T10:43:28.000Z",
+        "scraped_at": "2026-06-28T08:51:21.979Z",
+        "raw_text": "מחפש שותפ/ה לדירת 3 חדרים עם מרפסת גדולה ברחוב י ל פרץ . קרוב לרוטשילד, לוינסקי, פלורנטין\nכניסה 1.7 \nחוזה לשנה עם אופציה להארכה \n\nגיי פרנדלי \n\nיש אופציה לקנות מהשותף את המיטה והארון בגדים( לא תנאי לכניסה) \nמחפש שותף עם עבודה מסודרת(לא מהבית) , נקי וחברותי .\nהדירה מרוהטת חלקית וחלק מהריהוט נקנה יחד עם השותף היוצא . \n\nהחדר המושכר זה הממ״ד\n\nשכר דירה 3400 לא כולל חשבונות \n\nלעוד פרטים שילחו הודעה ❤️🙏",
+        "images": [
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/714765190_10164249723629568_6910662495541290733_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=7gUok3_iOdUQ7kNvwHIs6oz&_nc_oc=AdoqI0EPBuDlEFmJGYisjSsO_8aZx76hQV3foGvC9iEC1oSEJJog1APOKX5G48sEv2Q&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af-RI53hmh92YpPF5xYngvAh8WvWrqXtgcyivThOlfcBYw&oe=6A461F0C",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711687938_10164249723674568_6938948180842566623_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BM2NMyA8gh8Q7kNvwGuDm6D&_nc_oc=AdotIpEpSbrem-3UTWJKZsDow6-yRQ8zwkzqM4HTTT5oIBLVGO005DNpbSqythRK9wY&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af95kggwuvYsMSintlv-gj41H2Uc55AEC4H1pfmy4V12hg&oe=6A4623B9",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/712389354_10164249723874568_943774143602146626_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=PfP6rHxHFGgQ7kNvwGrwy9U&_nc_oc=Adr_Ul2wOUDHgb1XWTT76_OPoKexcjx-s9bZeooXPWf-03gRapAim-qaPRXGQ2nfPDM&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af95ZAbqx2NpThz5Fty5MRsbACn0hICMt8QoxaBwvXEOBA&oe=6A460964",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711389714_10164249724014568_1294101869274682298_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=vxt4DUOt7q8Q7kNvwG022oZ&_nc_oc=AdpL-UXUKxENi1wwNhHIJHgL-DA3xzgtTjFfHpSCj570YUQ1y3rGPAIXLVXwepApdRI&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af8qmMNJH2xs7to5s0fuRhTAKASQ0ifE3cWGz-IUS9TeaQ&oe=6A460FBB",
+          "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/711848268_10164249724484568_2109239948840493759_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=389Pdo5mUo0Q7kNvwFRZaz6&_nc_oc=AdoRQtHau8VWDIYLvoxAOS-ukg2yugW47mbBx9LVKZ2oc0O2pvypRcwjsIebcQz3uhs&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=y_bt-UFwV9Vd1h31yoU6SQ&_nc_ss=72289&oh=00_Af9g18YgpB51CmmEzqVkWouTeJrD8SstOTUqXPAVFlGWPQ&oe=6A460AD9"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": null,
+        "neighborhood": null,
+        "street": "י ל פרץ",
+        "raw_location_text": "רחוב י ל פרץ, קרוב לרוטשילד, לוינסקי, פלורנטין",
+        "lat": null,
+        "lng": null,
+        "geocode_source": "none"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3400,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "שכר דירה 3400 לא כולל חשבונות"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-01",
+        "min_lease_months": 12,
+        "is_short_term": false
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.city",
+          "location.neighborhood",
+          "location.lat",
+          "location.lng",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:UzpfSTEwMDAwMjU0NjQyNDEzMzpWSzozNjgwNDI1OTc5NTg4NjQwOA==": {
+      "id": "facebook_group:608325962573249:UzpfSTEwMDAwMjU0NjQyNDEzMzpWSzozNjgwNDI1OTc5NTg4NjQwOA==",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "UzpfSTEwMDAwMjU0NjQyNDEzMzpWSzozNjgwNDI1OTc5NTg4NjQwOA==",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36804259795886408/",
+        "author_name": "Or Zigelboim",
+        "posted_at": "2026-06-27T12:01:17.000Z",
+        "scraped_at": "2026-06-28T08:51:21.979Z",
+        "raw_text": "להשכרה – חדר גדול ומואר בדירת שותפים בראשון לציון ,\n5 דק’ הליכה מרחוב רוטשילד, קרוב למרכז העיר.\nחלון ויטרינה גדול + חלון צד, הרבה אור טבעי.\nמתאים לסטודנטים/צעירים, שקט ונוח.\n\nמחיר: 2100₪",
+        "images": [
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730917702_27223166400684873_3350702897741073810_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GVbnJupFWHQQ7kNvwG3VsE5&_nc_oc=Adr4_BWKR8509LRAjFMI_w4s8XlO6dcpOs18YId87WxAo3GIA3yFTosomNjZyr0RrIY&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-N1N2KLWx9tZb3oluf4f6pUJySPqZrR5CILk873N7DTQ&oe=6A462BB0",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730833831_27223167050684808_2316249905591623952_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1542&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=9vc4l7Kk7HIQ7kNvwEEn_RD&_nc_oc=AdpWTFf4bCXGo3FP9oacuDKhitdup7GHTybzxEltBTMb0h8uDDpj39C6ekBcyGhndPc&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_cMgVnSICAHpKW-UuDNGzvDosWCx-RmpiA4CT9BXFtgw&oe=6A463651",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730621211_27223167767351403_4244823754277727394_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=6wbEdMIANisQ7kNvwE86YR5&_nc_oc=Adqabm7SKgK2WRAye9BXSJuDqn4tf9sJeQNHIhJ8yfgbmiXvt8kiWHaOeh51II-EGMc&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9CI7uujtO1jlYMEW0ZX-5JZV9FbDutZOlqOzmbENkmEg&oe=6A460222",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/730749023_27223168304018016_4278933790142435602_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d_q_lJ_hYH0Q7kNvwFF_i8s&_nc_oc=AdqhPVkWp6KUj4eJyHi0IijUNyL2a9XchqMMjrLVokGuVBYb_bAupONclWgOsNgCJYs&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-Lbogivo1hlTUtelle9-WkbthTWX0QpIkOuSugLU25gA&oe=6A460851",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732068741_27223168567351323_7459236319535945435_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=pw4iaVGzxFIQ7kNvwF8tFh0&_nc_oc=Ado3DE30CxfmdjTnccQQk-k79nH4bJdy-uWyfnXN-cPauM2YNhwYZnCa2a-bqf1iSBI&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9aacpvonSCV5C82QfOJ9RSHARDBp4QMkQsTfYxHTwyww&oe=6A4611C1"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "ראשון לציון",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "ראשון לציון, 5 דק' הליכה מרחוב רוטשילד, קרוב למרכז העיר",
+        "lat": 31.97102,
+        "lng": 34.78939,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2100,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2100₪"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:UzpfSTYxNTcyNDM0ODIzMDAyOlZLOjM2ODA0MjI2Mjk1ODg5NzU4": {
+      "id": "facebook_group:608325962573249:UzpfSTYxNTcyNDM0ODIzMDAyOlZLOjM2ODA0MjI2Mjk1ODg5NzU4",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "UzpfSTYxNTcyNDM0ODIzMDAyOlZLOjM2ODA0MjI2Mjk1ODg5NzU4",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36804226295889758/",
+        "author_name": "Alma Zilber",
+        "posted_at": "2026-06-27T11:59:14.000Z",
+        "scraped_at": "2026-06-28T08:51:21.979Z",
+        "raw_text": "דירת שותפות בהרצליה✨️\nמחפשת 2 שותפות לדירת 4 חדרים מרווחת ומוארת בהרצליה☀️\n\nקצת פרטים על הדירה: \n\n• 2200₪ שכ\"ד לשותפה + חשבונות נמוכים, אין תיווך\n\n• 100 מ\"ר, 3 כיווני אוויר ושמש\n\n• סלון ענק ומרווח עם מרפסת נפרדת מקורה (ויטרינה)\n\n• מרפסת שירות עם מכונת כביסה ומייבש חדשים\n\n• מטבח גדול עם מדיח, תנור, מקרר וכיריים גז\n\n• 3 חדרי שינה גדולים עם ארונות מובנים ותקרות גבוהות, אחד גם עם פרקט\n\n• מזגן בכל חדר ובסלון\n\n• חניון לבניין\n\nמיקום מושלם ממש במרכז הרצליה במרחק הליכה ממרכז העיר, קווי אוטובוס ישירים לתל אביב, רכבת הרצליה, אוניברסיטת רייכמן(רבע שעה ברגל) והים,\n\n• חדרי כושר (אייקון והולמס פלייס) ממש ליד הבית, סופרים, סופרפארם וכל מה שצריך\n\n• כניסה ב1 לאוגוסט, אבל יש גמישות לפני בתיאום עם השותפה הקודמת.\n\nשאלות ופרטים נוספים בפרטי✨️",
+        "images": [
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733448815_122181078488747827_2712243658013657001_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1920&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CVVEez4BNlYQ7kNvwHaiiPX&_nc_oc=Ado1tHmUeJpTqDBPd_3wrDOAh1E_azEVAiOPiPiBawxFeismbntsuMZ5YHfgzMp1FlU&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_zu8HbrKn_E4qaXQRnckXQUjdr1ZGHxYm1f6QqBZmfOQ&oe=6A4618A5",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/731495875_122181078530747827_2939597971488673836_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BwFsYiEENl0Q7kNvwF1D9ZC&_nc_oc=AdpSbA-oyAghKm8k5ZRPC7IOot0iNv8mYgZidRdzjPsPfmKnL8UbaT6JAr2mqOwMOuk&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_a2lQCz7zJ0bdlAd3OciSktT3AMlmma6y9nWiKFDcBPg&oe=6A46348F",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733146244_122181078572747827_5856730396560236892_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DO7K4Ik3KNQQ7kNvwGdGXem&_nc_oc=Adokrz8bMn-HMwHVec_MZ6UfViPlZISPipCbTqe2i8JpAOTOk_UQTdw1_rjdfV4Wpek&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af_5ZVNN7YOwUMIXcdQWtCQ6E5l2wGGrlNhiIi3zNVNiZA&oe=6A460B29",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/732081904_122181078614747827_1393657073919437555_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=LP9JqKojrmMQ7kNvwHDcvau&_nc_oc=AdrX0JxBlSnAyO8POjZ_4fC1nhJOkwjucdBf9TCkOl57ZnwYypDdQJC2LJym0ShDFRw&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af-gzGd2c5xNP2o7a_XNm16lhLcH6ygsBcvb3ab4VjsMpA&oe=6A4613AE",
+          "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/733935748_122181078656747827_5576109723790627847_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=KgSx97uvlgYQ7kNvwEMXq28&_nc_oc=Adol19SYe2rq7-erwPcrONHYDm9WvSs1XUzk4q1VfleWcnjA-Pl0bikag5CVwgIHsg8&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=OEEanG4vVhq9cbw2C8aTCg&_nc_ss=72289&oh=00_Af9yUNNQnhh9SdT8N00Mh5zCknKndfFUrz-wX5Ks18ywyA&oe=6A462CF3"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "מרכז הרצליה",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 2,
+        "size_sqm": 100,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 2200,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2200₪ שכ\"ד לשותפה"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": true,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-01",
+        "min_lease_months": null,
+        "is_short_term": false
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.elevator",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36800718682907186": {
+      "id": "facebook_group:608325962573249:36800718682907186",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36800718682907186",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36800718682907186/",
+        "author_name": "Yaniv Moshe",
+        "posted_at": "2026-06-27T07:58:59.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "# חדר מאסטר בדירת שותפים ראשל\"צ\n\nמפנה את החדר שלי בדירת 3 שותפים\n\nכמרחק הליכה מרוטשילד (ממש ליד הג׳הג׳ה)\n\n**החדר מתפנה ב 1.9**\n\n## **פרטים על הדירה:**\n\nקומה 4 עם מעלית\n\n מגיעה מרוהטת קומפלט (מקרר, תנור, מיקרו, סלון, פינת אוכל, תמי 4, מכונת כביסה...)\n\n יש חניה 1 (מתחלקים בה)\n\n יש מקלט בבניין\n## **פרטים על החדר:**\n\nחדר מאסטר (שירותים ומקלחת פרטיים)\n\n מגיע **רק **עם הארון שבתמונה (את כל שאר הרהיטים ניתן לרכוש, יש לדבר איתי לגבי מחיר)\n## **פרטים על תשלומים:**\n\n~ 2800 ש\"ח כל חודש כולל כלל התשלומים",
+        "images": [
+          "https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/731032178_28188137330773110_5599838337707216279_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=43DoVFZD6PIQ7kNvwGxkN7c&_nc_oc=AdpWF4cBm-zDy2bty2JdcMM5gyObYPYkHD2V9B41epfHn0gJzKISw0j6c6dNw7usFDf5memnSUtAMWDTDAHxL69G&_nc_zt=23&_nc_ht=scontent.ftpa1-2.fna&_nc_gid=VmMFlDIrgkh8E5hV_LZn5w&_nc_ss=72289&oh=00_Af_jB1BTJKexjtzsytoSVUGDxJE6OsviHt5Y6d2cbRhvrQ&oe=6A46BB4F",
+          "https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/730628749_28188137294106447_396640412494469385_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=awlCAMn_afoQ7kNvwG6vn0j&_nc_oc=AdreU_6Oh-y1PJr_EyIa8vlT7L2DPRs6oEgKVaTM1i1H2NFjPTV2kivnYsLVJ18WE9EJu6SN5P4x37mB2cULV1C_&_nc_zt=23&_nc_ht=scontent.ftpa1-2.fna&_nc_gid=VmMFlDIrgkh8E5hV_LZn5w&_nc_ss=72289&oh=00_Af9qGBIq9mx7iPolA0EfvoTx5e9gSqV-OYKqFn1sc_XIQg&oe=6A46A8D2",
+          "https://scontent.ftpa1-1.fna.fbcdn.net/v/t39.30808-6/730570665_28188137334106443_9180220938905084544_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=snPsXwCHDy4Q7kNvwE7n9aN&_nc_oc=AdoX65UBOSXyK9amTZN1hcSeMtql5csucn_v_eced4hcdOizAuU7UMT3RPUGc5OjuMvfy19fVFcHJkode8i1SqZn&_nc_zt=23&_nc_ht=scontent.ftpa1-1.fna&_nc_gid=VmMFlDIrgkh8E5hV_LZn5w&_nc_ss=72289&oh=00_Af8uxx1HFJM5a4_nlbC1MwgzGyuiQC8GZaZHvoSM2evimA&oe=6A46A398",
+          "https://scontent.ftpa1-1.fna.fbcdn.net/v/t39.30808-6/731916825_28188137524106424_5122456530409008433_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ZRTGqhkuaNsQ7kNvwHNLdXQ&_nc_oc=AdohijKuANhDye08fgf1kqfjyltGaVKDB1BEOutiCc7JwlYsXCl8Fy2FeyuudcgvRZp1FczqKUzqYT4NtDdcKPD6&_nc_zt=23&_nc_ht=scontent.ftpa1-1.fna&_nc_gid=VmMFlDIrgkh8E5hV_LZn5w&_nc_ss=72289&oh=00_Af_Syx65gDuVuGWBjhWXdLS8yLjOg5_WGcFiMPMnR4mDnA&oe=6A46C131",
+          "https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/730503547_28188137554106421_2884828674245543708_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=OTh_tiQfEaYQ7kNvwGhVGmX&_nc_oc=AdoI1aDhbd7o64Q5f9LD9BDCroLRIJh1Br9MIwjT1xFtmeVlJEBH4I-gn5PGD-YOwITTxYWO1BH2cJg0qhnftlj_&_nc_zt=23&_nc_ht=scontent.ftpa1-2.fna&_nc_gid=VmMFlDIrgkh8E5hV_LZn5w&_nc_ss=72289&oh=00_Af82oadT-79MpzxY8sWzHQ5hDuVNm3tzMQ7sLnp9KLj5Wg&oe=6A46A50D"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "ראשל״צ",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "ראשל״צ, ממש ליד הג׳הג׳ה, כמרחק הליכה מרוטשילד",
+        "lat": 31.97102,
+        "lng": 34.78939,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": 4,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "~ 2800 ש״ח כל חודש כולל כלל התשלומים"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-09-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.air_conditioning",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36781528111492910": {
+      "id": "facebook_group:608325962573249:36781528111492910",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36781528111492910",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36781528111492910/",
+        "author_name": "Meni Biran",
+        "posted_at": "2026-06-26T10:48:05.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "ללא תיווך! בהרצליה,במלכי יהודה 29 דירת 4 חדרים גדולים. קומה שניה מיתוך 3 עם מעלית. עם מחסן וחניה מקורה . מקלט בבנין. מרחק הליכה של 10 דק למיככלה ו 10 דק למרכז העיר. כניסה 14.08.26. ארנונה לחודשיים 1300שח וועד בית 250 שח. 2  שרותים -אחד ניפרד ואחד בחדר האמבטיה הכולל מקלחון ואמבטיה . מחיר :7700 שח לחודש. \n\nלהתקשר למני 0547431102",
+        "images": [
+          "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/731014396_10240952726411398_6611356425730515999_n.jpg?stp=dst-jpg_tt6&cstp=mx1530x2040&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=UFP2GFu5_X8Q7kNvwE69pAm&_nc_oc=AdrIfhJdjJvioe19FVSv7ko67Vs4QHWgsp7jW_zPC4f89HFQy7LTILB-N41k7157yGg&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=-l_aFeRHH9Qr0PfjN1CRFg&_nc_ss=72289&oh=00_Af-ELGVYNKIEVoZl4beYlGLzIuIbC6RWdxsJQKaM1E-xEQ&oe=6A46B403",
+          "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/730688990_10240952726531401_1985035087726734849_n.jpg?stp=dst-jpg_tt6&cstp=mx1530x2040&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=xsM9vrNG2kcQ7kNvwF2H0s0&_nc_oc=AdrSRoZxJEXeTuNypgmKoi8W5WXuPk-LCKJK0OqCyQkDlWQTzY8a6_Xc1BBV_T8gUzI&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=-l_aFeRHH9Qr0PfjN1CRFg&_nc_ss=72289&oh=00_Af9hVoo0B1-q_PSFDmn_NpZELtui1vKVxwMnSmN06TEnxw&oe=6A46BC02",
+          "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/730413895_10240952726891410_5131805628515518770_n.jpg?stp=dst-jpg_tt6&cstp=mx1530x2040&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=JOte3vrzaqwQ7kNvwE9IoWI&_nc_oc=AdqwpWby7oTrpbwpikuKH-1yFvqaz0zCd9vy_QaHnRIax9gYTOLtqjYSZOsVb7bKsmE&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-l_aFeRHH9Qr0PfjN1CRFg&_nc_ss=72289&oh=00_Af-L320xmMKvnowM8zQfjpqCus9l0PFelzqh_pxm6f-u2g&oe=6A46BDA4",
+          "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/730621746_10240952727371422_2968169941000397188_n.jpg?stp=dst-jpg_tt6&cstp=mx1530x2040&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Q0-zfxAtG7oQ7kNvwEDB9XS&_nc_oc=AdpKeZanIZqvDfFWSLrJ0kvUOHZTjuQP0y5XKRAKtofTn6hCCBeG_xcD5RQZkxpoNGc&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-l_aFeRHH9Qr0PfjN1CRFg&_nc_ss=72289&oh=00_Af9BGJUJJBG-XVR0Oyw3z-FseLNsHoCY4rWZjyqS797uhQ&oe=6A46C6ED",
+          "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/731093503_10240952728051439_6450475204943325431_n.jpg?stp=dst-jpg_tt6&cstp=mx1530x2040&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=URAgy1ceWf0Q7kNvwFflBxW&_nc_oc=AdpZKL_KaS_hlXud_wQB8avc1I_m-sqhG79MzwAQnjSLMosC2Lm5vp3VkHSbmClMS-w&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-l_aFeRHH9Qr0PfjN1CRFg&_nc_ss=72289&oh=00_Af9VtbuU721s3SZrcqQHZSWIPdj0LkwbX8wpQ55BAZtY8Q&oe=6A46CA43"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "apartment_rent",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": "מלכי יהודה 29",
+        "raw_location_text": "בהרצליה,במלכי יהודה 29",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 4,
+        "size_sqm": null,
+        "floor": 1,
+        "total_floors": 3,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 7700,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "מחיר :7700 שח לחודש"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": true,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-08-14",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0547431102",
+        "whatsapp": null,
+        "contact_name": "מני",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.balcony",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36780396388272749": {
+      "id": "facebook_group:608325962573249:36780396388272749",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36780396388272749",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36780396388272749/",
+        "author_name": "Menachem Natan",
+        "posted_at": "2026-06-26T09:33:53.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": " מחפש שותף לדירה \n🚈🗼צמוד למגדלי בסר בבבני ברק והרכבת הקלה. החדר עצמו לא גדול אבל שטח משותף יש ברווח.\n\n💥 יש בחדר מיטה ארונות ומזגן נייד, הבית המשותף מאובזר בריהוט בסיסי. \n\n🥰קצת עליי: סטודנט להנדסה באוניברסיטה הפתוחה ונהג משלוחים במשרה חלקית. \n\n💃מחפש אווירה נעימה שותפית ומשפחתית בדירה \n\n⛱️החוזה עד ינואר, אז צריך לעשות חוזה חדש עם בעל הדירה \n\n🗝️ מחיר; 2000₪ כולל הוצאות (גמיש)\n\n🖋️ פרטים נוספים באישי, נא לרשום הודעה",
+        "images": [
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/730153564_2108846116700611_6869532623093380658_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx720x1600&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=hAU-3bsgmbQQ7kNvwG7r8Nb&_nc_oc=AdqDcnksDBVFJc747VPT9N3zBgZer5yKEFW60xfmLL71nILGrpMNYH8cbwmWWspXJNA&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af9yhTEU5FuNNT-VAp1OvOyPafbr87uwczu3Be7CEnIcxg&oe=6A46B581",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/730354510_2108846170033939_5530024164315669229_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx720x1600&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=JYasri6CMFAQ7kNvwG2nhrI&_nc_oc=AdoIEAOUIUB9I947LU4DhNhHkvY6mvL36w1FPimSqilhwFxxFFGld1tdrcupXA8UgCs&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af-D0UiMRHtD7cqjfJ2GRGNk843yum1noLJ4xnSSOYWrgg&oe=6A46A470",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/730437124_2108846210033935_3188851001622497498_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx720x1600&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BNrDijr1NagQ7kNvwEhuoYM&_nc_oc=AdrtWkVwtTp0ic08W0cwQZsuCOR-AS_mYTYWK1memqHiVtMptsqdOjycE0f9DsrUUU4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af-jlanF4IdnGW2-ySY4urQ_9bcjVA68n8t6q-zLbfwu_A&oe=6A46B08A"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.82
+      },
+      "location": {
+        "city": "בני ברק",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "צמוד למגדלי בסר בבני ברק והרכבת הקלה",
+        "lat": 32.08074,
+        "lng": 34.8338,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2000₪ כולל הוצאות (גמיש)"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": true,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36766054559706932": {
+      "id": "facebook_group:608325962573249:36766054559706932",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36766054559706932",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36766054559706932/",
+        "author_name": "Boaz Hason",
+        "posted_at": "2026-06-25T17:25:08.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "להשכרה בגבעתיים בשיינקין, בדירת שותפות, דירת חדר מאסטר, שירותים ומקלחת פרטית לכל אחת,, במיקום מרכזי ושקט, מחיר 2,950 שח כולל כל החשבונות גם חשמל! מקרר אישי לכל אחת בחדר, פרטיות מוחלטת לכל אחת! כניסה מיידית לפרטים נוספים בוואצטפ 0544799359",
+        "images": [
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/728969617_4307612042835805_8700033709281674705_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=dXBYeTeTP44Q7kNvwH1Xu3D&_nc_oc=AdqKSTCZnciBZDSa_VfoY_kuvbfIOXNkfRL_z-v2VSGo08G3EGdu7G4iiMVU84TRiis&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af9n_RhyFx80AiEXRe0p0H3clYBKhhwrEYV0CLDLNwP36Q&oe=6A46CE0D",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/731093768_4307612139502462_6151668152460311341_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=03m0_ZqJgRsQ7kNvwHjp5iw&_nc_oc=AdqK5wfEKC95ZJJcbBnIUh6O_Sy9IjESg_GM7njxxhJrLYk10IO6JCIuN1CwQ-vPF2c&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af8sJA_PwyDFtgxjWOX7HN2pHXlxvaM56rx1od2ol26Qsg&oe=6A46BC53",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/730776613_4307612286169114_7880828768055403791_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=D9C3xw95YuUQ7kNvwGXqwR7&_nc_oc=Adrfe5W-x_4Dp8ll_VNkOU2AHa7vifpRO7Omm9f_U0G1Qd2UVp3VtZ99ram5JHKJO8w&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af8nxDzL8-jP2LEWCF_138GXYAUn4kIqX9JCoeGuIru-3w&oe=6A46ABB4",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/730917692_4307612379502438_3334279914523125051_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=iv9L8qjuSTIQ7kNvwFtNJI7&_nc_oc=AdqNYD3_nWGlSs1JSzzyIEY8SdF9YNyRoO9Jx5K_WYugua5xz-5WOBrfGAOQ7q1R5O8&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af_rQEtA5xNu3HtbpEUb-ij4fmNtU6qd-2fwBCKsE23PzA&oe=6A46CAF6",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/729828894_4307612486169094_493756513333214309_n.jpg?stp=dst-jpg_tt6&cstp=mx1542x2048&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=fIDhCRcWyLUQ7kNvwHl_d2e&_nc_oc=Adq7iI4MFXL3q0I3tmmfZ5L4Pma1Sz1BGMz-w2pIq77jwvI9JAZ5CJE3e3D7ep7xiLM&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=m9XqwGRaCn8OUh2dt5xTHg&_nc_ss=72289&oh=00_Af8r11fNpCJvdkNKHg1_OhnKXO2Os4NwyexPiFK7og3ejw&oe=6A46C2BD"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "גבעתיים",
+        "neighborhood": null,
+        "street": "שיינקין",
+        "raw_location_text": "בגבעתיים בשיינקין",
+        "lat": 32.07225,
+        "lng": 34.81253,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2950,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "2,950 שח כולל כל החשבונות גם חשמל"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0544799359",
+        "whatsapp": "0544799359",
+        "contact_name": null,
+        "preferred_method": "whatsapp"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.contact_name"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36761168480195540": {
+      "id": "facebook_group:608325962573249:36761168480195540",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36761168480195540",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36761168480195540/",
+        "author_name": "Iris Birman",
+        "posted_at": "2026-06-25T12:35:58.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "בנסיבות משמחות מתפנה חדר בדירת שותפות הכי שווה ברחוב המרי בגבעתיים. יש רק שותפה אחת שקטה ויש לה חתול מתוק, שקט שאוהב להתכרבל.\n\n3000 לדיירת וחשבונות נמוכים.\n\nמפרט טכני:\nחדר גדול עם מרפסת שירות.\nמזגן לכל חדר, בעל דירה זמין לכל תקלה(הוחלפה צנרת לגמרי לפני חצי שנה)\nיש דוד שמש, 3 מרפסות שירות מתוכן אחת בחדר השינה\nמקלט בבניין + מעבר לכביש אחד נוסף אם צריך\nאין חניה לבניין אבל יש כחול לבן ואפשר להוציא תו בקלות\n\nדירה עם חלל גדול ושותפה אחת שכיף בסוף היום לשבת איתה על הספה ולראות סרט בנטפליקס.\n\nבחדר נשאר: ארון, שולחן עבודה ומיטה מושלמת מאיקאה וכוננית ספרים.\nכל הריהוט נקנה לפני פחות משנה ולכן ניתן לקנות ממני אך לא תנאי חובה לכניסה.\n(הריהוט בתמונה של החדר הוא לא הנוכחי אלא מהדיירת הקודמת, אשלח תמונות נוספות בפרטי במידת הצורך)\n\nלפרטים נוספים בפרטי",
+        "images": [
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/731808260_28495438200046564_8053844834067223179_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=iC8neSMaC5sQ7kNvwGTN8iu&_nc_oc=AdoKxZPRKNMWMErZnS3giKegP6T52HYl131g0NOVv9kGG-xtHYbypKD-YvNH2TrvlKI&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af8h85GpPvatHtt08M9Z-rPpQAE7EBI7VqThAX44tYTnaA&oe=6A46D170",
+          "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/729988291_28495438553379862_1694920307974784353_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x2340&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Fw11AHQJnYsQ7kNvwE8hyHj&_nc_oc=Adpi76wWG7VG9zVLaLif0nnbhAElpB5hhSIPYDRKXrncwXuamMpJ8B3LOim90rld_y4&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af_8SN6QCzxEYCEvsaM64kdJ9mVjqLIBwNmVRKcXdXfYxw&oe=6A46AFFA",
+          "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/729964308_28495439073379810_1899875504110062908_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=iMhdcGqjUwsQ7kNvwHQkXv-&_nc_oc=Ado9QAXEdO38HaVNSHV06EGoleaWW9CcSk7xXo5Yyg36_5omlc_QyrS5BrGRYTUV2aM&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af-BeOsBifDoFSDoVwlq4YL3zyzoC3yhXnmjH-vCTaxSCA&oe=6A46B351",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/730001587_28495439453379772_7514649193668113101_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=R2w6NKqATcMQ7kNvwEtFc_N&_nc_oc=AdpwPCmphlrRW1JtuLnAECAopI027_2J7VnkMAhfsKwGbZgxdnQPO7OLaO3yRcUNF60&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af8QbTsRIhezZxgIm8rvouij1CTSdbpPyBO3h6Gwik_X9A&oe=6A46A66B",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/730069509_28495439753379742_4124582041169070815_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=MMUpvnOWuPYQ7kNvwH2D_aR&_nc_oc=Adpc3g1IbK4osvIvkNnL8l79yS3tbVsU8kSp_bT3KsadxENMKnusrSCGsKiDob7mgfc&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af-TRlOJNCX5SeU9YIvqI-dKyuaTSh7na-Rr9xEhLnAb5A&oe=6A46A8AA"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "גבעתיים",
+        "neighborhood": null,
+        "street": "המרי",
+        "raw_location_text": "רחוב המרי בגבעתיים",
+        "lat": 32.07225,
+        "lng": 34.81253,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3000 לדיירת וחשבונות נמוכים"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": false,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": true,
+        "renovated": true,
+        "pets_allowed": true,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.elevator",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36758305990481789": {
+      "id": "facebook_group:608325962573249:36758305990481789",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36758305990481789",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36758305990481789/",
+        "author_name": "אור ייני",
+        "posted_at": "2026-06-25T09:31:15.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "חדר בדירת 3 שותפים בבית פרטי ברמת החייל. מקלחת ושירותים משותפים עם שותף\\ה. יש ממד, מטבח, פינת ישיבה ומרפסת פתוחה גדולה משותפים. ליד אסותא וההיטק. 2,600 לחודש כולל ארנונה. חשבונות מים וחשמל מתחלקים ל 3. כניסה מה 1\\7\\26. לפרטים נוסיפים רוני 0544780650.",
+        "images": [
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/730381820_4333357953546225_6281621683869863150_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=VwEPyXXIJwMQ7kNvwEZ1lJE&_nc_oc=AdqEbkjyZrtZifGAquoIaHomd9CjP7RVyyBYbJJJvHDWZWpqAScIeubzTQ4-mL_EANs&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af9-mjrTEw-d-jvMVOLLW4xFjLI8PIoQOHElMlCuQJMckw&oe=6A46A884",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/729413274_4333357946879559_7177790850209736937_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=zOkEal6OOGoQ7kNvwFm4nv5&_nc_oc=AdrgJgZ5WFLnTXwjyue7tI2xc8TJJhv819PDMphwHKM5YuOFOJ03Pf6Cz5dUQNp1tJs&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af-LPQSSbgZDPPv3VFlNDOemBp4GPPw88lVgvwzK5QGF3w&oe=6A46B762",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/730515905_4333357950212892_500801025117949277_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=usFY9yllPMwQ7kNvwElJk-x&_nc_oc=AdqYGAA6IznyfTjsqJzX9dSJE7aAR9WAXedaQdDYrPQAaPbFQjCOrPoUMZuIH4aivpE&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af-bqujOYjkfGjaIjrICFA4-UPuqYjPSnmkCx5IB8sLk7A&oe=6A46B76D",
+          "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/731252949_4333358033546217_4917508334677426260_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Fw6OiGdubO4Q7kNvwHhq4tz&_nc_oc=AdrFflhFlmMBJ5-U66dvYuWR1-AIe0qVFb7ldxim0femWhcSQVukIjx2BZq31I0t0rc&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af8-t0ohE9iuN4KzJY9Yof_L1aoqp_SaOS7Isu8h8gcxsA&oe=6A46AF44",
+          "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/729325140_4333358036879550_6500797853024506683_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=UKpYUfLpbKoQ7kNvwHwkQQ4&_nc_oc=AdprbPui0q3FPKJUBHQkO07zLDLWIyRV36dTRDMh5pRs-R987weTwm_KmJ98bSh1Uxk&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=EDS_DiSsviLKRZKNh-CTCQ&_nc_ss=72289&oh=00_Af-QfF_VrrixfufuprVp0Vh-By7YrHsl1YPfrQdDHe8I6A&oe=6A46AB85"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": null,
+        "neighborhood": "רמת החייל",
+        "street": null,
+        "raw_location_text": "בית פרטי ברמת החייל",
+        "lat": 32.115,
+        "lng": 34.843,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "house"
+      },
+      "price": {
+        "amount": 2600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2,600 לחודש כולל ארנונה"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0544780650",
+        "whatsapp": null,
+        "contact_name": "רוני",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.city",
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36757872533858468": {
+      "id": "facebook_group:608325962573249:36757872533858468",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36757872533858468",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36757872533858468/",
+        "author_name": "Ilanit Gabay A",
+        "posted_at": "2026-06-25T09:00:17.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "לדירת שותפות  מחפשת שותפה שלישית ברמת החייל תל אביב  \nמתפנה חדר מרוהט באופן חלקי מיטה וארון לבן  2600\"שח 9 מט\"ר כולל ארנונה\nמטבח סלון ומרפסת שמש גדולה משותפת לכולם מרוהטת \nכניסה מיידית ללא בעלי חיים \nשתהיה שותפה נקייה ומסודרת  ללא עישון \nשקטה ללא רעש אוירה רגועה \nעבודה מסודרת עדיפות לא מהבית \nקרוב למסעדות אזור הייטק אסותא  לקרית עתידים\nישנו מרחב מוגן",
+        "images": [
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/729499664_37027663866818831_8412418340267528613_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=HCoj-bsA-dUQ7kNvwHbS5az&_nc_oc=AdrlYWF9Lh9Fhq6YH_V1e63SNqlW8CbBdzI4Jk0tn1wcrDezq9v8ppid5acXxvkBsTo&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af9xl41fgh8jREDwuL1rsy_m6BCXBpo2i5brIPQJCmTMLA&oe=6A46A5E2",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/729805296_37027664390152112_1645250740895995299_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=o4EYPu9DLBwQ7kNvwHpsNME&_nc_oc=AdoWMYpcMDsoKNRkduq9vPJBh1B6OmIFPexmOUR6p-vceeCnfPrrOJMOCqGtWE47-a8&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af_RXljXxtwjft1xdLbJVcRbYfQtnJmEJSWC6h37_6JjYg&oe=6A46C127",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/730481037_37027665580151993_750508376736543564_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=K_iJGpunah8Q7kNvwFvTaJe&_nc_oc=AdqY9IBnGTND7y10h3PfGKmInLfSkXoeuo1NFH4ws1bFaZSuYdXP-dmadN4tVqmeohc&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af81scma1LTbsvB23kYU_SKr0EMo3Qe0_lxQs_u1GIi3AA&oe=6A46D2AF",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/729499668_37027665130152038_4459666443258786713_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DlFDUrlXKHIQ7kNvwGrrxxN&_nc_oc=AdpQaltCSNPdKmmIxdmvAeqGrzgeOiHoqOESdrmopQHbNkEyOU9aK3FBcbw2IDdCjHE&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af_TBn9RfWUHWYhEnATVYdKRN-RtDyHLJF8oy9jwdmUuMA&oe=6A46D337",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/730713388_37027664450152106_7348707877067250499_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=zB3aNCiexyoQ7kNvwGK8EWU&_nc_oc=AdqAz0nnoKL-6ZklQXRFX4Qm-za20xAVuAScI2swhHTYmEzyrXcn25R_A5E0vxyMBkY&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af-6tQ3cJTNYF9hxtEnhz5VC0_MuPYSOehCpwsSazlfsUg&oe=6A46C1E0"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "רמת החייל",
+        "street": null,
+        "raw_location_text": "רמת החייל תל אביב",
+        "lat": 32.115,
+        "lng": 34.843,
+        "geocode_source": "neighborhood"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": 9,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2600 שח כולל ארנונה"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_vaad_bait",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36757665387212516": {
+      "id": "facebook_group:608325962573249:36757665387212516",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36757665387212516",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36757665387212516/",
+        "author_name": "Pini Langman",
+        "posted_at": "2026-06-25T08:45:28.000Z",
+        "scraped_at": "2026-06-28T18:39:45.324Z",
+        "raw_text": "חדרים להשכרה בדירת שותפים איכותית במערב רעננה.\nמיקום מצוין בשכונה טובה, קרוב לצירי תנועה מרכזיים, מרכזי קניות ותחבורה ציבורית.\n\n✅ חדרים מרוהטים\n✅ ממ\"ד בדירה\n✅ שותפים נעימים\n✅ חוזה אישי וגמיש\n✅ מחיר כולל חשמל\n\nמתאים לסטודנטים, צעירים ואנשי הייטק.\n💰 החל מ-3,500 ₪\nלפרטים ותיאום ביקור - רשמו אני.",
+        "images": [
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.99422-6/729964726_1313822657090405_5396444581124089439_n.png?stp=dst-jpg_tt6&cstp=mx1044x1544&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=J8ohm49JNSQQ7kNvwGw5-D5&_nc_oc=AdrluH8LsgYTvOOm5jcvkybMPeNQz8hXgmdM3F_F0BkvJM6VgFlR3r33DsCmnQYbwcg&_nc_zt=14&_nc_ht=scontent.fagc3-1.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af-FGNp734wPEOjvaIOnbsp0_0cLxsm0xkRjlF5iKkNT-g&oe=6A46C5D1",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.99422-6/730584844_1817985815843953_3891862957189246070_n.png?stp=dst-jpg_tt6&cstp=mx2048x1959&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=eu8TNt0Rd3UQ7kNvwHEGyZU&_nc_oc=AdpQSdBEPopJfmxpeRZnLMe1l-ZOJ7YvGq9PUO_qaHo4lrqhwK216mzCkzCgd6E7hXg&_nc_zt=14&_nc_ht=scontent.fagc3-1.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af_p3sk9p7ucp6i7OpVLy4uiYI0wHJ9M9knEwV-XaKMbJQ&oe=6A46D263",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.99422-6/730598662_1665040908090828_7530363249246028628_n.png?stp=dst-jpg_tt6&cstp=mx1072x538&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=B2wFBSb3_8AQ7kNvwGgnRSc&_nc_oc=AdoOm8OouxtswjxBkSJem78a8oP2UPfT0Ue86kZIAmZqvaxArirCQSZTyCP-03l2HcI&_nc_zt=14&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af9w9mdtxVVUh-RJiWx2lbVIazdkJbVY57Sw6PbaZz7cZg&oe=6A46CD18",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.99422-6/730373624_1329210038692502_1367914032781037626_n.png?stp=dst-jpg_tt6&cstp=mx1080x788&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=tINs7UOHACgQ7kNvwEiXGoQ&_nc_oc=Ado0merF9bOVc8JtR3ART7m8_23-vmCfz2pONS6QzL2syeCpB_lakVUD_KTBtpzzY-k&_nc_zt=14&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af-7cpoyJmRyEDTQyoIDSqTvuoMhmenM4WzqGVu7FrB9xw&oe=6A46B57C",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.99422-6/730771540_995596920113881_2014097686881484364_n.png?stp=dst-jpg_tt6&cstp=mx1044x1545&ctp=p394x394&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=g-AvqIn0vwwQ7kNvwHzxg7I&_nc_oc=AdolB8GU7B7K2gvjICRYZ5ZRsuaHIqz0DR_EeuYeN9_HkAhuRQ0aTaEPLshkTezeAec&_nc_zt=14&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af8eYu6pk1Sd_u-KPzcUOLIh0orr4aIlcgPV1dzo4D6KHQ&oe=6A46B2C5"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "רעננה",
+        "neighborhood": "מערב רעננה",
+        "street": null,
+        "raw_location_text": "מערב רעננה",
+        "lat": 32.1836,
+        "lng": 34.87386,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "החל מ-3,500 ₪, מחיר כולל חשמל"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36743619308617124": {
+      "id": "facebook_group:608325962573249:36743619308617124",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36743619308617124",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36743619308617124/",
+        "author_name": "Yoav Tene",
+        "posted_at": "2026-06-24T16:18:33.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "מחפשים שותף או שותפה שיצטרפו לבית שלנו!\nדירה ברחוב בורלא בניות (ירושלים )(מיקום פצצה עם המון קווים שעוברים ליד הדירה) על הגן הבוטני, סלון גדול, מרפסת, מכונת כביסה ומייבש, קומה 2 בלי מעלית, יש ליד הדירה סופרפארם ושופרסל \nהחדר עצמו מגיע עם ארון קיר מובנה ושולחן (ויכול להיות שגם השותפה היוצאת תשאיר את המיטה) ומזגן(!)\nחשבונות סטנדרטיים\nשכד 2475\n\nאנחנו מחפשים מישהו.י בוייב טוב ונעים, שיודע מה זה לחיות עם שותפים ושיהיה לנו חיבור טוב וכיפי,שיודע/ת לתת ספייס אבל גם יזרום/תזרום איתנו על ארוחות שייש מפעם לפעם\n עדיפות לבני 25+ \nכניסה ב1.9 (יכול להיות שיהיה אפשר לסבלט לפני)\n\nנשמח לחיבורים פוטנציאליים!",
+        "images": [
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/729349955_27860086993597217_7711495978603170609_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x811&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GhjhSt6xvFMQ7kNvwEa0hX5&_nc_oc=Adpgx3h6P3YM6N50iBEKrfXGQXZ865ttJT_hnsJbYdQIngUOiBjmkf059hHBN06hpoA&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af-XLH0E6dg0WMr1J_fphukUCwsXa4hws1UfMqA10iZA2w&oe=6A46D2CA",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/731037788_27860087270263856_7968575418100604929_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x811&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=PdjdxfAFNyEQ7kNvwFvDs7a&_nc_oc=AdoBrI4_wyfJZPmj758O7DPzEs_c8Qdm99kVDPILqonythFu9jmhus4i1YdHNUR8df4&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af-ry5mCh0pEciDVr8s9xCkIFhkz2yEJC4KAfZIhGDcH3Q&oe=6A46A669",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/730640470_27860087693597147_2801051405821245407_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1439&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=SiIPMjtKj14Q7kNvwHTGiHU&_nc_oc=AdqOn-k-0mfR8xqYugoG7dYdJgG5Mr3Av-mF2tVVyjrAV5LYbHRyNbOVSMlRkaPlcPo&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af9BUp7wig5bU2tOb1n2Zjmp3FCk00Vrm-1RhNIdn1JFKg&oe=6A46CD73",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/730275243_27860088056930444_3636360451109297378_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1439&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=0TjQ4_tg8xAQ7kNvwH5Jc9x&_nc_oc=Adpjt12w3_jlb-u8XXlkwEP3mcoMVt1SFifv6xWZu5ulbuVVXvPBUzDV5UP5010FdA8&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af9GRI8bMZ0oes2y4xU11jBv2JC7_Z4cxGkleBbkKJPStw&oe=6A46C5E2",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728226202_27860088363597080_2013132561527793287_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1439&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GB7cvZ4o4McQ7kNvwGcbAeY&_nc_oc=AdoerL3tCUg2MOnJahdkM0GIp-7JpeCmGXJExfXDdu3p9RLjgoFHvTgLM7n9sU4iupY&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=vJZRhv4O9MIbO6XBQhp5tg&_nc_ss=72289&oh=00_Af9ynxD-TiZaCfnbOU2Oa5-0VUx8xOzc4ufKcy3k9guEkQ&oe=6A46A3C4"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "ירושלים",
+        "neighborhood": null,
+        "street": "בורלא בניות",
+        "raw_location_text": "רחוב בורלא בניות, ירושלים, ליד הגן הבוטני",
+        "lat": 31.76904,
+        "lng": 35.21633,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 2,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2475,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "שכד 2475"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": false,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-09-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36744118688567186": {
+      "id": "facebook_group:608325962573249:36744118688567186",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36744118688567186",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36744118688567186/",
+        "author_name": "PurpleBlueberry6248",
+        "posted_at": "2026-06-24T16:49:49.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "חדר פנוי בדירת שותפות בפתח תקווה, כניסה מיידית.\nבחדר מיטה, ארון, שידות ומראה,\nהדירה מרוהטת ומאובזרת ויש מרפסת ופינת ישיבה,\nבבניין יש חדר כושר לדיירי הבניין!\nוהדירה ממקומת 5 דק' הליכה מהרכבת הקלה\nשותפות מקסימות ושמירת שבת במרחב הציבורי, אפשרי כסאבלט עד 21.9 ואחרי כן חידוש חוזה.\nמחיר החדר 2545, חשבונות סטנדרטים.",
+        "images": [
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/730949265_1633614924368252_1764577530341634847_n.jpg?stp=dst-jpg_tt6&cstp=mx1170x1555&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=MRcHpqYywrMQ7kNvwHsuSUi&_nc_oc=AdoEBAjRSz99kB4u_dbYchrxGM37o5IWklKDPdWD9-VGWwZl0nVQPeFBc1psZpqT-IDa0kTnamtOZ2vDRZC3Gejj&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af9McY0PspmsFiYI96XQvlydm2Ay5XJxU1ZMR5Tjal6egQ&oe=6A46CD26",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/730320705_1633615014368243_4121921313573908812_n.jpg?stp=cp6_dst-jpegr_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DaWHObr8XFEQ7kNvwFTZnen&_nc_oc=Adqo3EYVA1KF2Vobwg2MCvB3e_IhlC7zzbyT-H6PPQzhQNHGy1OFi_zPeR9omnafrBn33pC8lq46822y2HjbhYfZ&_nc_zt=23&se=-1&_nc_ht=scontent-mia3-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af8APIiFtya-VrjPvYfvQ4Iz9-xn3oCBgQ3CjeQnEgnlug&oe=6A46B42A",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/729294111_1633615061034905_2204640067764819589_n.jpg?stp=cp6_dst-jpegr_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=f43JscF5tToQ7kNvwHbpEf8&_nc_oc=AdovwYt1deC1wTkvH26wtumah7sDVawWCaH7MazIUP1elCzYhxYjDwjNEnTC8DDSsdbLUWJhE4rcBStIm-sUNvg6&_nc_zt=23&se=-1&_nc_ht=scontent-mia3-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af-6cEbgyzKW4LkWTkO104_-TjufP18ZlDd9IJGSb-Tc5A&oe=6A469EE1",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/729567231_1633615131034898_110413133518954317_n.jpg?stp=cp6_dst-jpegr_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GAD5VSG_PtcQ7kNvwH6gk2K&_nc_oc=Adpu17W21iSnAXyMmsTMvvXUuq6-s30efR99WGXimz9d-DxYU-dluaWnc37tWq-xoi6W-BkPHeg26AEVSUyhWv_N&_nc_zt=23&se=-1&_nc_ht=scontent-mia3-3.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af8CRDu81DlCmfE3EolRMxwyoD0xCPs3qwRl5E4X98bFwQ&oe=6A46C831",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/731146889_1633615214368223_1223686065462456524_n.jpg?stp=cp6_dst-jpegr_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DBgs-5nsSrAQ7kNvwHdFtAI&_nc_oc=Ado_24YCk4inTESSTWLnLs3cRtmgXeSI7Cz5NmVLGDDGSZ3asHlxpWKDpKmGiOr2ZBFt7gAEjw09ZrBo-XyVc6ZZ&_nc_zt=23&se=-1&_nc_ht=scontent-mia3-3.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af-5QkSmgMxNanUIIL02lA6ABQe5XW6VVQ7JPJW0XfIkGw&oe=6A469EAB"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "פתח תקווה",
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "פתח תקווה",
+        "lat": 32.08707,
+        "lng": 34.88747,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2545,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2545, חשבונות סטנדרטים"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": true
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36741285732183815": {
+      "id": "facebook_group:608325962573249:36741285732183815",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36741285732183815",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36741285732183815/",
+        "author_name": "Einav Eliraz",
+        "posted_at": "2026-06-24T13:50:02.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "מתפנה חדר מאסטר, שקט ומרווח בדירת שותפים יפיפייה ומשופצת אדריכלית קרובה לתחבורה ציבורית, סופרים וכל מה שצריך... ברחוב בן גוריון 105 שברמת גן. \n\nחדר מאסטר עם שירותים ומקלחת פרטיים. פרטיות מירבית!  מרוהט קומפלט! \n\nמטבח משותף עם פינת אוכל,  מאובזר בכל מכשירי החשמל, כולל מכונת כביסה ומייבש.\n\nכניסה  מידית\nמחיר 3500 כולל הכל - ארנונה, חשמל, מים, ועד, גז, אינטרנט, כבלים.\n\nיש מקלט!\n\nללא בעלי חיים.\n\nלכל שותף הסכם כניסה ויציאה עצמאי ואף אחד לא רושם על עצמו חשבונות.\n\nעינב 0523278297",
+        "images": [
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/730698507_10231617830937017_432579219557395331_n.jpg?stp=dst-jpg_tt6&cstp=mx942x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=SIdihq2ZaRMQ7kNvwFW58Rq&_nc_oc=AdolaU2ypmBnVGekJztYE2qRo6M6kIQkM21UuMxQbog2bbZyGEEVabUswWx3RL0HIcj647f8_RMXesYBMckEli6G&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af-9-Jw5ElvuhlD2XSmmivkQ8YWg7rf_hfQoxEWU5JQ5hw&oe=6A46A02B",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/731032175_10231617831537032_6918711270476233250_n.jpg?stp=dst-jpg_tt6&cstp=mx942x2048&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=AG-eJcUZCewQ7kNvwGjgS7y&_nc_oc=Adq_pjEbvtUFRolPEUjrwCFwSE21uz7gzne-iIf0kI2WlwrCI-PUpCa5vXn80cJ5W30DWQwdHOc0V5bVDJ645wBz&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af8Sgw41hH954wh3zQNOxBxN0ARIwBvDGF8mgQcOk9lySA&oe=6A46B32E",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/729603506_10231617832697061_4619183022622772407_n.jpg?stp=dst-jpg_tt6&cstp=mx942x2048&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=y__8Mp8rLg4Q7kNvwFUi6hW&_nc_oc=AdrVzqjawEntS_yWjeheM5lUVrC5yoMUbt571uSXKBeHwQjePKNDyriH6sJx1l4Al7lS2d7XFWSv4-CmPqtHvwfs&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af-qM_R1Q5cYpm4HClaRw7qHeZ7ARcpXdWYI0AvyCdHdHw&oe=6A46AC3F",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/729364568_10231617833777088_1827638003311340952_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x768&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=xq_Fk_OUj2wQ7kNvwEzLTAp&_nc_oc=Adq2OGkrmt7y9kgMeCtJGjKWMeKfq6WZQXsHHWACWgaR3ZQGVpUchPM-FqfYpXXYgFa3zEGjRm6EvwwyqYERsCuK&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af_3jTNiaGI6NcW90JIeTCALpiuE_RQgDAKCCF4Qb8bZng&oe=6A46C2BE",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/730713630_10231617834097096_9063023656758062303_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x768&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=rDO_BbPA8KAQ7kNvwH8Hsx2&_nc_oc=AdpWxx8QJdDonH4jxCA5Y5UmBYq13HVET_evcJEkUibvD_cQ9ITb__kEUaaUke4J6r9BbVun9aSC3pXefFQctqF_&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af-IJcne2EI6S8ACHSA1MhFfmdH-pzkn3vtz8tnxgTx6pQ&oe=6A46CE4A"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "רמת גן",
+        "neighborhood": null,
+        "street": "בן גוריון 105",
+        "raw_location_text": "ברחוב בן גוריון 105 שברמת גן",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "מחיר 3500 כולל הכל - ארנונה, חשמל, מים, ועד, גז, אינטרנט, כבלים"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0523278297",
+        "whatsapp": null,
+        "contact_name": "עינב",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36738894152422973": {
+      "id": "facebook_group:608325962573249:36738894152422973",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36738894152422973",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36738894152422973/",
+        "author_name": "Noya Gamshidi",
+        "posted_at": "2026-06-24T11:13:32.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "חדר ענק עם מרפסת בדירת שותפים, להשכרה ללא תיווך!!!\nבצפון הישן הכי מבוקש בתל אביב!!!\nדירת שותפים ברחוב פנקס 3 פינת שד' נורדאו .\nחדר מאסטר ענק עם מרפסת פרטית !!!\nהדירה עכשיו עברה שיפוץ כללי .\n 3 שירותים ו 2 מקלחות , מטבח מאובזר \nמרחק הליכה מהים ומפארק הירקון,  קרוב לתחבורה ציבורית ולרכבת הקלה .\nכניסה גמישה ( מיידית או 1.8) \n מחיר 3800 שח (תשלומים זולים)\nמומלץ לבוא לראות !!!\n\n0508667848    אורנה \n0505230404   רינה",
+        "images": [
+          "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/728951302_27731507559778126_1195652937717238673_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=h1-iCEXtATgQ7kNvwF9wfVW&_nc_oc=AdoqbrBcYbqjCZ_XqbVsGgLoRBrmaIoQokP90PuVuWLbb-1BaWJGSkhcvO2XOvcoWj5OhVduVS0eAqX6nEOkOmQW&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af_GdLRlmMA4GGiTBM1Owg7FwBXZvyyFx4pYYVsTayQwlw&oe=6A46BF1F",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/728937214_27731507883111427_7204093599918937461_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x498&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=5I5-ujlcO3EQ7kNvwFCCSdc&_nc_oc=AdonE1bKLVo4YRBV6G9Mg4n31jAMkRzD1TFbAaO45cJbDGM3fIqSWhgyy3C2SkJxQcOr-06Zo2btASAwuCxRtI8l&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af9tqrkKCpoMOecVvHem5RQf9OnMAID7eGryqxNO51pyRw&oe=6A46C00B",
+          "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/730481006_27731508329778049_1291265824434339077_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=-PYeZ5Qhu1gQ7kNvwEF9xqU&_nc_oc=Adp4j2M57vA8VYpwPOnmeb_SyYlTG0ypnC3sLPq82vbrCbRAhdjCZYiHmcM_IOFkO41LYfDXKD6EcXdahYNgTx6c&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af8i84oX9U7br8_FCLummR5TkD7pna7wTI9v_M6ExzEDWA&oe=6A46CE69",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/728439209_27731508629778019_1187066963984164081_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=zBt9grMcsqkQ7kNvwHGn2ZO&_nc_oc=AdqdefAWIVbO4rBVHTY7ROrIepelkxGYEZjBhpNiUQDqKuqE-BG-Tv4XMakp0U-JqdZQegD_1S6u430b_Zzykdc-&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=SO7K8XJnMMdwQUkBJyJMEg&_nc_ss=72289&oh=00_Af8H5W9hfT0ErWMyNmtR9eaknaY1j8ZagcB6M3xaioSPYA&oe=6A46BB13"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "צפון הישן",
+        "street": "פנקס 3",
+        "raw_location_text": "רחוב פנקס 3 פינת שד' נורדאו, צפון הישן, תל אביב",
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3800 שח (תשלומים זולים)"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0508667848",
+        "whatsapp": null,
+        "contact_name": "אורנה",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36738746119104443": {
+      "id": "facebook_group:608325962573249:36738746119104443",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36738746119104443",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36738746119104443/",
+        "author_name": "Noya Gamshidi",
+        "posted_at": "2026-06-24T11:02:53.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "חדר ענק עם מרפסת בדירת שותפים, להשכרה ללא תיווך!!!\nבצפון הישן הכי מבוקש בתל אביב!!!\nדירת שותפים ברחוב פנקס 3 פינת שד' נורדאו .\nחדר מאסטר ענק עם מרפסת פרטית !!!\nהדירה עכשיו עברה שיפוץ כללי .\n 3 שירותים ו 2 מקלחות , מטבח מאובזר \nמרחק הליכה מהים ומפארק הירקון,  קרוב לתחבורה ציבורית ולרכבת הקלה .\nכניסה גמישה ( מיידית או 1.8) \n מחיר 3800 שח (תשלומים זולים)\nמומלץ לבוא לראות !!!\n\n0508667848    אורנה \n0505230404   רינה",
+        "images": [
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/728234849_27731424033119812_3722642779566202032_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Wne7M9wacJcQ7kNvwFLZn7L&_nc_oc=Adr79ngtn-1xlXmbdpul-J6ApKix5WscswSISwY89rA4Ec_yjJC1h8yDPGFS2-SKvwo&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af9i5jWX_Rn9mAco03KQGVCLaG5J90Lkk9V-UE_WA-8k3Q&oe=6A46BBEF",
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/729058027_27731424383119777_1512280035352692378_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x498&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Rhinomcx4H0Q7kNvwFmJ_Mq&_nc_oc=AdohmR5nRofnKyP-DMFfiHuNIwuv4nfHhgsp36QAaKczRWAkjVDDllvIm1daZclGQkw&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af9jVK-tz9DcxGqEiPP5anhBSlvUW6rny24VVA296ZXLGA&oe=6A46C216",
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/731044886_27731424799786402_6300903050556197547_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BrRDqq2nGHwQ7kNvwHJ6FB1&_nc_oc=AdqxKsDTFg_3VspbwUy8vMJQJG2ZIQxxd7CiREcY6J95zxffXxe8wswnA95b_vuUe4o&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af-El_4_LNeMUepKAvsmuemyTrtYZgY0f7s_7FeKlG9g3w&oe=6A46B9C2",
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/728969754_27731425253119690_9207328496527971920_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=y78gKjpnrtcQ7kNvwFqvJ_M&_nc_oc=AdpKLI42Xmt_InfyoZwjJcxo6_H4VxRD_GEmbnufJTH02Bz6GFVrnmtFDa65eqaQLUs&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af9XvcvCIx6pBsoS_iWM-kDG-LkyRBMhnoKzBFwsfncIeg&oe=6A469E15"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "צפון הישן",
+        "street": "פנקס 3",
+        "raw_location_text": "בצפון הישן בתל אביב, ברחוב פנקס 3 פינת שד' נורדאו",
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3800 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0508667848",
+        "whatsapp": null,
+        "contact_name": "אורנה",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36738257972486591": {
+      "id": "facebook_group:608325962573249:36738257972486591",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36738257972486591",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36738257972486591/",
+        "author_name": "דתי שרוני",
+        "posted_at": "2026-06-24T10:29:16.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "חדר בדירת שותפים/שותפות חדשה בבת ים – הכול כלול\n\nלהשכרה חדר בדירת שותפים לאחר שיפוץ מלא רח' מנדלה מוכר ספרים, בת ים מרחק הליכה קצר מהרכבת , מרכז מסחרי ברח' בלפור עם שפע חנויות ותחבורה.\n\nמה מקבלים?\n\n• חדר פרטי לכל דייר עם סגירה אישית ומנעול מיוחד אישי\n\n• מרפסת פרטית בכל חדר\n\n• בסיס של מיטה בכל חדר\n\n• בכל חדר: טלוויזיה, מזגן ופרקט\n\n• מכונת כביסה\n\n• דירה נקייה, מוארת ומסודרת\n\n• מטבח משותף מאובזר\n\n•שירותים ואמבטיה משותפים\n\n• קומה 2 (ללא מעלית)\n\nהכול כלול במחיר – בלי הפתעות:\n\nארנונה\nמים\nחשמל\nגז\nועד בית\nאינטרנט WIFI מהיר\n\nמחיר: 2,800/2,600 (לפי גודל החדר)\n\nמתאים לסטודנטים /צעירים עובדים \nאווירה שקטה ונעימה \n\nללא תיווך\n\nיובל 0502822371\n\n🔥 Сдается комната в квартире с соседями после полного ремонта 🔥\n📍 ул. Менделе Мохер Сфарим, Бат-Ям\nВ пешей доступности от железнодорожной станции, торгового центра и улицы Бальфур с множеством магазинов и транспорта.\nЧто вы получаете?\n• Отдельная комната для каждого жильца с индивидуальным закрытием и личным замком\n• В каждой комнате есть отдельный балкон\n• В каждой комнате есть основание для кровати\n• В каждой комнате: телевизор, кондиционер и паркет\n• Стиральная машина\n• Чистая, светлая и аккуратная квартира\n• Общая оборудованная кухня\n• Общий туалет и ванная\n• 2 этаж (без лифта)\nВсё включено в цену — без сюрпризов:\nАрнона\nВода\nЭлектричество\nГаз\nДомовой комитет\nБыстрый интернет WIFI\nЦена: 2,800 / 2,600 (в зависимости от размера комнаты)\nПодходит для студентов / работающей молодёжи\nТихая и приятная атмосфера\nБез посредников\nЮваль 0502822371",
+        "images": [
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/728184337_122115562617286759_7149736426761369751_n.jpg?stp=dst-jpg_tt6&cstp=mx629x962&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=8viCRRdY8o4Q7kNvwGEw28E&_nc_oc=Adr_0M3nk-3sZgmjyKfTKXmNSPRO5UpzAqCMT21wBUYzBqJstsPFl37UuFNrjWk1GMM&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af-eARgoeX_J_5HRn2eI3g2I95kWLhDmvL-TII4Xzq63Zg&oe=6A46D0DB",
+          "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/729437798_122115562659286759_5228314726777015251_n.jpg?stp=dst-jpg_tt6&cstp=mx471x629&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GcrTzclddTsQ7kNvwEaSVzW&_nc_oc=AdqrnVaj5jd0NOvW6CI8GZj0x3YdcfmUCKbSsQMAhjlqJI1n3Lud6nX-S-tz01BrjmY&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=S-ElhcRBrqDb8R1-HYWn4A&_nc_ss=72289&oh=00_Af91S70lN8xEWBD2EKvHKOlT9uIT252YPPierv7bpGvIww&oe=6A46D1CA"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "בת ים",
+        "neighborhood": null,
+        "street": "רח' מנדלה מוכר ספרים",
+        "raw_location_text": "רח' מנדלה מוכר ספרים, בת ים",
+        "lat": 32.02379,
+        "lng": 34.75185,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 2,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "2,800/2,600 (לפי גודל החדר), הכול כלול - ארנונה, מים, חשמל, גז, ועד בית, וויפיי"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": true,
+        "elevator": false,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0502822371",
+        "whatsapp": null,
+        "contact_name": "יובל",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36597777989867924": {
+      "id": "facebook_group:608325962573249:36597777989867924",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36597777989867924",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36597777989867924/",
+        "author_name": "Shachar Kuperman",
+        "posted_at": "2026-06-18T04:14:01.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "דירת  5 חדרים. מתפנה חדר בדירת שותפים.\nרח׳ אמנון ליפקין שחק 2 גבעת שמואל.  \n\nהדירה שומרת שבת וכשרות. \n\nהדירה מודרנית ומאובזרת היטב כולל שני מזגנים, עם הדלקות ניפרדות:\n\n        \n\nבסלון \n\nובחדרי השינה מזגן בכל חדר בנפרד. \n\nמחפש שותף שלישי לסבלט לחודש וחצי או לשנה, חשוב מסודר ונקי.  \n\n*סה״כ 3 שותפים*\n\n    \n\nלפרטים נוספים \n\nשחר-0544752007",
+        "images": [
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/725249892_10164867827743938_8829162971848441662_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Ijri8LadcMcQ7kNvwHTOcM6&_nc_oc=AdrjYadcqU2bkh3xaPOEP_52bChL6jfDxJsevzci1j2YU5tswtgIMaPm406n1Nv-wPk&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af8aZ0IWWz3PU99JAgYKESswPL_vCNUgpgY1waP2GBqs4w&oe=6A46C656",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/725716123_10164867827943938_3171319483157756400_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Ld7C0xZk_9gQ7kNvwG1VsD6&_nc_oc=Adqkd5DvnV1kXUay9-wnQHac5Rydq8qp1fTWd2weYIgI7JkdSshsn7NofzM9XXIo6us&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af8T0j7MADrkH0-akbOiQgo--9-SI4S5T5ULsnw5qdwsSg&oe=6A46C026",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/724771065_10164867827718938_2112700061212812098_n.jpg?stp=dst-jpg_tt6&cstp=mx1170x656&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=uySPiaIXvKEQ7kNvwG90NSD&_nc_oc=AdoglQdypqd-BaTZOz7_DgW8b9t4dLbU7SLgqVtGisG43ozOPua9QLmnIRWyAmFRVTM&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af_grjH5dt_QGR63WKnQlqrv6cvkLcYuBGek_jLtMBKdTQ&oe=6A46CAF1",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/727288211_10164867827813938_5123223758653514388_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=wZjbrjE6GG0Q7kNvwG-s9qP&_nc_oc=AdosaIOha_Uhd-CEh1FPcV9Ks0UK4UDMsA35-08bs4QVI-rb_gmiD_0PBt75JLtHC3E&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af9lzz3S8ZEfNsnAjpM1_qwgoMv12U4vl9taI2JtJjAZYQ&oe=6A46CED8",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/725205728_10164867827913938_2492955500664850832_n.jpg?stp=dst-jpg_tt6&cstp=mx1170x835&ctp=p417x417&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=TIzZJ5QwVA8Q7kNvwHimq4O&_nc_oc=AdpseLzsRi4HjyNofoiymFp5dAaqttmQcimolXQ-6X71V7_XFUzE-FeppCLE2IBlFj0&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af-PHrMmlwkL9G1r2eDfmztpEA0vb0Vx_AUWi5z_GBCY7A&oe=6A46A2EA"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "גבעת שמואל",
+        "neighborhood": null,
+        "street": "רח׳ אמנון ליפקין שחק 2",
+        "raw_location_text": "רח׳ אמנון ליפקין שחק 2 גבעת שמואל",
+        "lat": 32.07817,
+        "lng": 34.84858,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": null,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": null
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": 2,
+        "is_short_term": true
+      },
+      "contact": {
+        "phone": "0544752007",
+        "whatsapp": null,
+        "contact_name": "שחר",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.amount",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "price.raw_price_text",
+          "amenities.furnished",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36727073966938325": {
+      "id": "facebook_group:608325962573249:36727073966938325",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36727073966938325",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36727073966938325/",
+        "author_name": "Noya Gamshidi",
+        "posted_at": "2026-06-23T20:25:44.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "להשכרה ,ללא תיווך !!!\nבצפון הישן הכי מבוקש בתל אביב!!!\nדירת שותפים ברחוב פנקס 3 פינת שד' נורדאו .\nחדר מאסטר ענק עם מרפסת פרטית !!!\nהדירה עכשיו עברה שיפוץ כללי .\n 3 שירותים ו 2 מקלחות , מטבח מאובזר \nמרחק הליכה מהים ומפארק הירקון,  קרוב לתחבורה ציבורית ולרכבת הקלה .\nכניסה גמישה ( מיידית או 1.8) \n מחיר 3800 שח (תשלומים זולים)\nמומלץ לבוא לראות !!!\n\n0508667848    אורנה \n0505230404   רינה",
+        "images": [
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/726247218_27725158073746408_4017526084767013687_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Z0QmPh5Jr5UQ7kNvwF5rGpK&_nc_oc=Adrzvf2Zkl1osRrIXJOJ4heuxM2r65w9a-dJfFkPRyF0IAr1m-NB1OyYe5y-qyLtgJ0&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af-QMFg9sZgDcwleb3Mfjj_8g8IoUvkLQmPoi41EOZAOGw&oe=6A46BA68",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/730414254_27725158650413017_408777072900460910_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x498&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=u1xMj51cLCoQ7kNvwEyRoKm&_nc_oc=AdpQx9Cmoj4GvEwbgqYe9wIa_jF1cFqHg6vJJDG6_ZkH5HMBKahzu0xQiMn6jzzI5-Y&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af8bHsLRPOsRSBDwAnUBS0jNT5nQYx9mm_MXF3D4Sl5RNg&oe=6A46C6F2",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/727703854_27725159363746279_3214871016368363627_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Os21iNtDCwYQ7kNvwHnRTC6&_nc_oc=Adpa6PKZA0W6s8iyESrNJiXR3ikX2dRzEdN1NRoPXH0PzpiYOJTokFkbHofX_6Xa2lI&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af-SoAq5AlwnAp1RgKSgpyUfXcdzsIc6ag05AYcLf80nBw&oe=6A46C7C7",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/728664171_27725159797079569_2460107817098195946_n.jpg?stp=dst-jpg_tt6&cstp=mx768x1024&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=DoQj57JDvgQQ7kNvwEPM7IA&_nc_oc=AdoltjIn3d_VZxCs9gHL1y_XD6Q49WoaNiO3yCQV3sAJTintBJIW6fj4yAmMD-0QdDg&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=CrylyFP3hxI5t_LFeOQOkQ&_nc_ss=72289&oh=00_Af8zhLLkSMA1M2wKR8yTYUO9lUJldbUZSlsAno4t5_rlDQ&oe=6A46D16F"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.88
+      },
+      "location": {
+        "city": "תל אביב",
+        "neighborhood": "צפון הישן",
+        "street": "רחוב פנקס 3 פינת שד' נורדאו",
+        "raw_location_text": "צפון הישן בתל אביב, רחוב פנקס 3 פינת שד' נורדאו",
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3800,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "3800 שח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": true,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0508667848",
+        "whatsapp": null,
+        "contact_name": "אורנה",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36726452420333813": {
+      "id": "facebook_group:608325962573249:36726452420333813",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36726452420333813",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36726452420333813/",
+        "author_name": "Keren Abir-Gil",
+        "posted_at": "2026-06-23T19:41:22.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "** לבנות בלבד**\nבנסיבות משמחות ביותר! \nואחרי כמעט שנתיים מפנה את החדר הנדיר שלי בדירת 3 חדרים עם שותפה מקסימה! 🌸\nהדירה מוארת ונעימה במיקום מצויין ברחוב המתמיד 30 ברמת גן! ✨✨\nבאזור הבורסה, מרחק הליכה מרכבת סבידור והרכבת הקלה. קומה 4 ללא מעלית.\nחשבונות סטנדרטיים.\nחוזה עד סוף יוני, חידוש מול בעלי הדירה. \nכניסה ב1.9 גמיש 🏠\nמחיר 3,000 לא כולל חשבונות. \n\nליצירת קשר ופרטים נוספים ניתן לכתוב בפרטי- לרציניים בלבד✨🫶🏼",
+        "images": [
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/725319506_27363042873316415_9014489963817526515_n.jpg?stp=dst-jpg_tt6&cstp=mx1218x1600&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=fTvB6NNJmcYQ7kNvwFDG5F_&_nc_oc=Ado93QVxXL_qpzAK_HukU58rRMuVHeTs_0Rh_JlaqVm8ea4yZ5viSm82qbhbTPQAMII&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=21j9YfILi9TgLCxvCvfWYw&_nc_ss=72289&oh=00_Af8VkdlYhDtcRs8lIueWWOoxEUdWDvcYFONIWNhi635ugw&oe=6A46AD22",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/728491366_27363043156649720_3340207523777162020_n.jpg?stp=dst-jpg_tt6&cstp=mx1160x1600&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=TCAbNO95TCkQ7kNvwFFtwlo&_nc_oc=AdpB8zME8B95JdmyVv5da8N4iNir3m0Y1tahLMZuCPa4H1cXdJoN4DJmIEY0grcUMaA&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=21j9YfILi9TgLCxvCvfWYw&_nc_ss=72289&oh=00_Af_BWo_g3HaDcoZUy-WfL2y56WaAVQ807KksVgYLF88a0g&oe=6A46A9D3",
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/730776611_27363043169983052_4648660911418983262_n.jpg?stp=dst-jpg_tt6&cstp=mx1208x1600&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=RgW3SzBgGcgQ7kNvwEaQ3fY&_nc_oc=AdpT21-M7vNGUPGoH0SU5IuDRVhV8jMWW9UwqwKkdLabPLxwnlGjJLV8FXWbvizSYrk&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=21j9YfILi9TgLCxvCvfWYw&_nc_ss=72289&oh=00_Af-RyB9orf6H0pPvgqBqefcgA5f7EShGDxO3OX4030KfpA&oe=6A46CA48",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/729375609_27363043429983026_7899021754478333028_n.jpg?stp=dst-jpg_tt6&cstp=mx1242x1512&ctp=p480x480&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=oBeQwNyTkgAQ7kNvwEWhbKs&_nc_oc=Adr-bz2aQnfdYZVj-nQtzMwvzGDOfcl_O7LxvOyQ7NzmtoItL0goZIXTpF4cMzxmH8I&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=21j9YfILi9TgLCxvCvfWYw&_nc_ss=72289&oh=00_Af-BmW82EZI-gGNOXvsU37UqcE-fFlHwXKpi9GmM7krPPQ&oe=6A46CB1E",
+          "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/730022111_27363043443316358_5667524321306319418_n.jpg?stp=dst-jpg_tt6&cstp=mx1242x888&ctp=p417x417&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=qIfALm8AzBAQ7kNvwHgEd8k&_nc_oc=Ador2XmNYD6n7AjHMrLBeN_syutD613Wso19V7eNQylpi3yps60toZvf5zDST_3OfQI&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=21j9YfILi9TgLCxvCvfWYw&_nc_ss=72289&oh=00_Af96OXtCCbSB6Vj5JzQ3_dAoss4lVDmMeHtQuKkgEEYVVg&oe=6A46A672"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "רמת גן",
+        "neighborhood": "אזור הבורסה",
+        "street": "רחוב המתמיד 30",
+        "raw_location_text": "רחוב המתמיד 30 ברמת גן, באזור הבורסה",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 4,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 3000,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "3,000 לא כולל חשבונות"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": false,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-09-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36430592136586511": {
+      "id": "facebook_group:608325962573249:36430592136586511",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36430592136586511",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36430592136586511/",
+        "author_name": "Or Portnoy",
+        "posted_at": "2026-06-11T07:35:49.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "## ✨מחפשים **2̶ ̶ש̶ו̶ת̶פ̶ו̶ת̶ שותפה לדירה✨**\n\n****עדכון-נשאר חדר אחד🤭****\n\nלדירת שותפים נעימה ומרווחת בפתח תקווה שכונת כפר גנים ג'\n\nמחפשים 2 שותפות חדשות.\n\nבדירה  בסך הכול 4 שותפים - שותף ושותפה נשארים בדירה.\n\n \n\nשני חדרים פנויים להשכרה:\n\nחדר רגיל- 1950 ש״ח\n\nח̶ד̶ר̶ ̶מ̶מ̶״̶ד̶-̶ ̶1̶8̶0̶0̶ ̶ש̶״̶ח̶\n\nקיימת אפשרות לריהוט חלקי.\n\nשאר הדירה מרוהטת ומאובזרת.\n\nכניסה בסוף חודש יולי.\n\n \n\nמוזמנות לפנות לפרטים נוספים ותיאום ביקור בדירה.\n\n אור- 0535307108\n\nליאון- 0546565742",
+        "images": [
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/721644280_27719437957641783_6943914483293727362_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=hPR2WfwLN38Q7kNvwHLkfml&_nc_oc=AdrR-ok9lZ3aabktB1QswWFFpW9lbVp_YEsQhnw0Invya8FUcWuQnkinvomHKaTyscE&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af8enD9PTJHZU0pccWcJ0MpB3LW-zymYp2ozlZmX8l5i2w&oe=6A46BEAA",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/719919273_27719437960975116_6994472036178708805_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=7s23GD69ZRkQ7kNvwHmk0dc&_nc_oc=AdqEvO-bpI-VoItiPAXNGxnedVJRrtyvJr96aOcu8XVTkNXZs8J0bMhVtcNieQASQq8&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af-8t4yPges5_6tqwOwzuI51TMJIncffudvduSgc-A8Xuw&oe=6A46BEDC",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/720989603_27719437994308446_4220359531310952650_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YwMROnzJBhYQ7kNvwFWraU7&_nc_oc=Adoa0J_2X6rVV5HMAFhQznFLJyKNTmRstWp7q4EftLLxlRGz0w4cIll2IPh2xQSChVw&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af9Im61oUxPBKjKzbR2azG3JFaSVbxSZyIJA_HLoRP8iog&oe=6A46D46B",
+          "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/721517483_27719438200975092_3641442568525131037_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=8TRk0sjV8okQ7kNvwFTE_7z&_nc_oc=Adpztc0ll89Zh3F3Vzkw4hI_kFOPBZkESLuYBLaNRnnrr1u3UkIxN5_XQYylrl4w1_o&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_z9LPDZs7Nu_BbC1U32OgjIw48vU7WSObeu98NgPdSgg&oe=6A46BE35",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/721466930_27719438210975091_4052745029417657560_n.jpg?stp=dst-jpg_tt6&cstp=mx828x466&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ci47hvoiBCYQ7kNvwHFN1R_&_nc_oc=AdowQ2s8d1FKxCtp7dPUywqJx9ngc2hO9TBdtAGDW_oighNyJ6jCjqQ6JXhp5_G7Mkg&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_TyVycUgQZf9EyqV1yYyFRL6ogB16M-zPDQYvAVRqsZw&oe=6A46B2DD"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.85
+      },
+      "location": {
+        "city": "פתח תקווה",
+        "neighborhood": "כפר גנים ג'",
+        "street": null,
+        "raw_location_text": "בפתח תקווה שכונת כפר גנים ג'",
+        "lat": 32.08707,
+        "lng": 34.88747,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 1950,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "1950 ש״ח"
+      },
+      "amenities": {
+        "furnished": null,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": false,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-31",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0535307108",
+        "whatsapp": null,
+        "contact_name": "אור",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.furnished",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36717419547903767": {
+      "id": "facebook_group:608325962573249:36717419547903767",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36717419547903767",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36717419547903767/",
+        "author_name": "Yonatan Chirp",
+        "posted_at": "2026-06-23T10:25:33.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "חדר ענק (4.00 על 4.20) ויפה מתפנה בדירת שותפים מוארת ונעימה ברמת גן ברחוב מעלה הנשר. החדר יגיע ככל הנראה ריק. יש מזגן. בדירה נשארות שתי שותפות חמודות וחתול. מדובר בדירת 3.5 חדרים כשהחצי חדר הוא למעשה הסלון הקטן שלנו. יש גג נגיש למי שאוהב. הדירה מאובזרת בתנור גז מקרר ומכונת כביסה, בסלון ספות, וטלויזיה עם סטרימר. זו דירת קרקע בבניין של שתי קומות, במיקום שקט ופסטורלי ברחוב פנימי ללא מוצא. סגנון בניה ישן, חדרים גדולים, תקרות גבוהות. 2 מקלטים סמוכים. \n\nמחיר 2350 \n\nחשבונות סטנדרטיים (ארנונה 500 ועד 100 שניהם לחלק ל3 כמובן), חוזה קליל, פיקדון של חודשיים+ערב. כניסה ב-2.7. לתיאום ושאלות נוספות שלחו הודעה בפרטי.\n\n(שימו לב שהתמונות של החדר השני, החדר שמתפנה גדול יותר, בסגנון דומה, ומקסים באותה מידה אך ללא יציאה למרפסת)",
+        "images": [
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/729179391_1621260943332946_3249601922983869658_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ihzMRPqxQykQ7kNvwHY27SO&_nc_oc=AdrIYQZYUd-dyNPIbUWeBXFzNa0jctSSJlgrLR2V3ii1AqBZLKzD8k20fej2j2Y74Fk&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_MH1DBiQsCJ66icrY0jz9_-jKs-dHA7icRTJcLIBU_uQ&oe=6A46C8FD",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/729029046_1621260306666343_5439726281063045985_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=6_VkT9pBAqgQ7kNvwHLjZxc&_nc_oc=Ado2iXJaxmnfybVHRQqERx66gfq0Hu5th07RYY_80DBTKsr2AbNQdAmgSty1gnLwQmA&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_oxfqb2yt8PjlYL3F1xLtmRgTaRafK0B0StafwvXZAvg&oe=6A46CBF3",
+          "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/730083541_1621260309999676_4977917106848922489_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ktBw6XUyJBgQ7kNvwH8za3h&_nc_oc=AdqvSO5vZXn4Wg9SFeTYtCzFoaKrYGmhoUhLb7G1Awu3pYGAc5dhSS6_GExBOkC2Uhs&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_hIqvAbx3yAXDiwiDIJwdtkKaoeEZtzrr7cdFUvG09bw&oe=6A46AAF8",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/728984540_1621260303333010_5253723563977855275_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=jvtHIeUkpTwQ7kNvwHaImEA&_nc_oc=Adpxviop1FGjjtje2NU898jlLeENoKO2jlEtUuLCtyJmMN1czxHSiW9wWfMkxba1mGs&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af-8HMugznzdcBqTHW9wbg1F0TMiT6HPsj7aj8r-pP5sxw&oe=6A46B0DB",
+          "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/728503417_1621260399999667_7455974464428393566_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=bT4gRTOmhUMQ7kNvwFH9X1b&_nc_oc=AdqPPQ6M4CnBq-X9PdPvl1nQJfyaOiq6i6IsOvazey24CL3SoHonSg-dtiy6bJCcOts&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=yoY0jECS8T7vw5yZDdlFMg&_nc_ss=72289&oh=00_Af_0LYa5iL_h95nb4TFz6ExOJHmPmvW-XZD91Nh0-l8kJA&oe=6A46C0B2"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "רמת גן",
+        "neighborhood": null,
+        "street": "מעלה הנשר",
+        "raw_location_text": "ברמת גן ברחוב מעלה הנשר",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": 16.8,
+        "floor": 0,
+        "total_floors": 2,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2350,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "2350"
+      },
+      "amenities": {
+        "furnished": false,
+        "air_conditioning": true,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-07-02",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.property_type",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36719574094354979": {
+      "id": "facebook_group:608325962573249:36719574094354979",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36719574094354979",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36719574094354979/",
+        "author_name": "Yaniv Moshe",
+        "posted_at": "2026-06-23T12:41:27.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "# להשכרה - חדר מאסטר בדירת שותפים ראשל\"צ\n\nמפנה את החדר שלי בדירת 3 שותפים (אני ועוד שותף עוזבים ונשאר שותף בדירה ויכנס עוד שותף\\ה בעתיד) כמרחק הליכה מרוטשילד (ממש ליד הג׳הג׳ה) חדר מאסטר. (רלוונטי לנשים ולגברים).\n\n**החדר מתפנה ב 1.9**\n\n## פרטים על הדירה:\n\n🛗 הדירה בקומה 4 עם מעלית (הקומה האחרונה ככה שאין שכנים מלמעלה)\n\n🛋️ הדירה מגיעה מרוהטת קומפלט (מקרר, תנור, מיקרו, סלון, פינת אוכל, תמי 4)\n\n🅿️ יש חניה משותפת לכלל הדיירים (מתחלקים בה) תמיד מוצאים חניה באיזור גם\n\n🔒 יש מקלט בקומת הכניסה של הבניין\n\n🧍בדירה נשאר עוד דייר אחד בן 28 מאוד נוח (ויש עוד דייר בחדר לא מאסטר שעוזב)\n## פרטים על החדר:\n\n🚿 החדר הוא חדר מאסטר (שירותים ומקלחת פרטיים)\n\n🛏️ החדר מגיע רק עם הארון שבתמונה (את כל שאר הרהיטים הבאתי איתי אבל ניתן לרכוש את רוב הריהוט שרואים בתמונה, יש לדבר איתי בפרטי לגבי כמה כל דבר)\n\n## פרטים על תשלומים💰:\n\nשכ\"ד 2500\n\nארנונה 1270 לחודשיים (כמובן מתחלק בין 3 הדיירים)\n\nועד 350 לחודשיים (כמובן מתחלק בין 3 הדיירים)\n\nחשמל, מים לפי צריכה\n\n**אם מישהו מעוניין בעוד פרטים או לתאם הגעה לראות בבקשה פנו אלי בפרטי לא פה בתגובות :)",
+        "images": [
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728893492_28144223501831160_5540683076248860200_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ZtwH3BBULm4Q7kNvwEaabRs&_nc_oc=AdohalwhtDQRddQ1bet9F-0FZBTnGMxJjioeRa6l2fHp9KXPvxt4V7i51m7T-Pl754k&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af9MLKspltokhBSWMjIjEMeQi7R9iyt95ccykUCEfbN9UA&oe=6A46AAD8",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/730689023_28144223448497832_8389983661883988495_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YGXaUmguswkQ7kNvwEbi5Xe&_nc_oc=AdrsoGwDrq9__Dv7YDfUwff7YTPf9Djnu76p3D1pV6i1ngETXGkcz6IULW6fgHkqwT8&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af_qXsO-TuBicXbMm1gZKs3bAbGkmLuEa1u1QRfpFWkUJg&oe=6A46C05C",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/728235045_28144223435164500_3494933932580893048_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_5dFE5hWTg0Q7kNvwEkg5HF&_nc_oc=AdqIu6XP0sG7I6xdhj6C3o7MOLYgemhjLlLsufnGZ21iu7KH6DXRrlQ3qsD73ww-IdU&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af9GfwpyWft6DtjNh1D_LCd8MSk6FpjxosJFyDsrrkUY6A&oe=6A46A22A",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/729867839_28144223701831140_8183211741827754012_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=WjpIsr7wiGYQ7kNvwGqzVMN&_nc_oc=Adr-Wjga4KOYVBQTiaLz-ExDd5QwRiK3leg07FkEEXzGUl6-4htLYNQoRYY4hRL76Cs&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af84rarTV90_O_FUIZlrbzQ7FnIvAWPKyzHK1u1rfXOYDQ&oe=6A46B6A7",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728255600_28144223695164474_7010309413683012002_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=2HBEElITHwAQ7kNvwFzreph&_nc_oc=AdrscSvrOHxibp6I2ZiAOgCJJBGC0uGEjd1iPmvLQqhiCL8g15e_NmUH58Gk__pjJEY&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af8NTwgZnJvP7M7Tx3iGlzlodiALmYbmCyNP3XYD1oi6tg&oe=6A46B8DF"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.75
+      },
+      "location": {
+        "city": null,
+        "neighborhood": null,
+        "street": null,
+        "raw_location_text": "כמרחק הליכה מרוטשילד, ראשל״צ",
+        "lat": null,
+        "lng": null,
+        "geocode_source": "none"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 4,
+        "total_floors": null,
+        "property_type": "room"
+      },
+      "price": {
+        "amount": 2500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "שכ״ד 2500, ארנונה 1270 לחודשיים, ועד 350 לחודשיים, חשמל ומים לפי צריכה"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": "2026-09-01",
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.city",
+          "location.neighborhood",
+          "location.street",
+          "location.lat",
+          "location.lng",
+          "property.size_sqm",
+          "property.total_floors",
+          "amenities.air_conditioning",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": true
+      }
+    },
+    "facebook_group:608325962573249:36713410011638054": {
+      "id": "facebook_group:608325962573249:36713410011638054",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36713410011638054",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36713410011638054/",
+        "author_name": "אמיר סולימאני",
+        "posted_at": "2026-06-23T10:01:12.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "✨ מחפשים שותפ/ה שלישי/ת לדירת שותפים מהממת בהרצליה ✨\n📍 רחוב הרב קוק, הרצליה\nדירת 4 חדרים נעימה ומשופצת עם עוד 2 שותפים (שותף ושותפה), מתפנה חדר אחד 🏡\n\n📅 כניסה מיידית / תחילת יולי\n\n💰 שכר דירה: 2126₪ עד יולי\nהחל מיולי עלייה של 5% במחיר\n💡 חשבונות נמוכים – בערך 300-400₪ בחודש לשותף\n\n🚗 חניה על בסיס מקום פנוי בבניין – לרוב תמיד יש מקום\n🙌 בעל דירה מדהים וזמין\n🛋️ דירה מרווחת, מטבח גדול ואווירה טובה\n👕 בחדר נשאר ארון בלבד\n\nלפרטים:\nאמיר - 0542916217",
+        "images": [
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/728457661_27431270493172485_2689622793520635747_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1447&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=laNzYtRbBOUQ7kNvwHjSYih&_nc_oc=AdpLNRdU7GvTQSsN8iJt6VXRywMcYGDS2oBWvxnTupbZJAzXQeQQGGg6GwHGU7Qv188&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af-Gk9D8K4AB2jdEmrv4F8nnlwlS4m1OX-J69JfTRDhvqQ&oe=6A46C3D7",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728512129_27431270696505798_6616331363244721269_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1421&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=oN83iFbv85gQ7kNvwGa0JfJ&_nc_oc=AdpemiAnAYbWR778euIQjMktUg_d5Dmjr77dWbybJSRZ6h81p29yA8pxR27OfRfCF-s&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af8tZ-9bo5en9F87m0WWT4RvGOMFKoox3JIb-lvoPg8qWA&oe=6A46AC31",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728462702_27431271043172430_4182909803698959381_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1452&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Z7HEL5SVzwkQ7kNvwGuEK5c&_nc_oc=Adr68yfcfFLEJBGRu7Cdi_RYebYLuwheNgVrCGNPsPVu6aG_gD98DURAs_W_kHaPkO0&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af9tBYk6mFg8poMqlwPnvZHxksFPocaKoZsfHg_LKvIKRw&oe=6A46A561",
+          "https://scontent.fagc3-1.fna.fbcdn.net/v/t39.30808-6/727884693_27431271249839076_2711203271553771078_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1448&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=ZhP9HAW9f-EQ7kNvwE1YPCR&_nc_oc=AdqsW97cgmat573sMb-kXNyzgi10ES14JA16EofXB4BCHu4ZjJbCzJGHt8_FLHEMy5k&_nc_zt=23&_nc_ht=scontent.fagc3-1.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af806-cOli_l7a4ag31YQNjo2hGQ2NQ9vpgZd57yf0cepQ&oe=6A46B6DC",
+          "https://scontent.fagc3-2.fna.fbcdn.net/v/t39.30808-6/728580756_27431271439839057_4937941177732186970_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1437&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d3T83SXfHA8Q7kNvwFMBcuG&_nc_oc=Adox5HjNpE4VvDgLpXhaJ07x9d7_3z_vmAUaG06MYNCdkC4_iOUtdIgERigpCGPiP0M&_nc_zt=23&_nc_ht=scontent.fagc3-2.fna&_nc_gid=alA8T4JG6wJOSOicUb56wA&_nc_ss=72289&oh=00_Af_VxNdxMFmQY9gixXatBAgPMCeYDiJxEBmmq6bjoBb3Ag&oe=6A46B429"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "הרצליה",
+        "neighborhood": null,
+        "street": "רחוב הרב קוק",
+        "raw_location_text": "רחוב הרב קוק, הרצליה",
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2126,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "2126₪ עד יולי, החל מיולי עלייה של 5%"
+      },
+      "amenities": {
+        "furnished": false,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": null,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0542916217",
+        "whatsapp": null,
+        "contact_name": "אמיר",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "property.property_type",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.balcony",
+          "amenities.safe_room_mamad",
+          "amenities.storage",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36713832404929148": {
+      "id": "facebook_group:608325962573249:36713832404929148",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36713832404929148",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36713832404929148/",
+        "author_name": "Shira Telpaz",
+        "posted_at": "2026-06-23T10:01:10.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "**ירידת מחיר**!להשכרה ללא תיווך ! **חדר מרוהט קומפלט**, (שירותים ומקלחת שחולקים עם שותפה אחת בלבד, כניסה מחדר השינה לכל אחת עם מנעול לנעילה של הצד השני) בדירת שותפים חדשה מרוהטת קומפלט, כניסה מיידית!החדר עם פרטיות , מפתח אישי לחדר!בדירה נשארים שותפים, שקטים כיייפים ונקיים.\n\nהדירה בר\"ג רח' הירדן 27 קומה 4 , ישנה מעלית וקודן בכניסה. ישנו מקלט בבניין ובקומה.מיקום חלומי קרוב להכל, ישנו שופרסל ענקי ליד, מרכז מסחרי ושפע תחבורה ציבורית נגישה + חניה באיזור.מאחוריי הבניין ישנו מגרש חנייה בכחול לבן.\n\nחל איסור על עישון בדירה ובע\"ח.\n\nהדירה והחדר עברו שיפוץ יסודי לפניי שנה וקצת.החדר מרוהט קומפלט בכל מוצרי החשמל וריהוט רק להביא בגדים.\n\n**בחדר:** ארון קיר שעוצב אצל נגר פרטי עם מראה, מגירות ותלייה,מיטת קיר שעוצבה אצל נגר פרטי נפתחת ונסגרת הופכת לספה דו מושבית עם מזרן זוגי של עמינח,מראת גוף, שולחן כתיבה, טלוויזיה חכמה, שולחן קפה, ספה דו מושבית, מיני בר בקיצור הכל!!!ישנם שירותים ומקלחת שחולקים עם בחורה אחת\n\n**בחלל המרכזי**: מטבח מרכזי של סמל, מוצרי חשמל, מיקרו, כיריים גז, תנור, מקרר ענקי, מכונת כביסה+מייבש.כל הקודם זוכה דירת החלומות!!!\n\nשכירות חודשית 2600 ש\"ח + 550 ש\"ח הוצאות חודשיות שכוללות הכל(מים, חשמל,אינטרנט, ארנונה, ועד בית, גז )לפרטים שירה : 0546282144",
+        "images": [
+          "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/730069605_2508695196317595_4176356891631809923_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=t4vIRI6q-GcQ7kNvwFlsMXs&_nc_oc=Adq_2nLNKhQXhOTBV6lg-QWcUoo1s7Q3y_6jlBE7im7v58KA6QQwHqPHORMlXczxNxs&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=-IrB4NVUI34fJC-ORk6OQg&_nc_ss=72289&oh=00_Af8cP1rB4eim-pm7w2x7X5rQs-SJ6b3l-yMDD-gwWUHs_A&oe=6A46B8A8",
+          "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/730259066_2508695152984266_4281394388634816377_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=owuEHd1z21EQ7kNvwGCUAps&_nc_oc=Adr-AzfbD4jwaJdc5x55pLROw5yqIYkCyPHeU_6-2kh1JH-C0zD5xrh7CZ48t08Lr1I&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=-IrB4NVUI34fJC-ORk6OQg&_nc_ss=72289&oh=00_Af-SUiVPyJVZi_SqQskriqUlQOlUsTx9LYJNDqpyVrukng&oe=6A46ABDE",
+          "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/729068833_2508695149650933_3066772396884547774_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CrPBya2eXp4Q7kNvwHBi18p&_nc_oc=Adq0jqPxzXqeE0tWwONUUY2XKHGcwQY8UTAvx-Zcp446RlyyohQEkTPLZs3r7IbbsFc&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=-IrB4NVUI34fJC-ORk6OQg&_nc_ss=72289&oh=00_Af8LsFUp-oZybKCCAV1eCU68vDnHmkPfcG6_ujM2hn-ruA&oe=6A469EFB",
+          "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/730695778_2508695236317591_6887734709085756414_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1599&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=OYRr0sGiSBYQ7kNvwFXecSQ&_nc_oc=Adofykr_CFxwSqTX4IxclwXBa7owo_kdEQZ9mhewTjLCqBIJjyi4FZ38brSBzcCfSWI&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=-IrB4NVUI34fJC-ORk6OQg&_nc_ss=72289&oh=00_Af-R6No387cnDsPxGgbfmclmU0WvK7bVmHLY25_hI4WT1Q&oe=6A46BDAF",
+          "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/729500172_2508695239650924_7668646452638070288_n.jpg?stp=dst-jpg_tt6&cstp=mx1599x1200&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=qJxTfeJIchwQ7kNvwFVM-Sk&_nc_oc=Adq2F9kD_lf-FwK13Z9ZVyNg-0ZDn_Bk0r7OPH-gWDxPm-003bUnh8gTrv-7IlDVIS0&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=-IrB4NVUI34fJC-ORk6OQg&_nc_ss=72289&oh=00_Af94tLz2beth7XwWjOPQUHJrfQ5oRQKsfrOpsvD6QKcrrg&oe=6A46C7B0"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": "רמת גן",
+        "neighborhood": null,
+        "street": "הירדן 27",
+        "raw_location_text": "בר\"ג רח' הירדן 27 קומה 4",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 4,
+        "total_floors": null,
+        "property_type": "room"
+      },
+      "price": {
+        "amount": 2600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": true,
+        "includes_vaad_bait": true,
+        "raw_price_text": "2600 ש\"ח + 550 ש\"ח הוצאות חודשיות שכוללות הכל(מים, חשמל,אינטרנט, ארנונה, ועד בית, גז )"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0546282144",
+        "whatsapp": null,
+        "contact_name": "שירה",
+        "preferred_method": "phone"
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.neighborhood",
+          "property.size_sqm",
+          "property.total_floors",
+          "amenities.air_conditioning",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36714705904841798": {
+      "id": "facebook_group:608325962573249:36714705904841798",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36714705904841798",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36714705904841798/",
+        "author_name": "Pini Langman",
+        "posted_at": "2026-06-23T10:01:07.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "להשכרה דירת שותפים איכותית במערב רעננה.\nמיקום מצוין בשכונה טובה, קרוב לצירי תנועה מרכזיים, מרכזי קניות ותחבורה ציבורית.\n\n✅ חדרים מרוהטים\n✅ ממ\"ד בדירה\n✅ כניסה מיידית\n✅ חוזה אישי וגמיש\n✅ מחיר כולל חשמל\n\nמתאים לסטודנטים, צעירים ואנשי הייטק.\n💰 החל מ-3,500 ₪ לחדר\nלפרטים ותיאום ביקור - רשמו אני.",
+        "images": []
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.95
+      },
+      "location": {
+        "city": "רעננה",
+        "neighborhood": "מערב",
+        "street": null,
+        "raw_location_text": "מערב רעננה",
+        "lat": 32.1836,
+        "lng": 34.87386,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": null,
+        "size_sqm": null,
+        "floor": null,
+        "total_floors": null,
+        "property_type": "apartment"
+      },
+      "price": {
+        "amount": 3500,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": null,
+        "includes_vaad_bait": null,
+        "raw_price_text": "החל מ-3,500 ₪ לחדר"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": null,
+        "parking": null,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": null,
+        "pets_allowed": null,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": null,
+        "whatsapp": null,
+        "contact_name": null,
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.street",
+          "property.rooms",
+          "property.size_sqm",
+          "property.floor",
+          "property.total_floors",
+          "price.includes_arnona",
+          "price.includes_vaad_bait",
+          "amenities.air_conditioning",
+          "amenities.elevator",
+          "amenities.parking",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.renovated",
+          "amenities.pets_allowed",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.phone",
+          "contact.whatsapp",
+          "contact.contact_name",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
+    },
+    "facebook_group:608325962573249:36717010764611312": {
+      "id": "facebook_group:608325962573249:36717010764611312",
+      "source": {
+        "platform": "facebook_group",
+        "source_id": "608325962573249",
+        "post_id": "36717010764611312",
+        "post_url": "https://www.facebook.com/groups/608325962573249/permalink/36717010764611312/",
+        "author_name": "Nadav Telpaz",
+        "posted_at": "2026-06-23T10:01:02.000Z",
+        "scraped_at": "2026-06-28T18:39:45.325Z",
+        "raw_text": "**ירידת מחיר**!להשכרה ללא תיווך ! **חדר מרוהט קומפלט**, (שירותים ומקלחת שחולקים עם שותפה אחת בלבד, כניסה מחדר השינה לכל אחת עם מנעול לנעילה של הצד השני) בדירת שותפים חדשה מרוהטת קומפלט, כניסה מיידית!החדר עם פרטיות , מפתח אישי לחדר!בדירה נשארים שותפים, שקטים כיייפים ונקיים.\n\nהדירה בר\"ג רח' הירדן 27 קומה 4 , ישנה מעלית וקודן בכניסה. ישנו מקלט בבניין ובקומה.מיקום חלומי קרוב להכל, ישנו שופרסל ענקי ליד, מרכז מסחרי ושפע תחבורה ציבורית נגישה + חניה באיזור.מאחוריי הבניין ישנו מגרש חנייה בכחול לבן.\n\nחל איסור על עישון בדירה ובע\"ח.\n\nהדירה והחדר עברו שיפוץ יסודי לפניי שנה וקצת.החדר מרוהט קומפלט בכל מוצרי החשמל וריהוט רק להביא בגדים.\n\n**בחדר:** ארון קיר שעוצב אצל נגר פרטי עם מראה, מגירות ותלייה,מיטת קיר שעוצבה אצל נגר פרטי נפתחת ונסגרת הופכת לספה דו מושבית עם מזרן זוגי של עמינח,מראת גוף, שולחן כתיבה, טלוויזיה חכמה, שולחן קפה, ספה דו מושבית, מיני בר בקיצור הכל!!!ישנם שירותים ומקלחת שחולקים עם בחורה אחת\n\n**בחלל המרכזי**: מטבח מרכזי של סמל, מוצרי חשמל, מיקרו, כיריים גז, תנור, מקרר ענקי, מכונת כביסה+מייבש.כל הקודם זוכה דירת החלומות!!!\n\nשכירות חודשית 2600 ש\"ח + 550 ש\"ח הוצאות חודשיות שכוללות הכל(מים, חשמל,אינטרנט, ארנונה, ועד בית, גז )לפרטים שירה : 0546282144",
+        "images": [
+          "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/728462701_10163549711148402_7864637324828869805_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=uRvymK3DlqoQ7kNvwH9oPm-&_nc_oc=Ado3ZnFrYmzNLmVU9poT8TMFi0BzIdOwmwEA__WsM0qBaSXv2APX4DPHvzgnhg4bx3o&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=O5CWurpcQhAnwv2nJhHgQQ&_nc_ss=72289&oh=00_Af_Zplt48iwHSl52-HZdBb2CrcNWHTMGDRWm8hXorG1Aog&oe=6A46ACBF",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/728556188_10163549711138402_5538932911449156446_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=fCMy9bxSH3kQ7kNvwH2T6sL&_nc_oc=Adqd734pTGaW0medUP2EkT1LKhchfHp4dwO8BH_bAvcj_Chk4VKiBvYUCq4_bCwHXZY&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=O5CWurpcQhAnwv2nJhHgQQ&_nc_ss=72289&oh=00_Af_mQ1CjZwkkEV1k-nAGjoGPfl1O596AsCCGQusu9FiX3Q&oe=6A46C1BF",
+          "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/728175327_10163549711143402_6317235523013167295_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YgPgwElZ8cwQ7kNvwHaWEqd&_nc_oc=AdqVWjUi_dhgHP4AXbCCO4fp2KDfGB4MAoBczseWSeKttxLg-6iLTFB1Xsh7j4LZVSM&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=O5CWurpcQhAnwv2nJhHgQQ&_nc_ss=72289&oh=00_Af8wNT5dC43YjhT09JBqbVerDrtTMcCI37D1Jro8HRJsqg&oe=6A46B06C",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/727788070_10163549711278402_4135984878326301184_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1599&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=CtavLzb9ID8Q7kNvwG2nupU&_nc_oc=AdqBSh-Wp8x1xnHKDUweLZRmxWUVjA6f2nuQx_3Wmqb0Pqdeu-aelxNOIH9heghhb4Q&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=O5CWurpcQhAnwv2nJhHgQQ&_nc_ss=72289&oh=00_Af8nZBlu6tu6V6PRno5oTAVZ6DUkxhjTeycnvP9639A1sw&oe=6A46A554",
+          "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/728255039_10163549711288402_5944677385202605996_n.jpg?stp=dst-jpg_tt6&cstp=mx1599x1200&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=856FhSMpDrQQ7kNvwH1TZLm&_nc_oc=AdqtHoLlaLFpp6aZLaQQ0jjD_eyfOV6g-Q9LQmm63GbxOvLcGfE4XFBhUPznDEV3fAo&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=O5CWurpcQhAnwv2nJhHgQQ&_nc_ss=72289&oh=00_Af9sax7jODOlN352XvK2mY-Lsl5iPapf4sX60OA6zZx8Qg&oe=6A46A399"
+        ]
+      },
+      "classification": {
+        "is_rental_offer": true,
+        "listing_kind": "room_in_shared",
+        "confidence": 0.9
+      },
+      "location": {
+        "city": null,
+        "neighborhood": "בר\"ג",
+        "street": "הירדן",
+        "raw_location_text": "בר\"ג רח' הירדן 27 קומה 4",
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
+      },
+      "property": {
+        "rooms": 1,
+        "size_sqm": null,
+        "floor": 4,
+        "total_floors": null,
+        "property_type": null
+      },
+      "price": {
+        "amount": 2600,
+        "currency": "ILS",
+        "period": "month",
+        "includes_arnona": false,
+        "includes_vaad_bait": false,
+        "raw_price_text": "שכירות חודשית 2600 ש\"ח + 550 ש\"ח הוצאות חודשיות שכוללות הכל(מים, חשמל,אינטרנט, ארנונה, ועד בית, גז )"
+      },
+      "amenities": {
+        "furnished": true,
+        "air_conditioning": null,
+        "elevator": true,
+        "parking": true,
+        "balcony": null,
+        "safe_room_mamad": true,
+        "storage": null,
+        "renovated": true,
+        "pets_allowed": false,
+        "accessible": null
+      },
+      "availability": {
+        "available_from": null,
+        "min_lease_months": null,
+        "is_short_term": null
+      },
+      "contact": {
+        "phone": "0546282144",
+        "whatsapp": null,
+        "contact_name": "שירה",
+        "preferred_method": null
+      },
+      "extraction": {
+        "schema_version": "1.1.0",
+        "missing_fields": [
+          "location.city",
+          "property.size_sqm",
+          "property.total_floors",
+          "property.property_type",
+          "amenities.air_conditioning",
+          "amenities.balcony",
+          "amenities.storage",
+          "amenities.accessible",
+          "availability.available_from",
+          "availability.min_lease_months",
+          "availability.is_short_term",
+          "contact.whatsapp",
+          "contact.preferred_method"
+        ],
+        "needs_review": false
+      }
     }
   }
 }
