@@ -16,6 +16,14 @@ on:
         description: "Max posts to extract this run (0 = no cap; use a small number to pace a token-limited backfill)"
         type: string
         default: "0"
+      reuse_only:
+        description: "Re-extract from an EXISTING Apify dataset only — never start the actor"
+        type: boolean
+        default: false
+      reuse_run_id:
+        description: "Apify run id to reuse (optional; blank = latest SUCCEEDED run). Only used when reuse_only is on."
+        type: string
+        default: ""
 
 concurrency:
   group: rentalify-pipeline
@@ -53,6 +61,8 @@ jobs:
           # Manual-run toggles (empty/false on scheduled runs).
           FORCE_SCRAPE: ${{ inputs.force_scrape }}
           EXTRACT_LIMIT: ${{ inputs.extract_limit }}
+          REUSE_ONLY: ${{ inputs.reuse_only }}
+          REUSE_RUN_ID: ${{ inputs.reuse_run_id }}
         run: |
           node normalize.js
           node publish.mjs
