@@ -42,6 +42,22 @@ function cutoffMs() {
 }
 const listingDateMs = (l) => Date.parse(l.source?.posted_at || l.source?.scraped_at || "") || 0;
 
+// Collapse reposts: the same listing re-posted under a different post id (so id
+// dedup misses it) shows up as identical post text. Keep one card per distinct
+// text — the newest. Listings with no text can't be compared, so keep them all.
+// Expects `listings` already sorted newest-first.
+function dedupByContent(listings) {
+  const seen = new Set();
+  const out = [];
+  for (const l of listings) {
+    const key = (l.source?.raw_text || "").replace(/\s+/g, " ").trim();
+    if (key && seen.has(key)) continue; // older repost — drop from the published set
+    if (key) seen.add(key);
+    out.push(l);
+  }
+  return out;
+}
+
 // Re-host a new listing's photos on R2, replacing the Facebook URLs in place.
 async function rehostImages(l) {
   if (!r2Enabled()) return;
@@ -106,8 +122,10 @@ async function main() {
   // 3) write the master store
   writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
 
-  // 4) publish all live listings
-  const listings = Object.values(db.listings).sort((a, b) => listingDateMs(b) - listingDateMs(a));
+  // 4) publish all live listings (newest first), with reposts collapsed
+  const sorted = Object.values(db.listings).sort((a, b) => listingDateMs(b) - listingDateMs(a));
+  const listings = dedupByContent(sorted);
+  const collapsed = sorted.length - listings.length;
   if (STRIP_CONTACT) {
     for (const l of listings) {
       l.contact = { phone: null, whatsapp: null, contact_name: null, preferred_method: l.contact?.preferred_method ?? null };
@@ -119,7 +137,7 @@ async function main() {
   writeFileSync(DEST, JSON.stringify(output, null, 2));
   if (existsSync(GAZ_SRC)) copyFileSync(GAZ_SRC, GAZ_DEST);
 
-  console.log(`published ${listings.length} live listings (added ${added}, pruned ${pruned}) -> web/public/listings.json`);
+  console.log(`published ${listings.length} live listings (${collapsed} reposts collapsed; added ${added}, pruned ${pruned}) -> web/public/listings.json`);
   console.log(`images: ${r2Enabled() ? "re-hosted on R2" : "kept Facebook URLs (R2 not configured)"}`);
 }
 

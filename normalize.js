@@ -154,6 +154,27 @@ async function findReusableRun(source, onlyNewerThanDay) {
 }
 
 async function fetchPosts(source, onlyNewerThan, forceScrape = false) {
+  // REUSE_ONLY: rebuild from an EXISTING Apify dataset without ever starting a
+  // scrape (the actor is NOT activated). Processes ALL items in the dataset (no
+  // time-window trim) so a one-off re-extraction can reprocess the whole batch.
+  // Target a specific run with REUSE_RUN_ID, else the latest SUCCEEDED run.
+  if (process.env.REUSE_ONLY === "true") {
+    const runId = process.env.REUSE_RUN_ID;
+    let run;
+    if (runId) {
+      run = await apify.run(runId).get();
+    } else {
+      const { items: runs } = await apify.actor(ACTOR_ID).runs().list({ desc: true, limit: 30 });
+      run = runs.find((r) => r.status === "SUCCEEDED" && r.defaultDatasetId);
+    }
+    if (!run?.defaultDatasetId) {
+      throw new Error("REUSE_ONLY: no SUCCEEDED Apify run with a dataset to reuse — refusing to start the actor");
+    }
+    const { items } = await apify.dataset(run.defaultDatasetId).listItems();
+    console.log(`REUSE_ONLY: reusing run ${run.id} dataset (${items.length} items) — actor NOT started`);
+    return items;
+  }
+
   const onlyNewerThanDay = onlyNewerThan.slice(0, 10); // actor expects YYYY-MM-DD
 
   const reuse = forceScrape ? null : await findReusableRun(source, onlyNewerThanDay);
