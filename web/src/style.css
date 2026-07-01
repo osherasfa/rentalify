@@ -271,12 +271,20 @@ legend { font-size: 12px; font-weight: 700; color: var(--muted-2); padding: 0 8p
 .maplibregl-popup-close-button:hover { color: var(--text); background: transparent; }
 
 /* cluster card list */
-.cluster-list { max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
+.cluster-list { width: 322px; max-width: 100%; max-height: 360px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; }
 .cluster-list::-webkit-scrollbar { width: 6px; }
 .cluster-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 .cluster-head { font-weight: 800; font-size: 14px; margin-bottom: 4px; color: var(--text); }
-.cluster-list .card { padding: 12px; gap: 12px; box-shadow: none; border-color: var(--line-2); }
-.cluster-list .card:hover { border-color: var(--accent); }
+
+/* Compact list card: full-height photo cover on the side + address + price. */
+.cluster-list .card { flex: none; height: 108px; padding: 0; gap: 0; box-shadow: none; border-color: var(--line-2); }
+.cluster-list .card:hover { border-color: var(--accent); transform: none; box-shadow: var(--shadow-sm); }
+.cluster-list .card .card-thumb { width: 108px; height: 100%; border-radius: 0; }        /* photo covers the whole side */
+.cluster-list .card .card-thumb.no-img::after { font-size: 26px; }
+.cluster-list .card .card-body { padding: 10px 12px; padding-inline-end: 40px; gap: 4px; justify-content: center; }
+.cluster-list .card .card-title { font-size: 15px; }
+.cluster-list .card .price { font-size: 16px; margin-top: 2px; }
+.cluster-list .card .card-tags { margin-top: 4px; }
 
 /* detail modal */
 .modal[hidden] { display: none; }

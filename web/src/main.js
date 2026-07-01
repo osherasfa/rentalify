@@ -187,6 +187,35 @@ function cardHtml(l) {
     </button>`;
 }
 
+// Compact card for the cluster-popup LIST only: full-height photo cover on the
+// side, address (street + city), price, labels, heart. No contact line.
+function listCardHtml(l) {
+  const loc = l.location;
+  const street = loc.street ? escapeHtml(loc.street) : null;
+  const city = loc.city ? escapeHtml(loc.city) : null;
+  const nb = loc.neighborhood ? escapeHtml(loc.neighborhood) : null;
+  // Address: street (most specific) on top, city beneath. Fall back gracefully.
+  const title = street || nb || city || (loc.raw_location_text ? escapeHtml(loc.raw_location_text) : "מיקום לא ידוע");
+  const sub = city && city !== title ? city : (nb && nb !== title ? nb : "");
+  const labels = [roomsText(l.property), floorText(l.property), ...amenityTags(l.amenities)].filter(Boolean);
+  const chips = labels.map((t) => `<span class="chip">${t}</span>`).join("");
+  const imgs = Array.isArray(l.source.images) ? l.source.images : [];
+  const thumb = imgs.length
+    ? `<div class="card-thumb"><img src="${escapeHtml(imgs[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('no-img')" /></div>`
+    : `<div class="card-thumb no-img"></div>`;
+  const on = liked.has(l.id);
+  return `${thumb}
+    <div class="card-body">
+      <div class="card-title">${title}</div>
+      ${sub ? `<div class="card-sub">${sub}</div>` : ""}
+      <div class="price">${priceText(l.price)}</div>
+      ${chips ? `<div class="card-tags">${chips}</div>` : ""}
+    </div>
+    <button class="like-btn${on ? " liked" : ""}" type="button" aria-label="שמירה למועדפים" aria-pressed="${on}">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>`;
+}
+
 // Full detail view shown in the modal when a listing is clicked.
 function detailHtml(l) {
   const p = l.property, pr = l.price, av = l.availability, ct = l.contact;
@@ -319,7 +348,7 @@ function closeLightbox() {
 // Open exactly one popup, replacing any previous one.
 function openPopup(lngLat, content) {
   if (activePopup) activePopup.remove();
-  activePopup = new maplibregl.Popup({ closeButton: true, maxWidth: "300px" }).setLngLat(lngLat);
+  activePopup = new maplibregl.Popup({ closeButton: true, maxWidth: "360px" }).setLngLat(lngLat);
   content instanceof Node ? activePopup.setDOMContent(content) : activePopup.setHTML(content);
   activePopup.addTo(map);
 }
@@ -345,7 +374,7 @@ function clusterListEl(leaves) {
     if (!l) continue;
     const c = document.createElement("div");
     c.className = "card" + (l.extraction.needs_review ? " review" : "");
-    c.innerHTML = cardHtml(l);
+    c.innerHTML = listCardHtml(l);
     c.addEventListener("click", (e) => {
       const btn = e.target.closest(".like-btn");
       if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
