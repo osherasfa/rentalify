@@ -156,47 +156,18 @@ function renderClusters() {
 // ---------- rendering ----------
 const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// Sidebar / cluster-popup card: photo on the side, then neighborhood, city,
-// price, labels and contact stacked, with a save (heart) button.
+// Listing card (sidebar list + cluster popup): full-height photo cover on the
+// side, then city (title) + street (sub) + price + labels, with a save (heart)
+// button. City is first, street second, per the address convention.
 function cardHtml(l) {
-  const loc = l.location, ct = l.contact || {};
-  const nb = loc.neighborhood ? escapeHtml(loc.neighborhood) : null;
-  const city = loc.city ? escapeHtml(loc.city) : null;
-  // Title = neighborhood, sub = city (smaller). Fall back when one is missing.
-  const title = nb || city || (loc.raw_location_text ? escapeHtml(loc.raw_location_text) : "מיקום לא ידוע");
-  const sub = nb && city ? city : "";
-  // Labels: rooms / floor / amenities — no listing-kind.
-  const labels = [roomsText(l.property), floorText(l.property), ...amenityTags(l.amenities)].filter(Boolean);
-  const chips = labels.map((t) => `<span class="chip">${t}</span>`).join("");
-  const contactBits = [ct.contact_name ? escapeHtml(ct.contact_name) : null, ct.phone ? escapeHtml(ct.phone) : null].filter(Boolean);
-  const imgs = Array.isArray(l.source.images) ? l.source.images : [];
-  const thumb = imgs.length
-    ? `<div class="card-thumb"><img src="${escapeHtml(imgs[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('no-img')" /></div>`
-    : `<div class="card-thumb no-img"></div>`;
-  const on = liked.has(l.id);
-  return `${thumb}
-    <div class="card-body">
-      <div class="card-title">${title}</div>
-      ${sub ? `<div class="card-sub">${sub}</div>` : ""}
-      <div class="price">${priceText(l.price)}</div>
-      ${chips ? `<div class="card-tags">${chips}</div>` : ""}
-      ${contactBits.length ? `<div class="card-contact">☎ ${contactBits.join(" · ")}</div>` : ""}
-    </div>
-    <button class="like-btn${on ? " liked" : ""}" type="button" aria-label="שמירה למועדפים" aria-pressed="${on}">
-      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-    </button>`;
-}
-
-// Compact card for the cluster-popup LIST only: full-height photo cover on the
-// side, address (street + city), price, labels, heart. No contact line.
-function listCardHtml(l) {
   const loc = l.location;
-  const street = loc.street ? escapeHtml(loc.street) : null;
   const city = loc.city ? escapeHtml(loc.city) : null;
+  const street = loc.street ? escapeHtml(loc.street) : null;
   const nb = loc.neighborhood ? escapeHtml(loc.neighborhood) : null;
-  // Address: street (most specific) on top, city beneath. Fall back gracefully.
-  const title = street || nb || city || (loc.raw_location_text ? escapeHtml(loc.raw_location_text) : "מיקום לא ידוע");
-  const sub = city && city !== title ? city : (nb && nb !== title ? nb : "");
+  // Title = city (first), sub = street (second). Fall back gracefully.
+  const title = city || nb || (loc.raw_location_text ? escapeHtml(loc.raw_location_text) : "מיקום לא ידוע");
+  const sub = street || (nb && nb !== title ? nb : "");
+  // Labels: rooms / floor / amenities — no listing-kind.
   const labels = [roomsText(l.property), floorText(l.property), ...amenityTags(l.amenities)].filter(Boolean);
   const chips = labels.map((t) => `<span class="chip">${t}</span>`).join("");
   const imgs = Array.isArray(l.source.images) ? l.source.images : [];
@@ -334,8 +305,9 @@ function openLightbox(imgs, startIdx = 0) {
   lb.hidden = false;
   lightboxKeyHandler = (e) => {
     if (e.key === "Escape") closeLightbox();
-    else if (e.key === "ArrowLeft") ctrl?.show(ctrl.index + 1);
-    else if (e.key === "ArrowRight") ctrl?.show(ctrl.index - 1);
+    // Match the on-screen buttons: › (right) = next, ‹ (left) = previous.
+    else if (e.key === "ArrowRight") ctrl?.show(ctrl.index + 1);
+    else if (e.key === "ArrowLeft") ctrl?.show(ctrl.index - 1);
   };
   document.addEventListener("keydown", lightboxKeyHandler);
 }
@@ -374,7 +346,7 @@ function clusterListEl(leaves) {
     if (!l) continue;
     const c = document.createElement("div");
     c.className = "card" + (l.extraction.needs_review ? " review" : "");
-    c.innerHTML = listCardHtml(l);
+    c.innerHTML = cardHtml(l);
     c.addEventListener("click", (e) => {
       const btn = e.target.closest(".like-btn");
       if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }

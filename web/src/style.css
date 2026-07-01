@@ -199,12 +199,12 @@ legend { font-size: 12px; font-weight: 700; color: var(--muted-2); padding: 0 8p
 }
 
 .card {
-  position: relative; display: flex; gap: 14px; align-items: stretch; overflow: hidden;
+  position: relative; display: flex; gap: 0; align-items: stretch; overflow: hidden;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 10px 12px; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-sm);
   animation: cardEnter 0.4s ease-out backwards;
-  height: 148px;
+  height: 118px; flex: none;   /* flex:none so lists (flex columns) scroll instead of shrinking cards */
 }
 .card:nth-child(1) { animation-delay: 0.03s; }
 .card:nth-child(2) { animation-delay: 0.06s; }
@@ -215,14 +215,14 @@ legend { font-size: 12px; font-weight: 700; color: var(--muted-2); padding: 0 8p
 .card:hover { border-color: var(--accent-line); box-shadow: var(--shadow-float); transform: translateY(-3px); }
 .card:active { transform: translateY(-1px); box-shadow: var(--shadow); transition-duration: 0.1s; }
 
-/* photo on the side */
-.card-thumb { flex: none; width: 120px; border-radius: 8px; overflow: hidden; background: var(--surface-2); position: relative; }
+/* photo covers the whole side, flush to the card edges */
+.card-thumb { flex: none; width: 122px; border-radius: 0; overflow: hidden; background: var(--surface-2); position: relative; }
 .card-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
 .card:hover .card-thumb img { transform: scale(1.05); }
 .card-thumb.no-img::after { content: "🏠"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 32px; opacity: 0.25; }
 
 /* text block */
-.card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; gap: 4px; padding-inline-end: 28px; }
+.card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 12px 14px; padding-inline-end: 42px; }
 .card-title { font-size: 16px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
 .card-sub { font-size: 13px; font-weight: 500; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -276,15 +276,10 @@ legend { font-size: 12px; font-weight: 700; color: var(--muted-2); padding: 0 8p
 .cluster-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 .cluster-head { font-weight: 800; font-size: 14px; margin-bottom: 4px; color: var(--text); }
 
-/* Compact list card: full-height photo cover on the side + address + price. */
-.cluster-list .card { flex: none; height: 108px; padding: 0; gap: 0; box-shadow: none; border-color: var(--line-2); }
+/* cards share the base full-cover layout; the popup just softens the shadow/hover */
+.cluster-list .card { height: 108px; box-shadow: none; border-color: var(--line-2); }
 .cluster-list .card:hover { border-color: var(--accent); transform: none; box-shadow: var(--shadow-sm); }
-.cluster-list .card .card-thumb { width: 108px; height: 100%; border-radius: 0; }        /* photo covers the whole side */
-.cluster-list .card .card-thumb.no-img::after { font-size: 26px; }
-.cluster-list .card .card-body { padding: 10px 12px; padding-inline-end: 40px; gap: 4px; justify-content: center; }
-.cluster-list .card .card-title { font-size: 15px; }
-.cluster-list .card .price { font-size: 16px; margin-top: 2px; }
-.cluster-list .card .card-tags { margin-top: 4px; }
+.cluster-list .card .card-thumb { width: 108px; }
 
 /* detail modal */
 .modal[hidden] { display: none; }
@@ -371,7 +366,7 @@ legend { font-size: 12px; font-weight: 700; color: var(--muted-2); padding: 0 8p
   .map-search { width: calc(100% - 32px); max-width: 340px; }
   .map-panel { bottom: 16px; right: 16px; }
   
-  .card-thumb { width: 100px; height: 90px; }
+  .card-thumb { width: 104px; }
   .modal-card { padding: 20px; max-height: 85vh; border-radius: 16px 16px 0 0; margin-top: auto; align-self: flex-end; width: 100%; max-width: 100%; }
   .modal { padding: 0; }
 }

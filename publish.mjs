@@ -36,6 +36,21 @@ const STRIP_CONTACT = false;   // false = show phone/name (you chose this)
 const MAX_AGE_MONTHS = 5;      // listings older than this are deleted (with their images)
 const MAX_IMAGES = 4;          // cap images re-hosted per listing (storage control)
 
+// The LLM sometimes emits English place names; the UI should always show Hebrew.
+// Map the ones we've seen (keyed case-insensitively) back to their Hebrew form.
+const HE_PLACE = {
+  "tel aviv": "תל אביב", "ramat gan": "רמת גן", "bat yam": "בת ים", "jerusalem": "ירושלים",
+  "kfar yona": "כפר יונה", "petah tikva": "פתח תקווה", "petach tikva": "פתח תקווה",
+  "givat shmuel": "גבעת שמואל", "holon": "חולון", "pardesiya": "פרדסייה", "netanya": "נתניה",
+  "ashkelon": "אשקלון", "herzliya": "הרצליה", "rishon lezion": "ראשון לציון", "rishon letzion": "ראשון לציון",
+  "beer sheva": "באר שבע", "haifa": "חיפה", "rehovot": "רחובות", "kfar saba": "כפר סבא", "raanana": "רעננה",
+  "hod hasharon": "הוד השרון", "ganei tikva": "גני תקווה", "or yehuda": "אור יהודה", "bnei brak": "בני ברק",
+  // neighborhoods
+  "baka": "בקעה", "beit hakerem": "בית הכרם", "ramat aviv": "רמת אביב", "ramat hahayil": "רמת החייל",
+  "old north": "צפון הישן", "sharona": "שרונה", "green herzliya": "הרצליה הירוקה", "afridar": "אפרידר", "merkaz afriddar": "אפרידר",
+};
+const toHebrew = (s) => (typeof s === "string" && HE_PLACE[s.trim().toLowerCase()]) || s;
+
 function cutoffMs() {
   const d = new Date();
   d.setMonth(d.getMonth() - MAX_AGE_MONTHS);
@@ -126,6 +141,15 @@ async function main() {
   }
   if (orphanKeys.length) { try { await deleteKeys(orphanKeys); } catch (e) { console.warn("R2 delete failed:", e.message); } }
 
+  // 2a) normalize English place names to Hebrew so the UI is consistently Hebrew.
+  let hebrewized = 0;
+  for (const l of Object.values(db.listings)) {
+    if (!l.location) continue;
+    const c = toHebrew(l.location.city), nb = toHebrew(l.location.neighborhood);
+    if (c !== l.location.city) { l.location.city = c; hebrewized++; }
+    if (nb !== l.location.neighborhood) l.location.neighborhood = nb;
+  }
+
   // 2b) backfill coords for listings that never geocoded — re-run the offline
   // geocoder against the current gazetteer. This fixes listings stored before a
   // gazetteer entry/alias existed (their lat/lng were baked in as null) without
@@ -173,7 +197,7 @@ async function main() {
   writeFileSync(DEST, JSON.stringify(output, null, 2));
   if (existsSync(GAZ_SRC)) copyFileSync(GAZ_SRC, GAZ_DEST);
 
-  console.log(`published ${listings.length} live listings (${collapsed} reposts collapsed; added ${added}, pruned ${pruned}, re-geocoded ${regeocoded}) -> web/public/listings.json`);
+  console.log(`published ${listings.length} live listings (${collapsed} reposts collapsed; added ${added}, pruned ${pruned}, re-geocoded ${regeocoded}, hebrewized ${hebrewized}) -> web/public/listings.json`);
   console.log(`images: ${r2Enabled() ? "re-hosted on R2" : "kept Facebook URLs (R2 not configured)"}`);
 }
 

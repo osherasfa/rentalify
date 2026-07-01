@@ -248,8 +248,8 @@
         "confidence": 0.88
       },
       "location": {
-        "city": "Tel Aviv",
-        "neighborhood": "Old North",
+        "city": "תל אביב",
+        "neighborhood": "צפון הישן",
         "street": "Yirmiyahu",
         "raw_location_text": "רחוב ירמיהו המבוקש בצפון הישן צמוד לפארק הירקון",
         "lat": 32.08088,
@@ -342,8 +342,8 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Jerusalem",
-        "neighborhood": "Baka",
+        "city": "ירושלים",
+        "neighborhood": "בקעה",
         "street": null,
         "raw_location_text": "בקעה, ירושלים",
         "lat": 31.756,
@@ -438,7 +438,7 @@
         "confidence": 0.87
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": null,
         "street": "Arye Ben Eliezer 44",
         "raw_location_text": "דירה בר״ג רח' אריה בן אליעזר 44 א ר״ג קומה 3",
@@ -528,7 +528,7 @@
         "confidence": 0.8
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": null,
         "street": "Pinsker",
         "raw_location_text": "מרכז העיר על יד הסנטר והים (פינסקר פינת אידלסון, כ-100 מטר מהים וכ-300 מטר מדיזינגוף סנטר)",
@@ -626,7 +626,7 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": null,
         "street": "Hayarden 27",
         "raw_location_text": "בר\"ג רח' הירדן 27 קומה 4",
@@ -717,7 +717,7 @@
         "confidence": 0.88
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": null,
         "street": "שדרות ירושלים 153",
         "raw_location_text": "שדרות ירושלים 153",
@@ -906,8 +906,8 @@
         "confidence": 0.8
       },
       "location": {
-        "city": "Jerusalem",
-        "neighborhood": "Baka",
+        "city": "ירושלים",
+        "neighborhood": "בקעה",
         "street": null,
         "raw_location_text": "בקעה, ירושלים",
         "lat": 31.756,
@@ -1095,7 +1095,7 @@
         "confidence": 0.88
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": null,
         "street": "Arie Ben Eliezer",
         "raw_location_text": "בר\"ג רח' אריה בן אליעזר 44 א ר\"ג קומה 3",
@@ -1277,8 +1277,8 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Tel Aviv",
-        "neighborhood": "Sharona",
+        "city": "תל אביב",
+        "neighborhood": "שרונה",
         "street": null,
         "raw_location_text": "Ser Sharona, heart of Sharona",
         "lat": 32.0712,
@@ -1478,7 +1478,7 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": null,
         "street": "Y.L. Peretz",
         "raw_location_text": "Y.L. Peretz street, close to Florentin, Rothschild, Levinsky market and central station",
@@ -4154,7 +4154,7 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Bat Yam",
+        "city": "בת ים",
         "neighborhood": null,
         "street": null,
         "raw_location_text": "אזור מרכזי במיוחד בבת ים",
@@ -4254,8 +4254,8 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Herzliya",
-        "neighborhood": "Green Herzliya",
+        "city": "הרצליה",
+        "neighborhood": "הרצליה הירוקה",
         "street": null,
         "raw_location_text": "Green Herzliya",
         "lat": 32.16627,
@@ -4548,8 +4548,8 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Ashkelon",
-        "neighborhood": "Merkaz Afriddar",
+        "city": "אשקלון",
+        "neighborhood": "אפרידר",
         "street": null,
         "raw_location_text": "מרכז אפרידר, אשקלון",
         "lat": 31.67564,
@@ -4647,7 +4647,7 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Givat Shmuel",
+        "city": "גבעת שמואל",
         "neighborhood": null,
         "street": null,
         "raw_location_text": "גבעת שמואל, מול אוניברסיטת בר אילן, ברחבת קרן היסוד",
@@ -4737,8 +4737,8 @@
         "confidence": 0.9
       },
       "location": {
-        "city": "Kfar Yona",
-        "neighborhood": "Sharona",
+        "city": "כפר יונה",
+        "neighborhood": "שרונה",
         "street": null,
         "raw_location_text": "בשכונת שרונה החדשה כפר יונה",
         "lat": 32.0712,
@@ -4926,7 +4926,7 @@
         "confidence": 0.88
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": "central",
         "street": null,
         "raw_location_text": "ברמת גן מרכזי ושקט",
@@ -5030,7 +5030,7 @@
         "confidence": 0.7
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": null,
         "street": null,
         "raw_location_text": "ליד הבורסה ברמת גן על גבול ת״א",
@@ -5233,7 +5233,7 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Holon",
+        "city": "חולון",
         "neighborhood": null,
         "street": "Moshe Sharett",
         "raw_location_text": "רחוב משה שרת, קומה 7",
@@ -5521,7 +5521,7 @@
         "confidence": 0.9
       },
       "location": {
-        "city": "Netanya",
+        "city": "נתניה",
         "neighborhood": null,
         "street": null,
         "raw_location_text": "נתניה – בלב העיר, במרחק דקות ספורות מהחוף ומהכיכר",
@@ -5612,7 +5612,7 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": "Hadar Yosef, Neot Afeka, Ramat HaChai",
         "street": null,
         "raw_location_text": "תל אביב בשכונות שמעבר לירקון כגון הדר יוסף, נאות אפקה ורמת החייל",
@@ -5712,7 +5712,7 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": "Dizengoff, Allenby",
         "street": null,
         "raw_location_text": "תל אביב, דיזנגוף, אלנבי או אזורים דומים",
@@ -5816,8 +5816,8 @@
         "confidence": 0.85
       },
       "location": {
-        "city": "Jerusalem",
-        "neighborhood": "Beit HaKerem",
+        "city": "ירושלים",
+        "neighborhood": "בית הכרם",
         "street": null,
         "raw_location_text": "בבית הכרם",
         "lat": 31.77953,
@@ -5996,8 +5996,8 @@
         "confidence": 0.5
       },
       "location": {
-        "city": "Tel Aviv",
-        "neighborhood": "Ramat Aviv",
+        "city": "תל אביב",
+        "neighborhood": "רמת אביב",
         "street": null,
         "raw_location_text": "תל אביב / רמת אביב",
         "lat": 32.113,
@@ -6284,7 +6284,7 @@
         "confidence": 0.9
       },
       "location": {
-        "city": "Ramat Gan",
+        "city": "רמת גן",
         "neighborhood": null,
         "street": "Herzl 53",
         "raw_location_text": "ברמת גן – רחוב הרצל 53",
@@ -6381,7 +6381,7 @@
         "confidence": 0.9
       },
       "location": {
-        "city": "Tel Aviv",
+        "city": "תל אביב",
         "neighborhood": null,
         "street": "Rofin",
         "raw_location_text": "רחוב רופין, במיקום מושלם — דקה מחוף גורדון",
@@ -6676,7 +6676,7 @@
         "confidence": 0.95
       },
       "location": {
-        "city": "Pardesiya",
+        "city": "פרדסייה",
         "neighborhood": null,
         "street": null,
         "raw_location_text": "בפרדסיה",
