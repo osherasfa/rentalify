@@ -22,6 +22,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, copyFi
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { r2Enabled, uploadImage, deleteKeys, keyFromUrl } from "./lib/r2.js";
+import { geocode } from "./lib/geocode.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, "out");
@@ -80,9 +81,15 @@ async function rehostImages(l) {
 }
 
 async function main() {
-  if (!existsSync(OUT_DIR)) { console.error("no out/ directory — run normalize.js first."); process.exit(1); }
-  const runs = readdirSync(OUT_DIR).filter((f) => /^listings-\d+\.json$/.test(f)).sort();
-  if (!runs.length) { console.error("no listings-*.json in out/."); process.exit(1); }
+  const runs = existsSync(OUT_DIR)
+    ? readdirSync(OUT_DIR).filter((f) => /^listings-\d+\.json$/.test(f)).sort()
+    : [];
+  // No run files is fine: re-publish the existing DB (e.g. after a gazetteer
+  // update). We only need a run file when there are new listings to merge.
+  if (!runs.length && !existsSync(DB_PATH)) {
+    console.error("nothing to publish: no out/listings-*.json and no listings-db.json.");
+    process.exit(1);
+  }
 
   const db = existsSync(DB_PATH) ? JSON.parse(readFileSync(DB_PATH, "utf8")) : { listings: {} };
   db.listings = db.listings || {};
@@ -119,6 +126,22 @@ async function main() {
   }
   if (orphanKeys.length) { try { await deleteKeys(orphanKeys); } catch (e) { console.warn("R2 delete failed:", e.message); } }
 
+  // 2b) backfill coords for listings that never geocoded — re-run the offline
+  // geocoder against the current gazetteer. This fixes listings stored before a
+  // gazetteer entry/alias existed (their lat/lng were baked in as null) without
+  // needing to re-extract them.
+  let regeocoded = 0;
+  for (const l of Object.values(db.listings)) {
+    if (l.location?.lat != null) continue;
+    const geo = geocode(l.location?.city, l.location?.neighborhood);
+    if (geo.lat == null) continue;
+    l.location.lat = geo.lat;
+    l.location.lng = geo.lng;
+    if (!l.location.city && geo.city) l.location.city = geo.city;
+    l.location.geocode_source = geo.source;
+    regeocoded++;
+  }
+
   // 3) write the master store
   writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
 
@@ -132,12 +155,25 @@ async function main() {
       if (l.source) l.source.author_name = null;
     }
   }
-  const output = { run_metadata: lastRun?.run_metadata, listings };
+  // Prefer the newest run's metadata; when re-publishing with no new run, keep
+  // the last published metadata, else synthesize a minimal schema-valid stub.
+  let runMeta = lastRun?.run_metadata;
+  if (!runMeta && existsSync(DEST)) {
+    try { runMeta = JSON.parse(readFileSync(DEST, "utf8")).run_metadata; } catch {}
+  }
+  if (!runMeta) {
+    runMeta = {
+      run_id: "republish", schema_version: "1.1.0",
+      run_started_at: new Date().toISOString(), is_initial_backfill: false,
+      sources: [], totals: { posts_fetched: 0, rental_posts_kept: 0, non_rental_filtered_out: 0, duplicates_skipped: 0 },
+    };
+  }
+  const output = { run_metadata: runMeta, listings };
   mkdirSync(PUBLIC_DIR, { recursive: true });
   writeFileSync(DEST, JSON.stringify(output, null, 2));
   if (existsSync(GAZ_SRC)) copyFileSync(GAZ_SRC, GAZ_DEST);
 
-  console.log(`published ${listings.length} live listings (${collapsed} reposts collapsed; added ${added}, pruned ${pruned}) -> web/public/listings.json`);
+  console.log(`published ${listings.length} live listings (${collapsed} reposts collapsed; added ${added}, pruned ${pruned}, re-geocoded ${regeocoded}) -> web/public/listings.json`);
   console.log(`images: ${r2Enabled() ? "re-hosted on R2" : "kept Facebook URLs (R2 not configured)"}`);
 }
 

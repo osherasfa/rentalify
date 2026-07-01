@@ -252,9 +252,9 @@
         "neighborhood": "Old North",
         "street": "Yirmiyahu",
         "raw_location_text": "רחוב ירמיהו המבוקש בצפון הישן צמוד לפארק הירקון",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 2,
@@ -346,9 +346,9 @@
         "neighborhood": "Baka",
         "street": null,
         "raw_location_text": "בקעה, ירושלים",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 31.756,
+        "lng": 35.223,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 3,
@@ -442,9 +442,9 @@
         "neighborhood": null,
         "street": "Arye Ben Eliezer 44",
         "raw_location_text": "דירה בר״ג רח' אריה בן אליעזר 44 א ר״ג קומה 3",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -532,9 +532,9 @@
         "neighborhood": null,
         "street": "Pinsker",
         "raw_location_text": "מרכז העיר על יד הסנטר והים (פינסקר פינת אידלסון, כ-100 מטר מהים וכ-300 מטר מדיזינגוף סנטר)",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 4,
@@ -630,9 +630,9 @@
         "neighborhood": null,
         "street": "Hayarden 27",
         "raw_location_text": "בר\"ג רח' הירדן 27 קומה 4",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 2,
@@ -721,9 +721,9 @@
         "neighborhood": null,
         "street": "שדרות ירושלים 153",
         "raw_location_text": "שדרות ירושלים 153",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -910,9 +910,9 @@
         "neighborhood": "Baka",
         "street": null,
         "raw_location_text": "בקעה, ירושלים",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 31.756,
+        "lng": 35.223,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 3,
@@ -1190,9 +1190,9 @@
         "neighborhood": "Sharona",
         "street": null,
         "raw_location_text": "Ser Sharona, heart of Sharona",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.0712,
+        "lng": 34.7876,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 4,
@@ -1391,9 +1391,9 @@
         "neighborhood": null,
         "street": "Y.L. Peretz",
         "raw_location_text": "Y.L. Peretz street, close to Florentin, Rothschild, Levinsky market and central station",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 3,
@@ -3963,13 +3963,13 @@
         "confidence": 0.8
       },
       "location": {
-        "city": null,
+        "city": "תל אביב",
         "neighborhood": "צפון הישן",
         "street": "ירמיהו",
         "raw_location_text": "רחוב ירמיהו המבוקש בצפון הישן",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": null,
@@ -4067,9 +4067,9 @@
         "neighborhood": null,
         "street": null,
         "raw_location_text": "אזור מרכזי במיוחד בבת ים",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.02379,
+        "lng": 34.75185,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 4.5,
@@ -4167,9 +4167,9 @@
         "neighborhood": "Green Herzliya",
         "street": null,
         "raw_location_text": "Green Herzliya",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.16627,
+        "lng": 34.82536,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 1,
@@ -4461,9 +4461,9 @@
         "neighborhood": "Merkaz Afriddar",
         "street": null,
         "raw_location_text": "מרכז אפרידר, אשקלון",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 31.67564,
+        "lng": 34.56655,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 5,
@@ -4560,9 +4560,9 @@
         "neighborhood": null,
         "street": null,
         "raw_location_text": "גבעת שמואל, מול אוניברסיטת בר אילן, ברחבת קרן היסוד",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.07817,
+        "lng": 34.84858,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 3,
@@ -4650,9 +4650,9 @@
         "neighborhood": "Sharona",
         "street": null,
         "raw_location_text": "בשכונת שרונה החדשה כפר יונה",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.0712,
+        "lng": 34.7876,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 4,
@@ -4839,9 +4839,9 @@
         "neighborhood": "central",
         "street": null,
         "raw_location_text": "ברמת גן מרכזי ושקט",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 3.5,
@@ -4943,9 +4943,9 @@
         "neighborhood": null,
         "street": null,
         "raw_location_text": "ליד הבורסה ברמת גן על גבול ת״א",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -5146,9 +5146,9 @@
         "neighborhood": null,
         "street": "Moshe Sharett",
         "raw_location_text": "רחוב משה שרת, קומה 7",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.01034,
+        "lng": 34.77918,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 4,
@@ -5434,9 +5434,9 @@
         "neighborhood": null,
         "street": null,
         "raw_location_text": "נתניה – בלב העיר, במרחק דקות ספורות מהחוף ומהכיכר",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.33291,
+        "lng": 34.85992,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 3,
@@ -5525,9 +5525,9 @@
         "neighborhood": "Hadar Yosef, Neot Afeka, Ramat HaChai",
         "street": null,
         "raw_location_text": "תל אביב בשכונות שמעבר לירקון כגון הדר יוסף, נאות אפקה ורמת החייל",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -5625,9 +5625,9 @@
         "neighborhood": "Dizengoff, Allenby",
         "street": null,
         "raw_location_text": "תל אביב, דיזנגוף, אלנבי או אזורים דומים",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -5729,9 +5729,9 @@
         "neighborhood": "Beit HaKerem",
         "street": null,
         "raw_location_text": "בבית הכרם",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 31.77953,
+        "lng": 35.19004,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": 3,
@@ -5909,9 +5909,9 @@
         "neighborhood": "Ramat Aviv",
         "street": null,
         "raw_location_text": "תל אביב / רמת אביב",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.113,
+        "lng": 34.795,
+        "geocode_source": "neighborhood"
       },
       "property": {
         "rooms": null,
@@ -6197,9 +6197,9 @@
         "neighborhood": null,
         "street": "Herzl 53",
         "raw_location_text": "ברמת גן – רחוב הרצל 53",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08227,
+        "lng": 34.81065,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": null,
@@ -6294,9 +6294,9 @@
         "neighborhood": null,
         "street": "Rofin",
         "raw_location_text": "רחוב רופין, במיקום מושלם — דקה מחוף גורדון",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.08088,
+        "lng": 34.78057,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 4,
@@ -6589,9 +6589,9 @@
         "neighborhood": null,
         "street": null,
         "raw_location_text": "בפרדסיה",
-        "lat": null,
-        "lng": null,
-        "geocode_source": "none"
+        "lat": 32.30577,
+        "lng": 34.90911,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 3,
