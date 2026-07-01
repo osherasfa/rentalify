@@ -333,6 +333,38 @@ function focusListing(l) {
   openDetail(l);
 }
 
+// Drag-to-scroll for the horizontal chip row (touch already scrolls natively).
+// Also swallows the click that ends a drag so it doesn't open the listing.
+function makeDragScroll(el) {
+  let down = false, startX = 0, startLeft = 0, moved = false;
+  el.addEventListener("pointerdown", (e) => { down = true; moved = false; startX = e.clientX; startLeft = el.scrollLeft; });
+  el.addEventListener("pointermove", (e) => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 3) { moved = true; el.classList.add("dragging"); }
+    el.scrollLeft = startLeft - dx;
+  });
+  const end = () => { down = false; el.classList.remove("dragging"); };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointerleave", end);
+  el.addEventListener("click", (e) => { if (moved) { e.stopPropagation(); moved = false; } });
+}
+
+// Build one listing card element (shared by the sidebar list + cluster popup).
+function makeCardEl(l) {
+  const el = document.createElement("div");
+  el.className = "card" + (l.extraction.needs_review ? " review" : "");
+  el.innerHTML = cardHtml(l);
+  el.addEventListener("click", (e) => {
+    const btn = e.target.closest(".like-btn");
+    if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
+    focusListing(l);
+  });
+  const tags = el.querySelector(".card-tags");
+  if (tags) makeDragScroll(tags);
+  return el;
+}
+
 // Card list shown when a cluster of nearby dots is clicked.
 function clusterListEl(leaves) {
   const wrap = document.createElement("div");
@@ -343,16 +375,7 @@ function clusterListEl(leaves) {
   wrap.appendChild(head);
   for (const lf of leaves) {
     const l = byId.get(lf.properties.id);
-    if (!l) continue;
-    const c = document.createElement("div");
-    c.className = "card" + (l.extraction.needs_review ? " review" : "");
-    c.innerHTML = cardHtml(l);
-    c.addEventListener("click", (e) => {
-      const btn = e.target.closest(".like-btn");
-      if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
-      focusListing(l);
-    });
-    wrap.appendChild(c);
+    if (l) wrap.appendChild(makeCardEl(l));
   }
   return wrap;
 }
@@ -364,17 +387,7 @@ function renderResults(list) {
     box.innerHTML = `<div class="muted empty">${showLikedOnly ? "אין מודעות שמורות. לחצו על ♥ בכרטיס כדי לשמור." : "אין תוצאות לסינון הנוכחי."}</div>`;
     return;
   }
-  for (const l of list.slice(0, 200)) {
-    const el = document.createElement("div");
-    el.className = "card" + (l.extraction.needs_review ? " review" : "");
-    el.innerHTML = cardHtml(l);
-    el.addEventListener("click", (e) => {
-      const btn = e.target.closest(".like-btn");
-      if (btn) { e.stopPropagation(); toggleLike(l, btn); return; }
-      focusListing(l);
-    });
-    box.appendChild(el);
-  }
+  for (const l of list.slice(0, 200)) box.appendChild(makeCardEl(l));
 }
 
 // ---------- drawing (Terra Draw + Turf) ----------
