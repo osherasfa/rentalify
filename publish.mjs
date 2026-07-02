@@ -32,7 +32,7 @@ const DEST = join(PUBLIC_DIR, "listings.json");
 const GAZ_SRC = join(__dirname, "geo", "il-places.json");
 const GAZ_DEST = join(PUBLIC_DIR, "il-places.json");
 
-const STRIP_CONTACT = false;   // false = show phone/name (you chose this)
+const STRIP_CONTACT = true;    // true = drop phone/name from the PUBLIC copy (repo+Pages are public); users reach listers via the original FB post link. listings-db.json keeps contacts.
 const MAX_AGE_MONTHS = 5;      // listings older than this are deleted (with their images)
 const MAX_IMAGES = 4;          // cap images re-hosted per listing (storage control)
 
