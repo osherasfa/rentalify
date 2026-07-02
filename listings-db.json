@@ -27,9 +27,9 @@
         "neighborhood": "מרכז",
         "street": null,
         "raw_location_text": "מרכז הוד השרון",
-        "lat": 29.55406,
-        "lng": 34.95178,
-        "geocode_source": "neighborhood"
+        "lat": 32.15934,
+        "lng": 34.8932,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 1,
@@ -1176,9 +1176,9 @@
         "neighborhood": "מרכז",
         "street": null,
         "raw_location_text": "מרכז הוד השרון",
-        "lat": 29.55406,
-        "lng": 34.95178,
-        "geocode_source": "neighborhood"
+        "lat": 32.15934,
+        "lng": 34.8932,
+        "geocode_source": "city"
       },
       "property": {
         "rooms": 1,

@@ -150,15 +150,20 @@ async function main() {
     if (nb !== l.location.neighborhood) l.location.neighborhood = nb;
   }
 
-  // 2b) backfill coords for listings that never geocoded — re-run the offline
-  // geocoder against the current gazetteer. This fixes listings stored before a
-  // gazetteer entry/alias existed (their lat/lng were baked in as null) without
-  // needing to re-extract them.
+  // 2b) (re-)geocode against the current gazetteer. Backfills listings that never
+  // geocoded (lat/lng baked in as null before a gazetteer entry existed) AND
+  // corrects listings whose stored coords no longer match the offline geocoder —
+  // e.g. a place text that used to resolve to a since-removed generic entry
+  // ("מרכז" -> Eilat, ~280km off). The geocoder is deterministic, so recomputing
+  // is self-healing; we only overwrite when it yields a real point (never wipe a
+  // good coord back to null).
   let regeocoded = 0;
   for (const l of Object.values(db.listings)) {
-    if (l.location?.lat != null) continue;
-    const geo = geocode(l.location?.city, l.location?.neighborhood);
+    if (!l.location) continue;
+    const geo = geocode(l.location.city, l.location.neighborhood);
     if (geo.lat == null) continue;
+    const moved = geo.lat !== l.location.lat || geo.lng !== l.location.lng;
+    if (!moved && l.location.lat != null) continue;
     l.location.lat = geo.lat;
     l.location.lng = geo.lng;
     if (!l.location.city && geo.city) l.location.city = geo.city;

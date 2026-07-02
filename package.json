@@ -8,6 +8,7 @@
     "start": "node normalize.js",
     "publish": "node publish.mjs",
     "validate": "node validate.mjs",
+    "eval": "node eval/run-eval.mjs",
     "test": "node --test"
   },
   "dependencies": {
