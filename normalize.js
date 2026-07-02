@@ -426,7 +426,7 @@ async function main() {
 
   const listings = [];
   const sourceStats = [];
-  const totals = { posts_fetched: 0, rental_posts_kept: 0, non_rental_filtered_out: 0, duplicates_skipped: 0 };
+  const totals = { posts_fetched: 0, rental_posts_kept: 0, non_rental_filtered_out: 0, duplicates_skipped: 0, extraction_failures: 0 };
 
   for (const source of SOURCES) {
     const key = `${source.platform}:${source.source_id}`;
@@ -511,11 +511,28 @@ async function main() {
       rental_posts_kept: kept,
       non_rental_filtered_out: dropped,
       duplicates_skipped: dups,
+      extraction_failures: failed,
     });
     totals.posts_fetched += items.length;
     totals.rental_posts_kept += kept;
     totals.non_rental_filtered_out += dropped;
     totals.duplicates_skipped += dups;
+    totals.extraction_failures += failed;
+  }
+
+  // Run health: surface silent failures so a broken scheduled run isn't mistaken
+  // for a quiet window. In GitHub Actions these also print as ::warning:: so they
+  // show on the run summary. (Non-fatal — publish still runs on whatever we got.)
+  const warn = (msg) => {
+    console.error(`WARNING: ${msg}`);
+    if (process.env.GITHUB_ACTIONS === "true") console.log(`::warning::${msg}`);
+  };
+  if (totals.posts_fetched === 0) {
+    warn("0 posts fetched from any source — check APIFY_TOKEN, the actor, and the fetch window.");
+  } else if (totals.rental_posts_kept === 0 && totals.extraction_failures > 0) {
+    warn(`0 listings kept but ${totals.extraction_failures} extraction(s) failed — likely a rate-limit or Claude CLI auth issue, not a quiet window.`);
+  } else if (totals.extraction_failures > 0) {
+    warn(`${totals.extraction_failures} extraction(s) failed this run (left un-seen; will retry next run).`);
   }
 
   const output = {
